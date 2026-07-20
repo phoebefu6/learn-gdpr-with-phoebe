@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>learn GDPR with phoebe - a two-track course on EU privacy for a Singapore org</title>
+<link rel="stylesheet" href="assets/style.css?v=1">
+<style>
+  .stats-row { display: flex; gap: 2.4rem; margin-top: 1.5rem; flex-wrap: wrap; }
+  .stat b { display: block; font-size: 2.1rem; font-weight: 800; line-height: 1.05; font-variant-numeric: tabular-nums; }
+  .stat span { font-size: .72rem; opacity: .85; text-transform: uppercase; letter-spacing: .09em; font-weight: 600; }
+  .lawnote { margin-top: 1rem; font-size: .8rem; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.25); border-radius: 10px; padding: .55rem .8rem; max-width: 46rem; }
+
+  .course-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+  .course-card { border: 1px solid var(--hairline); border-top: 4px solid var(--diff, var(--indigo)); border-radius: var(--radius); padding: 1.2rem 1.3rem 1.1rem; display: flex; flex-direction: column; gap: .5rem; text-decoration: none; color: var(--ink); background: #fff; transition: box-shadow .15s ease, border-color .15s ease, transform .15s ease; position: relative; }
+  .course-card:hover { border-color: var(--indigo-soft); border-top-color: var(--diff, var(--indigo)); box-shadow: 0 8px 28px rgba(29,78,216,.14); transform: translateY(-3px); }
+  .course-card .cicon { font-size: 1.7rem; line-height: 1; }
+  .course-card .cnum { font-size: .72rem; font-weight: 700; color: var(--indigo); text-transform: uppercase; letter-spacing: .1em; }
+  .course-card h3 { font-size: 1.05rem; font-weight: 800; line-height: 1.3; }
+  .course-card p { font-size: .85rem; color: var(--muted); flex: 1; }
+  .course-card .meta { display: flex; gap: .4rem; flex-wrap: wrap; }
+
+  .diff-legend { display: flex; gap: 1rem; margin-top: 1.6rem; font-size: .74rem; color: var(--muted); font-weight: 600; flex-wrap: wrap; }
+  .diff-legend i { display: inline-block; width: .85rem; height: .35rem; border-radius: 999px; margin-right: .35rem; vertical-align: middle; }
+
+  .paths { margin-top: 2.6rem; }
+  .paths h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: .3rem; }
+  .paths .plede { color: var(--muted); font-size: .92rem; margin-bottom: .8rem; }
+  .path { display: flex; gap: .55rem; align-items: center; padding: .75rem 0; border-bottom: .5px solid var(--hairline); flex-wrap: wrap; }
+  .path:last-child { border-bottom: none; }
+  .path b { min-width: 15.5rem; font-size: .9rem; }
+  .path .pstep { background: var(--indigo-50); color: var(--indigo); border-radius: 999px; padding: .16rem .68rem; font-weight: 700; font-size: .8rem; text-decoration: none; transition: all .12s ease; }
+  .path .pstep:hover { background: var(--indigo); color: #fff; }
+  .path .parr { color: var(--faint); font-weight: 700; }
+
+  .rp-card { border: 1px solid var(--hairline); border-left: 4px solid var(--indigo); border-radius: var(--radius); padding: 1rem 1.2rem; background: linear-gradient(180deg,#fff,var(--indigo-50)); margin-top: 1.2rem; }
+  .rp-card h4 { font-size: 1rem; font-weight: 800; margin-bottom: .3rem; }
+  .rp-card p { font-size: .86rem; color: var(--muted); line-height: 1.6; }
+
+  .mm-section { margin-top: 1.6rem; }
+  .mm-section h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: .2rem; }
+  .mm-section .mm-lede { color: var(--muted); font-size: .92rem; margin-bottom: .4rem; }
+  .mm-wrap { border: 1px solid var(--hairline); border-radius: var(--radius); background: linear-gradient(180deg,#fff,#EEF4FF); padding: .6rem; overflow-x: auto; }
+  .mm-svg { width: 100%; height: auto; display: block; max-width: 60rem; margin: 0 auto; min-width: 34rem; }
+  .mm-link { cursor: pointer; text-decoration: none; }
+  .mm-node rect { transition: opacity .15s ease, filter .15s ease; }
+  .mm-node text { pointer-events: none; }
+  .mm-link:hover .mm-node rect { filter: brightness(1.06); }
+  .mm-edge { transition: opacity .15s ease; }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn GDPR with Phoebe</div>
+    <h1>Two tracks on EU privacy, for an organisation that is not in the EU</h1>
+    <p class="sub">The GDPR does not stop at Europe's border. Sell to, or track, people in the EU and it reaches your Singapore company - with fines up to 4% of global turnover. A leader track teaches what the GDPR requires and when it applies to you, mapped to the PDPA you already know. A practitioner track makes it operational: pick a lawful basis, write a compliant notice, handle a data-subject request, move data across borders, and answer a breach in 72 hours. The running case is Lumina, a Singapore SaaS with EU customers.</p>
+    <div class="stats-row">
+      <div class="stat"><b data-count="2">2</b><span>tracks</span></div>
+      <div class="stat"><b data-count="14">14</b><span>sessions</span></div>
+      <div class="stat"><b data-count="1">1</b><span>live GDPR checker</span></div>
+      <div class="stat"><b data-count="6">6</b><span>lawful bases</span></div>
+    </div>
+    <div class="lawnote">⚖️ Educational, not legal advice. The GDPR is enforced by EU supervisory authorities and interpreted through case law - verify against the Regulation text and your data protection authority, and get proper advice before acting.</div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section">
+    <div class="paths" style="margin-top:0">
+      <h2>The leader track 🤝 <span style="font-size:.85rem;font-weight:600;color:var(--muted)">· for C-level, managers &amp; DPOs · 6 x 45 min · no jargon</span></h2>
+      <p class="plede">What the GDPR requires, when it reaches a non-EU company, and how each piece maps to the PDPA you already run - each session ends with questions to ask your DPO and legal counsel.</p>
+    </div>
+    <div class="course-grid">
+      <a class="course-card" href="courses/a1-scope.html" style="--diff:#34D399">
+        <span class="cicon">🌍</span><span class="cnum">Leader 1 · easy</span>
+        <h3>Why GDPR reaches a Singapore company</h3>
+        <p>The Article 3 territorial-scope test - offer to or monitor people in the EU and you are in scope, no EU office required. And how that differs from the PDPA.</p>
+        <span class="meta"><span class="pill amber">▶ Leaders start here</span></span>
+      </a>
+      <a class="course-card" href="courses/a2-principles-bases.html" style="--diff:#34D399">
+        <span class="cicon">📜</span><span class="cnum">Leader 2 · easy</span>
+        <h3>Seven principles, six lawful bases</h3>
+        <p>The principles every processing must satisfy, and the six lawful bases - why consent is only one of them, unlike the PDPA's consent-first model.</p>
+        <span class="meta"><span class="pill light">Art 5-6</span></span>
+      </a>
+      <a class="course-card" href="courses/a3-rights.html" style="--diff:#FBBF24">
+        <span class="cicon">🙋</span><span class="cnum">Leader 3 · medium</span>
+        <h3>Data-subject rights vs PDPA</h3>
+        <p>Access, erasure, portability, objection and more - a broader set than the PDPA's access + correction. Which rights have no PDPA equivalent.</p>
+        <span class="meta"><span class="pill light">Art 12-22</span></span>
+      </a>
+      <a class="course-card" href="courses/a4-controller-processor.html" style="--diff:#FBBF24">
+        <span class="cicon">🔗</span><span class="cnum">Leader 4 · medium</span>
+        <h3>Controller, processor, DPO, DPIA</h3>
+        <p>Who is responsible for what, when a DPO is mandatory (narrower than the PDPA), and when a high-risk project needs an impact assessment.</p>
+        <span class="meta"><span class="pill light">Accountability</span></span>
+      </a>
+      <a class="course-card" href="courses/a5-breach-penalties.html" style="--diff:#FB923C">
+        <span class="cicon">🚨</span><span class="cnum">Leader 5 · deciding</span>
+        <h3>Breach (72h) + penalties</h3>
+        <p>The 72-hour clock, the two-tier fines (up to 4% of global turnover), and the billion-euro cases - versus the PDPA's own regime.</p>
+        <span class="meta"><span class="pill light">Real fines</span></span>
+      </a>
+      <a class="course-card" href="courses/a6-transfers.html" style="--diff:#FB923C">
+        <span class="cicon">🌐</span><span class="cnum">Leader 6 · deciding</span>
+        <h3>International transfers</h3>
+        <p>Adequacy, Standard Contractual Clauses, and the post-Schrems II duty to assess the destination - the rules that govern moving EU data to Singapore.</p>
+        <span class="meta"><span class="pill light">Chapter V</span></span>
+      </a>
+    </div>
+
+    <div class="paths">
+      <h2>The practitioner track 🛠️ <span style="font-size:.85rem;font-weight:600;color:var(--muted)">· for DPOs, marketers &amp; ops · 8 x 45 min · Lumina case</span></h2>
+      <p class="plede">The operational half: how to comply in practice. Every session moves Lumina, a Singapore SaaS serving EU customers, one step closer to defensible GDPR compliance.</p>
+    </div>
+    <div class="course-grid">
+      <a class="course-card" href="courses/b1-applicability.html" style="--diff:#34D399">
+        <span class="cicon">🧭</span><span class="cnum">Practitioner 1 · easy</span>
+        <h3>Does GDPR apply? the checker</h3>
+        <p>A live Article 3 checker - answer three questions and see whether the GDPR reaches you, which article, and what to do next.</p>
+        <span class="meta"><span class="pill amber">▶ Practitioners start here</span></span>
+      </a>
+      <a class="course-card" href="courses/b2-lawful-basis.html" style="--diff:#34D399">
+        <span class="cicon">⚖️</span><span class="cnum">Practitioner 2 · easy</span>
+        <h3>Picking a lawful basis</h3>
+        <p>Choose and document one of the six bases - consent vs legitimate interest, the consent standard, and the balancing test (LIA).</p>
+        <span class="meta"><span class="pill light">Lumina picks a basis</span></span>
+      </a>
+      <a class="course-card" href="courses/b3-privacy-notices.html" style="--diff:#FBBF24">
+        <span class="cicon">📄</span><span class="cnum">Practitioner 3 · medium</span>
+        <h3>Privacy notices + transparency</h3>
+        <p>What Articles 13 and 14 require you to tell people, when, and how - the notice that turns "we process data" into informed consent.</p>
+        <span class="meta"><span class="pill light">Lumina writes a notice</span></span>
+      </a>
+      <a class="course-card" href="courses/b4-dsar.html" style="--diff:#FBBF24">
+        <span class="cicon">🙋</span><span class="cnum">Practitioner 4 · medium</span>
+        <h3>Handling a DSAR</h3>
+        <p>A data-subject access request end to end - verify, locate, respond within one month, and the permitted extensions and refusals.</p>
+        <span class="meta"><span class="pill light">Lumina answers a request</span></span>
+      </a>
+      <a class="course-card" href="courses/b5-records-dpia.html" style="--diff:#FB923C">
+        <span class="cicon">🗂️</span><span class="cnum">Practitioner 5 · hands-on</span>
+        <h3>Records + DPIA</h3>
+        <p>The Article 30 record of processing (and why the small-org exemption rarely helps), and when a project needs an impact assessment.</p>
+        <span class="meta"><span class="pill light">Lumina documents</span></span>
+      </a>
+      <a class="course-card" href="courses/b6-transfers-practice.html" style="--diff:#FB923C">
+        <span class="cicon">🌐</span><span class="cnum">Practitioner 6 · hands-on</span>
+        <h3>Transfers in practice</h3>
+        <p>Put Standard Contractual Clauses in place and run a transfer impact assessment - the real work of moving EU data to a Singapore server.</p>
+        <span class="meta"><span class="pill light">Lumina moves data</span></span>
+      </a>
+      <a class="course-card" href="courses/b7-breach-response.html" style="--diff:#F87171">
+        <span class="cicon">🚨</span><span class="cnum">Practitioner 7 · hardest</span>
+        <h3>Breach response (72 hours)</h3>
+        <p>The clock starts when you become aware. Assess the risk, notify the authority within 72 hours, and tell individuals when the risk is high.</p>
+        <span class="meta"><span class="pill light">When it goes wrong</span></span>
+      </a>
+      <a class="course-card" href="courses/b8-gdpr-program.html" style="--diff:#F87171">
+        <span class="cicon">🏛️</span><span class="cnum">Practitioner 8 · hardest</span>
+        <h3>The GDPR program + PDPA harmony</h3>
+        <p>Assemble the artifacts into one programme - and run GDPR and PDPA together so one operation satisfies both. Lumina graduates.</p>
+        <span class="meta"><span class="pill light">Dual compliance</span></span>
+      </a>
+    </div>
+    <div class="diff-legend">
+      <span><i style="background:#34D399"></i>easy - everyone</span>
+      <span><i style="background:#FBBF24"></i>medium</span>
+      <span><i style="background:#FB923C"></i>hands-on / deciding</span>
+      <span><i style="background:#F87171"></i>hardest</span>
+    </div>
+
+    <div class="paths">
+      <h2>The running case + the live checker 🧭</h2>
+      <div class="rp-card">
+        <h4>Lumina, and a GDPR checker you can poke</h4>
+        <p>The practitioner track follows Lumina, a fictional Singapore SaaS with EU customers - the exact situation where the GDPR reaches a company that has never set foot in Europe. Session b1 gives you a live checker: answer the three Article 3 questions and it tells you whether the GDPR applies and which limb catches you; a second mode suggests which of the six lawful bases fits a purpose. It encodes Articles 3 and 6 (educational, not legal advice).</p>
+      </div>
+    </div>
+
+    <div class="paths">
+      <h2>Choose your path 🗺️</h2>
+      <p class="plede">Two doors, one course. Leaders get the law and the risk; practitioners get the moves that make an EU-facing operation defensible.</p>
+      <div class="path"><b>🤝 Leader (the law + the risk)</b>
+        <a class="pstep" href="courses/a1-scope.html">a1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a2-principles-bases.html">a2</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a3-rights.html">a3</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a4-controller-processor.html">a4</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a5-breach-penalties.html">a5</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a6-transfers.html">a6</a>
+      </div>
+      <div class="path"><b>🛠️ Practitioner (comply in practice)</b>
+        <a class="pstep" href="courses/b1-applicability.html">b1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b2-lawful-basis.html">b2</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b3-privacy-notices.html">b3</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b4-dsar.html">b4</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b5-records-dpia.html">b5</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b6-transfers-practice.html">b6</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b7-breach-response.html">b7</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b8-gdpr-program.html">b8</a>
+      </div>
+      <div class="path"><b>🌱 Just tell me if it applies</b>
+        <a class="pstep" href="courses/a1-scope.html">a1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b1-applicability.html">b1</a>
+      </div>
+      <div class="path"><b>🚀 Already know PDPA? (the deltas)</b>
+        <a class="pstep" href="courses/a1-scope.html">a1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a3-rights.html">a3</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a6-transfers.html">a6</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b8-gdpr-program.html">b8</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section mm-section">
+    <h2>The knowledge map 🧠</h2>
+    <p class="mm-lede">Both tracks at a glance - hover a session to spotlight its concepts, click any node to jump in.</p>
+    <div class="mm-wrap"><div id="mindmap"></div></div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>learn-gdpr-with-phoebe · by Phoebe Fu · taught from the GDPR text (Regulation (EU) 2016/679) + EDPB guidance · educational, not legal advice</span>
+    <span>📚 Part of <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a> - the shelf of every course</span>
+  </footer>
+</main>
+
+<script>
+window.MINDMAP_DATA = {
+  title: "Learn\nGDPR",
+  centerColor: "#1E3A8A",
+  sessions: [
+    { label: "Why GDPR\nreaches you", href: "courses/a1-scope.html", color: "#34D399",
+      concepts: [ { label: "Article 3 scope", href: "courses/a1-scope.html" }, { label: "Offer / monitor triggers", href: "courses/a1-scope.html" }, { label: "vs PDPA", href: "courses/a1-scope.html" } ] },
+    { label: "Principles\n+ bases", href: "courses/a2-principles-bases.html", color: "#34D399",
+      concepts: [ { label: "7 principles", href: "courses/a2-principles-bases.html" }, { label: "6 lawful bases", href: "courses/a2-principles-bases.html" }, { label: "Consent standard", href: "courses/a2-principles-bases.html" } ] },
+    { label: "Rights\nvs PDPA", href: "courses/a3-rights.html", color: "#FBBF24",
+      concepts: [ { label: "Access + erasure", href: "courses/a3-rights.html" }, { label: "Portability", href: "courses/a3-rights.html" }, { label: "No PDPA equivalent", href: "courses/a3-rights.html" } ] },
+    { label: "Roles +\naccountability", href: "courses/a4-controller-processor.html", color: "#FBBF24",
+      concepts: [ { label: "Controller vs processor", href: "courses/a4-controller-processor.html" }, { label: "DPO triggers", href: "courses/a4-controller-processor.html" }, { label: "DPIA", href: "courses/a4-controller-processor.html" } ] },
+    { label: "Breach +\npenalties", href: "courses/a5-breach-penalties.html", color: "#FB923C",
+      concepts: [ { label: "72-hour rule", href: "courses/a5-breach-penalties.html" }, { label: "4% / EUR 20M", href: "courses/a5-breach-penalties.html" }, { label: "Real fines", href: "courses/a5-breach-penalties.html" } ] },
+    { label: "Transfers", href: "courses/a6-transfers.html", color: "#FB923C",
+      concepts: [ { label: "Adequacy", href: "courses/a6-transfers.html" }, { label: "SCCs", href: "courses/a6-transfers.html" }, { label: "Schrems II", href: "courses/a6-transfers.html" } ] },
+    { label: "Does GDPR\napply?", href: "courses/b1-applicability.html", color: "#34D399",
+      concepts: [ { label: "The checker", href: "courses/b1-applicability.html" }, { label: "Art 3 test", href: "courses/b1-applicability.html" } ] },
+    { label: "Lawful\nbasis", href: "courses/b2-lawful-basis.html", color: "#34D399",
+      concepts: [ { label: "Six bases", href: "courses/b2-lawful-basis.html" }, { label: "Consent vs LI", href: "courses/b2-lawful-basis.html" }, { label: "LIA", href: "courses/b2-lawful-basis.html" } ] },
+    { label: "Privacy\nnotices", href: "courses/b3-privacy-notices.html", color: "#FBBF24",
+      concepts: [ { label: "Art 13 / 14", href: "courses/b3-privacy-notices.html" }, { label: "Transparency", href: "courses/b3-privacy-notices.html" } ] },
+    { label: "DSAR", href: "courses/b4-dsar.html", color: "#FBBF24",
+      concepts: [ { label: "One-month clock", href: "courses/b4-dsar.html" }, { label: "Extensions + refusals", href: "courses/b4-dsar.html" } ] },
+    { label: "Records\n+ DPIA", href: "courses/b5-records-dpia.html", color: "#FB923C",
+      concepts: [ { label: "Art 30 records", href: "courses/b5-records-dpia.html" }, { label: "When a DPIA", href: "courses/b5-records-dpia.html" } ] },
+    { label: "Transfers\nin practice", href: "courses/b6-transfers-practice.html", color: "#FB923C",
+      concepts: [ { label: "SCCs", href: "courses/b6-transfers-practice.html" }, { label: "Transfer assessment", href: "courses/b6-transfers-practice.html" } ] },
+    { label: "Breach\nresponse", href: "courses/b7-breach-response.html", color: "#F87171",
+      concepts: [ { label: "72-hour clock", href: "courses/b7-breach-response.html" }, { label: "Two thresholds", href: "courses/b7-breach-response.html" } ] },
+    { label: "GDPR\nprogram", href: "courses/b8-gdpr-program.html", color: "#F87171",
+      concepts: [ { label: "The artifacts", href: "courses/b8-gdpr-program.html" }, { label: "GDPR + PDPA together", href: "courses/b8-gdpr-program.html" } ] }
+  ]
+};
+</script>
+<script src="assets/mindmap.js?v=1"></script>
+<script src="assets/app.js?v=1"></script>
+</body>
+</html>

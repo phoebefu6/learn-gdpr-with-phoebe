@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practitioner session 3 · Privacy notices + transparency - learn GDPR with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-gdpr-with-phoebe</a> / Practitioner session 3 of 8</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn GDPR with Phoebe · Practitioner track · Session 3 of 8</div>
+    <h1>Privacy notices <span class="accent">and transparency</span></h1>
+    <p class="sub">Transparency is the GDPR obligation people meet first, because it is the one visible on your website. Articles 13 and 14 spell out what you must tell people about what you do with their data, and when. A notice that lists cookies but hides the lawful basis, the retention period, or the right to complain is not compliant - just familiar. This session turns the requirement into a checklist and rebuilds Lumina's notice against it.</p>
+    <div class="chip-row">
+      <span class="chip level">🟡 Practitioner track</span>
+      <span class="chip audience">DPOs · marketers · ops</span>
+      <span class="chip audience">No jargon</span>
+      <span class="chip time">Medium</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:3">3-18 · Concepts</span>
+      <span class="a3" style="flex:5">18-40 · Build-along</span>
+      <span class="a4" style="flex:1">40-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section" id="intro">
+    <div class="section-kicker"><span class="klabel">Part 0</span><h2>The obligation on your homepage</h2></div>
+    <p class="lede">Everything else in the GDPR happens behind the scenes; transparency is the part the public sees. It is also the cheapest to get materially wrong, because most privacy notices were written to look like everyone else's rather than to satisfy Articles 13 and 14. The good news: the required content is a finite list. Once you have the checklist, auditing any notice - yours or a vendor's - takes minutes.</p>
+    <div class="callout tip"><strong>Read this first</strong> Educational, not legal advice. Verify against the Regulation text and get advice before publishing a notice.</div>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - full depth after class</span>
+      <span class="pill peach">★ Try it now</span>
+      <span class="pill inkpill">Sources covered at the end</span>
+    </div>
+    <div class="callout win"><strong>★ What you build today</strong> The Article 13/14 content checklist, the timing rules for direct vs indirect collection, the layered-notice pattern, and a rebuilt privacy notice for Lumina that would survive an audit.</div>
+  </section>
+
+  <section class="section" id="what">
+    <div class="section-kicker"><span class="klabel">Part 1 · covers Articles 13 &amp; 14</span><h2>What you must tell people <span class="tag concept">7 min live</span></h2></div>
+    <p class="lede">Two articles, one checklist. Article 13 covers data you collect directly from the person; Article 14 covers data you get from somewhere else. The content overlaps heavily.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 270" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Privacy notice anatomy: who you are, purposes and lawful basis, recipients, transfers, retention, the rights, and the right to complain">
+        <style>
+          .b3nT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .b3nW { font: 400 11px Inter, sans-serif; fill: #DBEAFE; }
+          .b3nH { font: 700 14px Inter, sans-serif; fill: #1E293B; }
+          .b3nN { font: 600 14px Inter, sans-serif; fill: #422006; }
+        </style>
+        <text class="b3nH" x="30" y="34">A compliant notice tells the person:</text>
+        <rect x="30" y="50" width="200" height="40" rx="8" fill="#1E3A8A"/><text class="b3nT" x="46" y="75">Who you are + DPO</text>
+        <rect x="242" y="50" width="220" height="40" rx="8" fill="#1D4ED8"/><text class="b3nT" x="258" y="75">Purposes + lawful basis</text>
+        <rect x="474" y="50" width="180" height="40" rx="8" fill="#3B82F6"/><text class="b3nT" x="490" y="75">Recipients</text>
+        <rect x="666" y="50" width="184" height="40" rx="8" fill="#1E3A8A"/><text class="b3nT" x="682" y="75">Transfers + safeguards</text>
+        <rect x="30" y="100" width="200" height="40" rx="8" fill="#1D4ED8"/><text class="b3nT" x="46" y="125">Retention period</text>
+        <rect x="242" y="100" width="220" height="40" rx="8" fill="#3B82F6"/><text class="b3nT" x="258" y="125">Their rights</text>
+        <rect x="474" y="100" width="180" height="40" rx="8" fill="#1D4ED8"/><text class="b3nT" x="490" y="125">Withdraw consent</text>
+        <rect x="666" y="100" width="184" height="40" rx="8" fill="#1E3A8A"/><text class="b3nT" x="682" y="125">Right to complain</text>
+        <rect x="30" y="240" width="14" height="14" rx="3" fill="#CA8A04"/>
+        <text class="b3nN" x="54" y="252">Most notices list purposes but omit the lawful basis, retention, and the right to complain. Those are required.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the required contents of a privacy notice</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The content checklist<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>A compliant notice tells the person, in clear and plain language:</p>
+        <ul>
+          <li>Who the controller is and how to contact them (and the DPO, if you have one).</li>
+          <li>The <strong>purposes</strong> and the <strong>lawful basis</strong> for each (and the legitimate interest, if you rely on it).</li>
+          <li>Who receives the data (recipients or categories of them).</li>
+          <li>Any international <strong>transfers</strong> and the safeguard used.</li>
+          <li>The <strong>retention period</strong> (or how it is decided).</li>
+          <li>Their <strong>rights</strong> (access, rectification, erasure, restriction, portability, object) and the right to <strong>withdraw consent</strong>.</li>
+          <li>The right to <strong>complain to a supervisory authority</strong>.</li>
+        </ul>
+        <div class="prompt-box good"><span class="label">★ Try it now (any chat AI)</span>Give me the GDPR Article 13 privacy-notice checklist - everything a notice must tell a person whose data we collect directly. Then review this notice text against the checklist and tell me what is missing: [paste a real privacy notice].</div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Direct vs indirect, and timing<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Article 13</strong> applies when you collect data <em>from the person</em> - the notice must be there <strong>at the time of collection</strong> (the signup form, the checkout).</li>
+          <li><strong>Article 14</strong> applies when you get data <em>from somewhere else</em> (a data provider, a partner) - you must inform the person within a reasonable period, at the latest one month, or at first contact.</li>
+          <li><strong>Article 14 adds one item:</strong> you must tell the person the <strong>source</strong> of the data, since they did not give it to you directly.</li>
+        </ul>
+        <div class="callout tip"><strong>The PDPA parallel</strong> The PDPA's Notification Obligation also requires stating your purposes on or before collection - so a good GDPR notice largely satisfies the PDPA too. The GDPR simply requires more items (lawful basis, retention, the fuller rights list, the complaint right).</div>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="practice">
+    <div class="section-kicker"><span class="klabel">Part 2 · transparency in practice</span><h2>Make it readable <span class="tag concept">8 min live</span></h2></div>
+    <p class="lede">A notice can contain everything required and still fail transparency if nobody can read it. Article 12 demands clear, plain language - which is why the layered notice exists.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A layered notice: a short summary up top linking to the full detail beneath">
+        <style>
+          .b3tT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .b3tW { font: 400 12px Inter, sans-serif; fill: #DBEAFE; }
+          .b3tS { font: 400 12px Inter, sans-serif; fill: #334155; }
+          .b3tN { font: 600 14px Inter, sans-serif; fill: #422006; }
+        </style>
+        <rect x="230" y="30" width="420" height="60" rx="12" fill="#1D4ED8"/>
+        <text class="b3tT" x="252" y="56">Layer 1 · the short version</text>
+        <text class="b3tW" x="252" y="78">who, why, your rights - in a few plain lines</text>
+        <rect x="150" y="110" width="580" height="70" rx="12" fill="#F8FAFF" stroke="#93C5FD"/>
+        <text class="b3tS" x="172" y="136">Layer 2 · the full notice</text>
+        <text class="b3tS" x="172" y="160">every required item, for anyone who wants the detail</text>
+        <rect x="30" y="192" width="14" height="14" rx="3" fill="#CA8A04"/>
+        <text class="b3tN" x="54" y="204">A short summary that links to the full detail satisfies both "complete" and "clear".</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the layered notice</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Clear language + the layered pattern<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Article 12:</strong> the information must be concise, transparent, intelligible, and in clear and plain language - especially for anything aimed at children.</li>
+          <li><strong>The layered notice</strong> resolves the tension between "complete" and "readable": a short top layer (who, why, your rights, a link) over a full second layer with every required item.</li>
+          <li><strong>Put it where the data is collected:</strong> a link at the signup form and checkout, not buried three clicks deep.</li>
+        </ul>
+        <div class="callout example"><span class="ex-pill">Real world</span><p><strong>Lumina rewrites its notice.</strong> Lumina's old notice listed cookies and "we value your privacy" but never named a lawful basis, a retention period, or the right to complain. The rebuild added those, split into a short summary plus a full version, and put the link on the signup form. Same company, a notice that now matches Articles 13 and 12.</p></div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The notice as the front door to the rights<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>It is easy to treat the privacy notice as a legal formality, but it is really the front door to every right you learned in the leader track. The notice is where a person first learns they <em>can</em> ask for access, erasure, or portability, and where they find the channel to do it and the authority to complain to. A notice that omits the rights (or hides the contact) does not just breach Article 13 - it suppresses the rights downstream, because people cannot exercise what they do not know they have. So when you audit a notice, do not only check that the items are present; check that a real person could read it and know, concretely, what they can ask for and how. That readability test is the difference between a compliant document and an honest one.</p>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="exercise">
+    <div class="section-kicker"><span class="klabel">Build-along · take it further</span><h2>Audit a real notice <span class="tag demo">★ 10 min · pen and paper</span></h2></div>
+    <p class="lede">Run the checklist against a notice you actually use.</p>
+    <div class="steps">
+      <div class="step"><p>Open your own (or your company's) privacy notice. Tick each checklist item present: controller + contact, purposes, lawful basis, recipients, transfers, retention, rights, withdraw consent, right to complain.</p></div>
+      <div class="step"><p>Circle the missing ones. The three most commonly absent: lawful basis, retention period, and the right to complain to an authority.</p></div>
+      <div class="step"><p>Check readability: could a non-lawyer skim the top and know who has their data, why, and what they can ask for?</p></div>
+      <div class="step"><p>Check timing: is the notice actually shown at collection (the form, the checkout), or hidden in a footer?</p></div>
+    </div>
+    <div class="callout win"><strong>★ Lumina after b3</strong> Lumina's notice now names every required item, reads in plain language, and appears at the point of collection. The rights it lists are real - which sets up b4, where an EU user actually exercises one and Lumina has to deliver within a month.</div>
+  </section>
+
+  <section class="section" id="homework">
+    <div class="section-kicker"><span class="klabel">Homework</span><h2>Before session b4 <span class="tag exercise">◐ 40 min total</span></h2></div>
+    <ul>
+      <li>Audit your live privacy notice against the Article 13 checklist and list the missing items.</li>
+      <li>Draft a short "layer 1" summary for your notice - who, why, rights, and a link to the full version.</li>
+      <li>Check every form that collects personal data actually links the notice at the point of collection.</li>
+      <li>Read: GDPR Articles 13 and 12 - the content list and the plain-language rule.</li>
+    </ul>
+  </section>
+
+  <section class="section" id="official">
+    <div class="section-kicker"><span class="klabel">Source material</span><h2>Official sources covered</h2></div>
+    <p class="lede">Taught from the GDPR text. This page covers ~80% of the working content on transparency.</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">GDPR Articles 13 &amp; 14 (information to provide)</span><span class="note">Part 1 · the content checklist + direct vs indirect + timing</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">GDPR Article 12 (clear and plain language)</span><span class="note">Part 2 · readability + the layered notice</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">PDPA Notification Obligation (s.20) contrast</span><span class="note">Part 1 · state purposes on/before collection</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="quiz">
+    <div class="section-kicker"><span class="klabel">Check yourself</span><h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2></div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · Which is commonly MISSING from a non-compliant privacy notice but REQUIRED by Article 13?</p>
+      <button class="qopt" type="button">A · The company logo</button>
+      <button class="qopt" type="button">B · A cookie banner</button>
+      <button class="qopt" type="button">C · The lawful basis, retention period, and the right to complain to an authority</button>
+      <p class="qwhy">Most notices list purposes but omit the lawful basis, the retention period, and the right to lodge a complaint - all required by Article 13.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">2 · When you obtain personal data from a third party (not the person), Article 14 adds the duty to tell them...</p>
+      <button class="qopt" type="button">A · The source the data came from</button>
+      <button class="qopt" type="button">B · Your annual revenue</button>
+      <button class="qopt" type="button">C · Nothing extra</button>
+      <p class="qwhy">Article 14 (indirect collection) mirrors Article 13 but adds the source of the data, since the person did not provide it to you directly.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">3 · The "layered notice" pattern exists to...</p>
+      <button class="qopt" type="button">A · Hide the detail from users</button>
+      <button class="qopt" type="button">B · Reconcile "complete" with "clear and plain" - a short summary linking to the full detail</button>
+      <button class="qopt" type="button">C · Satisfy cookie law only</button>
+      <p class="qwhy">Article 12 demands clear, plain language while Article 13 demands completeness. A short readable top layer over a full second layer satisfies both.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <section class="cheat" id="cheatsheet">
+    <h3>Practitioner session 3 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>The checklist</b><span>Who you are + DPO, purposes + lawful basis, recipients, transfers, retention, rights, withdraw consent, right to complain.</span></div>
+      <div class="cheat-item"><b>Most-missed items</b><span>Lawful basis, retention period, right to complain to an authority.</span></div>
+      <div class="cheat-item"><b>Art 13 vs 14</b><span>13 = collected from the person (notice at collection). 14 = from elsewhere (+ tell them the source).</span></div>
+      <div class="cheat-item"><b>Timing</b><span>Art 13 at collection; Art 14 within a reasonable period (at most a month) or first contact.</span></div>
+      <div class="cheat-item"><b>Clear + plain (Art 12)</b><span>Concise, intelligible language. Completeness alone is not transparency.</span></div>
+      <div class="cheat-item"><b>Layered notice</b><span>Short summary up top, full detail beneath - complete AND readable.</span></div>
+      <div class="cheat-item"><b>Put it at collection</b><span>Link on the form and checkout, not buried in a footer.</span></div>
+      <div class="cheat-item"><b>PDPA parallel</b><span>PDPA Notification also wants purposes stated at collection - a good GDPR notice covers it.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Practitioner session 3 of 8 · learn-gdpr-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="../index.html">← All sessions</a> &nbsp;·&nbsp; <a href="b4-dsar.html">Next: Handling a DSAR →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

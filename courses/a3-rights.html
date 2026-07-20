@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leader session 3 · Data-subject rights vs PDPA - learn GDPR with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-gdpr-with-phoebe</a> / Leader session 3 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn GDPR with Phoebe · Leader track · Session 3 of 6</div>
+    <h1>Data-subject rights <span class="accent">vs the PDPA</span></h1>
+    <p class="sub">The GDPR hands individuals a broad set of rights over their data - and most of them have no equivalent under the PDPA you already run. If your process only does access and correction, it is built for the wrong regime. This session walks the eight rights, the one-month clock they run on, and exactly which ones the PDPA does not give - so you know what a dual-regime operation must add.</p>
+    <div class="chip-row">
+      <span class="chip level">🟡 Leader track</span>
+      <span class="chip audience">Leaders: C-level · managers · DPOs</span>
+      <span class="chip audience">No jargon</span>
+      <span class="chip time">Medium</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-20 · Concepts</span>
+      <span class="a3" style="flex:4">20-40 · Exercises</span>
+      <span class="a4" style="flex:1">40-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section" id="intro">
+    <div class="section-kicker"><span class="klabel">Part 0</span><h2>Why rights are the sharpest GDPR-PDPA gap</h2></div>
+    <p class="lede">Scope decides whether the GDPR applies; rights decide what you owe the people whose data you hold. This is where the two regimes diverge most. The PDPA gives individuals two enforceable rights in practice - access and correction. The GDPR gives eight, including some that can force you to delete data or hand it over in a portable file. A Singapore company that becomes GDPR-subject inherits a to-do list of rights it never had to build for.</p>
+    <div class="callout tip"><strong>Read this first</strong> Educational, not legal advice. Verify against the Regulation text and your data protection authority, and get proper advice before acting.</div>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">★ Try it now prompt</span>
+      <span class="pill inkpill">Sources covered at the end</span>
+    </div>
+    <div class="callout win"><strong>★ What you walk out with today</strong> The eight GDPR rights in plain English, the one-month response clock, a clear list of the rights the PDPA does not give, and five questions to put to your DPO about whether your request-handling is built for one regime or two.</div>
+  </section>
+
+  <section class="section" id="rights">
+    <div class="section-kicker"><span class="klabel">Part 1 · covers Articles 12-22</span><h2>The eight rights <span class="tag concept">9 min live</span></h2></div>
+    <p class="lede">The rights sit in Articles 12-22. You do not need the article numbers in a meeting, but you do need to recognise each right when a customer invokes it - and know the clock you are on.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The GDPR data-subject rights fan out from the individual: be informed, access, rectify, erase, restrict, port, object, and rights over automated decisions">
+        <style>
+          .a3rC { font: 700 13px Inter, sans-serif; fill: #1E293B; }
+          .a3rT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .a3rW { font: 400 11.5px Inter, sans-serif; fill: #1E293B; }
+          .a3rN { font: 600 14px Inter, sans-serif; fill: #422006; }
+        </style>
+        <circle cx="150" cy="150" r="52" fill="#1D4ED8"/>
+        <text class="a3rT" x="150" y="146" text-anchor="middle">The</text>
+        <text class="a3rT" x="150" y="164" text-anchor="middle">person</text>
+        <rect x="270" y="24" width="180" height="34" rx="8" fill="#EFF6FF" stroke="#93C5FD"/><text class="a3rW" x="284" y="46">Be informed (13/14)</text>
+        <rect x="270" y="66" width="180" height="34" rx="8" fill="#EFF6FF" stroke="#93C5FD"/><text class="a3rW" x="284" y="88">Access (15)</text>
+        <rect x="270" y="108" width="180" height="34" rx="8" fill="#EFF6FF" stroke="#93C5FD"/><text class="a3rW" x="284" y="130">Rectification (16)</text>
+        <rect x="270" y="150" width="180" height="34" rx="8" fill="#EFF6FF" stroke="#93C5FD"/><text class="a3rW" x="284" y="172">Erasure (17)</text>
+        <rect x="470" y="66" width="190" height="34" rx="8" fill="#EFF6FF" stroke="#93C5FD"/><text class="a3rW" x="484" y="88">Restriction (18)</text>
+        <rect x="470" y="108" width="190" height="34" rx="8" fill="#EFF6FF" stroke="#93C5FD"/><text class="a3rW" x="484" y="130">Portability (20)</text>
+        <rect x="470" y="150" width="190" height="34" rx="8" fill="#EFF6FF" stroke="#93C5FD"/><text class="a3rW" x="484" y="172">Object (21)</text>
+        <rect x="470" y="192" width="190" height="34" rx="8" fill="#EFF6FF" stroke="#93C5FD"/><text class="a3rW" x="484" y="214">Automated decisions (22)</text>
+        <rect x="690" y="108" width="160" height="52" rx="10" fill="#1E3A8A"/><text class="a3rT" x="706" y="132">Respond within</text><text class="a3rT" x="706" y="150">ONE month</text>
+        <rect x="30" y="266" width="14" height="14" rx="3" fill="#CA8A04"/>
+        <text class="a3rN" x="54" y="278">One month to respond (Art 12(3)); extendable by two more for complex or numerous requests.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the eight rights and the one-month clock</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The rights, in the order they get used<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Be informed (13/14):</strong> tell people what you do with their data, at collection - the privacy notice (session b3).</li>
+          <li><strong>Access (15):</strong> give them a copy of their data plus how it is used.</li>
+          <li><strong>Rectification (16):</strong> correct errors.</li>
+          <li><strong>Erasure / right to be forgotten (17):</strong> delete in defined circumstances (no longer needed, consent withdrawn).</li>
+          <li><strong>Restriction (18):</strong> "freeze" processing while a dispute is resolved.</li>
+          <li><strong>Portability (20):</strong> hand data back in a structured, machine-readable file they can take elsewhere.</li>
+          <li><strong>Object (21):</strong> stop processing - and for direct marketing, it is an absolute stop.</li>
+          <li><strong>Automated decisions (22):</strong> not to be subject to solely automated decisions with legal or significant effects, with exceptions.</li>
+        </ul>
+        <div class="prompt-box good"><span class="label">★ Try it now (any chat AI)</span>List the eight GDPR data-subject rights in plain English for a business leader, and for each say in one line what my company would have to DO when a customer invokes it. Then tell me which of these Singapore's PDPA does not currently give.</div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The one-month clock<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Every request runs on the same clock: respond <strong>without undue delay and within one month</strong> of receipt (Art 12(3)). You can extend by <strong>up to two further months</strong> for complex or numerous requests - but you must tell the person, with reasons, within the first month.</p>
+        <ul>
+          <li><strong>The leadership read:</strong> this is an operational commitment. If a request lands and nobody owns it for three weeks, you have already half-spent your month.</li>
+          <li><strong>Free by default:</strong> you generally cannot charge; a reasonable fee (or a refusal) is only for manifestly unfounded or excessive requests.</li>
+        </ul>
+        <div class="callout example"><span class="ex-pill">Real world</span><p><strong>Lumina's first erasure request.</strong> An EU user asked Lumina to delete their account and all data. Under the PDPA, Lumina had never built an erasure flow - only correction. Under the GDPR it had one month to actually delete, across its database and backups, and confirm. The request exposed a capability the PDPA never required.</p></div>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="gap">
+    <div class="section-kicker"><span class="klabel">Part 2 · covers the PDPA gap</span><h2>What the PDPA does not give <span class="tag concept">8 min live</span></h2></div>
+    <p class="lede">If you have built request-handling for the PDPA, you have built access and correction. The GDPR adds four rights with no live PDPA equivalent - and those are exactly the ones that need new process.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A two-column comparison: PDPA gives access and correction; GDPR adds erasure, restriction, objection, automated-decision rights, and portability">
+        <style>
+          .a3gT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .a3gH { font: 700 13px Inter, sans-serif; fill: #1E293B; }
+          .a3gW { font: 400 12px Inter, sans-serif; fill: #DBEAFE; }
+          .a3gS { font: 400 12px Inter, sans-serif; fill: #334155; }
+          .a3gN { font: 600 14px Inter, sans-serif; fill: #422006; }
+        </style>
+        <rect x="30" y="30" width="380" height="170" rx="14" fill="#F8FAFF" stroke="#93C5FD"/>
+        <text class="a3gH" x="52" y="58">PDPA gives (today)</text>
+        <text class="a3gS" x="52" y="88">· Access</text>
+        <text class="a3gS" x="52" y="112">· Correction</text>
+        <text class="a3gS" x="52" y="150">Portability legislated but NOT in force.</text>
+        <text class="a3gS" x="52" y="172">Marketing handled by Do Not Call instead.</text>
+        <rect x="440" y="30" width="410" height="170" rx="14" fill="#1D4ED8"/>
+        <text class="a3gT" x="462" y="58">GDPR adds (no PDPA equivalent)</text>
+        <text class="a3gW" x="462" y="88">· Erasure - delete on request</text>
+        <text class="a3gW" x="462" y="110">· Restriction - freeze processing</text>
+        <text class="a3gW" x="462" y="132">· Object - stop (absolute for marketing)</text>
+        <text class="a3gW" x="462" y="154">· Automated-decision safeguards</text>
+        <text class="a3gW" x="462" y="176">· Portability - a machine-readable copy</text>
+        <rect x="30" y="226" width="14" height="14" rx="3" fill="#CA8A04"/>
+        <text class="a3gN" x="54" y="238">Build for the GDPR set and you cover the PDPA too - the reverse leaves you four rights short.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the rights the PDPA does not give</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The four you have to add<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Erasure (17):</strong> the big one operationally - you must be able to actually delete a person's data, including from the systems it flowed into.</li>
+          <li><strong>Restriction (18):</strong> a "pause" state your systems must support while a dispute runs.</li>
+          <li><strong>Object (21):</strong> a genuine stop - and for direct marketing there is no balancing, it is absolute.</li>
+          <li><strong>Automated decisions (22):</strong> if you make solely automated decisions with significant effects, individuals can demand human review.</li>
+          <li><strong>Portability (20):</strong> legislated in the PDPA (Part 6B) but not yet in force - so under the GDPR you must offer it now, under the PDPA not yet.</li>
+        </ul>
+        <div class="callout tip"><strong>The build rule</strong> Build your request-handling to the GDPR's broader set, and it satisfies the PDPA's narrower one automatically. Building to the PDPA first leaves you four rights short the day the GDPR applies.</div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Where PDPA marketing rights actually live<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>One apparent gap is not really a gap. The GDPR's "right to object to direct marketing" (Art 21) has no PDPA <em>rights</em>-equivalent - but Singapore handles marketing through an entirely separate mechanism: the Do Not Call provisions, a registry-and-consent regime rather than an individual right. So a Singapore company already has a marketing-opt-out muscle; it is just built in a different place. For a dual-regime operation, the practical move is to let a single "stop marketing me" signal satisfy both the GDPR objection right and the PDPA DNC/consent-withdrawal path, rather than running two disconnected suppression lists.</p>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="exercise-1">
+    <div class="section-kicker"><span class="klabel">Exercise 1 of 2</span><h2>Audit your request-handling <span class="tag demo">★ 12 min · pen and paper</span></h2></div>
+    <p class="lede">Find out which regime your current process was built for.</p>
+    <div class="steps">
+      <div class="step"><p>List the data-subject requests your company can actually handle today. Most SG-first companies will list access and correction.</p></div>
+      <div class="step"><p>Now check the four GDPR-only rights: could you erase a person's data everywhere? Freeze it? Honour an objection? Give a human review of an automated decision? Mark each yes/no.</p></div>
+      <div class="step"><p>For every "no", note the systems that would need to change (the CRM, the data warehouse, backups). Erasure usually touches the most.</p></div>
+      <div class="step"><p>Circle the one right you are least ready for. That is your biggest GDPR rights gap - and where the practitioner track (b4) starts.</p></div>
+    </div>
+    <div class="prompt-box good"><span class="label">★ Your rights-gap partner (paste into any chat AI)</span>You are auditing my company's GDPR readiness on data-subject rights. Ask me whether I can handle each of the eight rights (informed, access, rectify, erase, restrict, port, object, automated-decision review). For each "no", tell me which systems likely need to change and roughly how hard it is. Then name my single biggest gap. Educational only. Here is my setup: [describe it]</div>
+  </section>
+
+  <section class="section" id="exercise-2">
+    <div class="section-kicker"><span class="klabel">Exercise 2 of 2</span><h2>Set the one-month drill <span class="tag demo">★ 8 min · your next ops review</span></h2></div>
+    <p class="lede">A right you cannot deliver in a month is a right you do not really have. Pressure-test the clock.</p>
+    <div class="steps">
+      <div class="step"><p>Pick the request type you get most (usually access). Trace who receives it, who acts, and how long each hop takes today.</p></div>
+      <div class="step"><p>Add it up. If the honest total is over a month, you have a compliance gap before anyone even does the work.</p></div>
+      <div class="step"><p>Name a single owner and an intake channel. Requests that bounce between inboxes are how the month gets lost.</p></div>
+      <div class="step"><p>Decide your extension policy: what counts as "complex", and who signs off telling the person within the first month.</p></div>
+    </div>
+    <div class="callout tip"><strong>Why the clock is the real test</strong> The rights are easy to agree to in principle. The month is what makes them operational. A named owner + a clear intake channel is 80% of compliance here.</div>
+  </section>
+
+  <section class="section" id="homework">
+    <div class="section-kicker"><span class="klabel">Homework</span><h2>Before session a4 <span class="tag exercise">◐ 30 min total</span></h2></div>
+    <ul>
+      <li>Finish the rights audit and keep it - session b4 turns the gaps into a request-handling workflow.</li>
+      <li>Trace your access-request clock end to end and note where the month leaks.</li>
+      <li>Check whether your marketing opt-out (PDPA/DNC) and a GDPR objection would hit the same suppression list, or two different ones.</li>
+      <li>Optional: skim GDPR Articles 15 and 17 - access and erasure, the two you will use most.</li>
+    </ul>
+    <div class="callout win"><strong>★ Questions to ask your DPO this week</strong>
+      <ol>
+        <li>Which data-subject requests can we actually fulfil today, and which four GDPR rights are we not built for?</li>
+        <li>Could we truly erase a person's data everywhere, including backups and downstream systems?</li>
+        <li>What is our real end-to-end time to answer an access request - is it under a month?</li>
+        <li>Who owns data-subject requests, and through what single intake channel?</li>
+        <li>Do a GDPR objection and a PDPA marketing opt-out feed one suppression list or two?</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" id="official">
+    <div class="section-kicker"><span class="klabel">Source material</span><h2>Official sources covered</h2></div>
+    <p class="lede">Taught from the GDPR text and reputable comparative guidance. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">GDPR Articles 12-22 (data-subject rights)</span><span class="note">Part 1 · the eight rights + the one-month clock</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">GDPR Article 12(3) (response timeline)</span><span class="note">Part 1 · one month, extendable by two</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">GDPR vs PDPA (rights contrast)</span><span class="note">Part 2 · verified GDPR side; PDPA = access + correction, portability not in force</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="quiz">
+    <div class="section-kicker"><span class="klabel">Check yourself</span><h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2></div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · The standard GDPR response time for a data-subject request is...</p>
+      <button class="qopt" type="button">A · 72 hours</button>
+      <button class="qopt" type="button">B · One month, extendable by up to two further months for complex or numerous requests</button>
+      <button class="qopt" type="button">C · 30 business days, no extension</button>
+      <p class="qwhy">Article 12(3): without undue delay and within one month; extendable by two further months for complex/numerous requests, with notice in the first month.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · A GDPR right that the PDPA does NOT currently give individuals is...</p>
+      <button class="qopt" type="button">A · Access to their data</button>
+      <button class="qopt" type="button">B · Correction of errors</button>
+      <button class="qopt" type="button">C · Erasure (right to be forgotten)</button>
+      <p class="qwhy">Access and correction exist under both. Erasure, restriction, objection and automated-decision rights are GDPR-only; portability is legislated in the PDPA but not in force.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · The safest way to build request-handling for a dual-regime (GDPR + PDPA) company is to...</p>
+      <button class="qopt" type="button">A · Build to the GDPR's broader set of rights - it covers the PDPA's narrower set automatically</button>
+      <button class="qopt" type="button">B · Build to the PDPA first and add GDPR later</button>
+      <button class="qopt" type="button">C · Handle each request type in a separate team</button>
+      <p class="qwhy">The GDPR set is a superset of what the PDPA requires here. Build to the broader standard once, rather than leaving four rights unbuilt.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <section class="cheat" id="cheatsheet">
+    <h3>Leader session 3 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Eight rights</b><span>Informed, access, rectify, erase, restrict, port, object, automated-decision review (Art 12-22).</span></div>
+      <div class="cheat-item"><b>One-month clock</b><span>Respond within a month; extend by up to two more for complex/numerous, with notice in month one.</span></div>
+      <div class="cheat-item"><b>Free by default</b><span>No charge normally; a fee or refusal only for manifestly unfounded or excessive requests.</span></div>
+      <div class="cheat-item"><b>PDPA gives</b><span>Access + correction. That is effectively it, today.</span></div>
+      <div class="cheat-item"><b>GDPR-only rights</b><span>Erasure, restriction, objection, automated-decision. Portability (legislated in PDPA, not in force).</span></div>
+      <div class="cheat-item"><b>Erasure is the hard one</b><span>You must delete everywhere - database, downstream systems, backups.</span></div>
+      <div class="cheat-item"><b>Build rule</b><span>Build to the GDPR set once; it covers the PDPA. The reverse leaves four rights short.</span></div>
+      <div class="cheat-item"><b>Marketing opt-out</b><span>GDPR objection ≈ PDPA Do Not Call. Feed one suppression list, not two.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Leader session 3 of 6 · learn-gdpr-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="../index.html">← All sessions</a> &nbsp;·&nbsp; <a href="a4-controller-processor.html">Next: Controller, processor, DPO, DPIA →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

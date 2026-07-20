@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practitioner session 5 · Records + DPIA - learn GDPR with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-gdpr-with-phoebe</a> / Practitioner session 5 of 8</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn GDPR with Phoebe · Practitioner track · Session 5 of 8</div>
+    <h1>Records <span class="accent">and the DPIA</span></h1>
+    <p class="sub">Two documents do most of the GDPR's paperwork. The record of processing (Article 30) is the inventory every other obligation reads from - what data you hold, why, and where it goes. The data protection impact assessment (Article 35) is the pre-flight check for anything high-risk. This session builds both for Lumina, and dismantles the myth that a small company is exempt from keeping records.</p>
+    <div class="chip-row">
+      <span class="chip level">🟠 Practitioner track</span>
+      <span class="chip audience">DPOs · ops · engineering</span>
+      <span class="chip audience">No jargon</span>
+      <span class="chip time">Hands-on</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:3">3-18 · Concepts</span>
+      <span class="a3" style="flex:5">18-40 · Build-along</span>
+      <span class="a4" style="flex:1">40-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section" id="intro">
+    <div class="section-kicker"><span class="klabel">Part 0</span><h2>The inventory everything else reads from</h2></div>
+    <p class="lede">Almost every GDPR task you have learned - answering a DSAR, mapping transfers, responding to a breach - starts with the same question: what data do we hold, and where? The record of processing is where that lives. It is the least glamorous artifact and the most load-bearing: build it once and every other obligation gets faster. The DPIA is its forward-looking cousin: before you launch something risky, you assess the risk on paper first.</p>
+    <div class="callout tip"><strong>Read this first</strong> Educational, not legal advice. Verify against the Regulation text and get advice for real DPIAs.</div>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - full depth after class</span>
+      <span class="pill peach">★ Try it now</span>
+      <span class="pill inkpill">Sources covered at the end</span>
+    </div>
+    <div class="callout win"><strong>★ What you build today</strong> A record-of-processing entry you can replicate across your systems, the truth about the "small company" exemption, the test for when a DPIA is required, and Lumina's first records plus a DPIA call on a new feature.</div>
+  </section>
+
+  <section class="section" id="ropa">
+    <div class="section-kicker"><span class="klabel">Part 1 · covers Article 30</span><h2>The record of processing <span class="tag concept">7 min live</span></h2></div>
+    <p class="lede">A record of processing (often called a ROPA) is a structured list: for each processing activity, what data, why, who gets it, where it goes, and how long you keep it. Both controllers and processors must keep one.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A record-of-processing entry with its fields: activity, purpose, data categories, recipients, transfers, retention">
+        <style>
+          .b5rT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .b5rW { font: 400 11px Inter, sans-serif; fill: #1E293B; }
+          .b5rH { font: 700 14px Inter, sans-serif; fill: #1E293B; }
+          .b5rN { font: 600 14px Inter, sans-serif; fill: #422006; }
+        </style>
+        <rect x="30" y="34" width="820" height="34" rx="8" fill="#1D4ED8"/><text class="b5rT" x="48" y="56">One row per processing activity - e.g. "customer accounts"</text>
+        <rect x="30" y="80" width="130" height="90" rx="8" fill="#EFF6FF" stroke="#93C5FD"/><text class="b5rW" x="44" y="120">Purpose</text>
+        <rect x="172" y="80" width="130" height="90" rx="8" fill="#EFF6FF" stroke="#93C5FD"/><text class="b5rW" x="186" y="120">Data categories</text>
+        <rect x="314" y="80" width="130" height="90" rx="8" fill="#EFF6FF" stroke="#93C5FD"/><text class="b5rW" x="328" y="120">Recipients</text>
+        <rect x="456" y="80" width="130" height="90" rx="8" fill="#EFF6FF" stroke="#93C5FD"/><text class="b5rW" x="470" y="120">Transfers</text>
+        <rect x="598" y="80" width="130" height="90" rx="8" fill="#EFF6FF" stroke="#93C5FD"/><text class="b5rW" x="612" y="120">Retention</text>
+        <rect x="740" y="80" width="110" height="90" rx="8" fill="#EFF6FF" stroke="#93C5FD"/><text class="b5rW" x="754" y="120">Lawful basis</text>
+        <rect x="30" y="210" width="14" height="14" rx="3" fill="#CA8A04"/>
+        <text class="b5rN" x="54" y="222">The ROPA is the master inventory - a DSAR search, a transfer map, and a breach scope all read from it.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - a record-of-processing entry</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The "small company is exempt" myth<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Article 30(5) seems to exempt organisations with <strong>fewer than 250 employees</strong> - and teams stop reading there. But the exemption falls away if any one of three things is true, and one almost always is:</p>
+        <ul>
+          <li>the processing is <strong>likely to result in a risk</strong> to people's rights; or</li>
+          <li>the processing is <strong>not occasional</strong> (i.e. it is regular, routine - which a customer database is); or</li>
+          <li>it includes <strong>special-category</strong> or criminal data.</li>
+        </ul>
+        <p>Because "not occasional" catches any regular business processing, the exemption almost never applies to a real operating company. Treat records as required, and the exemption as a rare edge case.</p>
+        <div class="prompt-box good"><span class="label">★ Try it now (any chat AI)</span>Explain the GDPR Article 30 record-of-processing obligation and its under-250-employees exemption - including the three carve-outs that usually cancel the exemption for a normal business. Then list the fields a good record entry should contain.</div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Why the ROPA pays for itself<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>DSARs get fast:</strong> "where does this person's data live" is answered by the ROPA, not by asking around.</li>
+          <li><strong>Transfers get visible:</strong> the transfers column is your cross-border map from session a6/b6.</li>
+          <li><strong>Breaches get scoped:</strong> when something leaks, the ROPA tells you what was in the affected system and whose data it held.</li>
+          <li><strong>It is the accountability evidence:</strong> Article 5(2) says you must be able to <em>demonstrate</em> compliance - the ROPA is a large part of that demonstration.</li>
+        </ul>
+        <div class="callout example"><span class="ex-pill">Real world</span><p><strong>Lumina builds its ROPA.</strong> Lumina, well under 250 employees, assumed it was exempt - until it hit the "not occasional" carve-out (its processing is continuous). It built a ROPA with rows for accounts, billing, support, and analytics. The first payoff came a week later: a DSAR that used to mean a scramble was answered by reading four rows.</p></div>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="dpia">
+    <div class="section-kicker"><span class="klabel">Part 2 · covers Article 35</span><h2>When you need a DPIA <span class="tag concept">8 min live</span></h2></div>
+    <p class="lede">A DPIA is a structured risk assessment you run <em>before</em> starting a high-risk processing activity. The trick is knowing when it is required - the GDPR gives a general test plus three clear examples.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="DPIA trigger: high-risk processing, with three mandatory examples - profiling with significant effects, large-scale special-category data, large-scale public monitoring">
+        <style>
+          .b5dT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .b5dW { font: 400 11px Inter, sans-serif; fill: #DBEAFE; }
+          .b5dI { font: 700 13px Inter, sans-serif; fill: #1E293B; }
+          .b5dN { font: 600 14px Inter, sans-serif; fill: #422006; }
+        </style>
+        <rect x="30" y="40" width="240" height="60" rx="12" fill="#1E3A8A"/><text class="b5dI" x="48" y="66" style="fill:#FFFFFF">Likely HIGH risk?</text><text class="b5dW" x="48" y="86">then a DPIA is required</text>
+        <rect x="320" y="30" width="530" height="40" rx="8" fill="#1D4ED8"/><text class="b5dT" x="336" y="55">Example 1 · systematic extensive profiling with legal/significant effects</text>
+        <rect x="320" y="80" width="530" height="40" rx="8" fill="#3B82F6"/><text class="b5dT" x="336" y="105">Example 2 · large-scale special-category or criminal data</text>
+        <rect x="320" y="130" width="530" height="40" rx="8" fill="#1D4ED8"/><text class="b5dT" x="336" y="155">Example 3 · large-scale systematic monitoring of a public area</text>
+        <rect x="30" y="210" width="14" height="14" rx="3" fill="#CA8A04"/>
+        <text class="b5dN" x="54" y="222">Do the DPIA BEFORE the processing starts - it is a pre-flight check, not a post-mortem.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the DPIA trigger and its three examples</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The trigger test<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>General rule:</strong> a DPIA is required where processing is likely to result in a <strong>high risk</strong> to people's rights and freedoms - especially with new technologies.</li>
+          <li><strong>Three mandatory examples (Art 35(3)):</strong> systematic and extensive profiling by automated means with legal or similarly significant effects; large-scale processing of special-category or criminal data; large-scale systematic monitoring of a publicly accessible area.</li>
+          <li><strong>Timing:</strong> before you start the processing. A DPIA done after launch is just documentation of a risk you already took.</li>
+          <li><strong>What it contains:</strong> a description of the processing, an assessment of necessity and proportionality, the risks to individuals, and the measures to mitigate them.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The DPIA as a design tool, not a form<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>It is tempting to treat the DPIA as a compliance form you fill in to get sign-off. Done well, it is a design tool that changes what you build. Because it forces you to state the risk to individuals and the measures that reduce it <em>before</em> you ship, it surfaces the "do we even need to collect that?" question at the point where the answer is still cheap to act on. A profiling feature that looked fine in a product spec often looks different once a DPIA makes you write down what happens to someone the model gets wrong. For a Singapore company, the DPIA also doubles as useful evidence under the PDPA's accountability expectations - the same assessment that satisfies Article 35 shows you thought about risk before processing, which is exactly what a regulator on either side wants to see. Run it early, let it change the design, and keep it.</p>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="exercise">
+    <div class="section-kicker"><span class="klabel">Build-along · take it further</span><h2>Draft Lumina's records + a DPIA call <span class="tag demo">★ 10 min · pen and paper</span></h2></div>
+    <p class="lede">Build the two artifacts on the running case.</p>
+    <div class="steps">
+      <div class="step"><p><strong>Three ROPA rows.</strong> For Lumina's accounts, analytics, and support, fill the fields: purpose, data categories, recipients, transfers, retention, lawful basis.</p></div>
+      <div class="step"><p><strong>Check the exemption.</strong> Confirm Lumina cannot rely on the under-250 exemption (its processing is "not occasional"). Write the one-line reason.</p></div>
+      <div class="step"><p><strong>The DPIA call.</strong> Lumina plans a feature that profiles users to auto-decide their pricing tier. Run the trigger test - does it need a DPIA? (Automated profiling with a significant effect - yes.)</p></div>
+      <div class="step"><p><strong>Sketch the DPIA.</strong> In four lines: the processing, its necessity, the risk to a mis-profiled user, and one mitigation (e.g. a human-review option).</p></div>
+    </div>
+    <div class="callout win"><strong>★ Lumina after b5</strong> Lumina has a living record of processing and a DPIA habit for risky features. That inventory is exactly what the next session needs: b6 reads the transfers column to fix Lumina's cross-border flows properly.</div>
+  </section>
+
+  <section class="section" id="homework">
+    <div class="section-kicker"><span class="klabel">Homework</span><h2>Before session b6 <span class="tag exercise">◐ 40 min total</span></h2></div>
+    <ul>
+      <li>Start your real record of processing - one row per major activity, with all six fields. Even a spreadsheet beats nothing.</li>
+      <li>Confirm whether the Article 30 small-org exemption applies to you (almost certainly not - "not occasional").</li>
+      <li>Identify one planned or recent feature that would need a DPIA under the trigger test, and note whether one was done.</li>
+      <li>Read: GDPR Articles 30 and 35 - records and the impact assessment.</li>
+    </ul>
+  </section>
+
+  <section class="section" id="official">
+    <div class="section-kicker"><span class="klabel">Source material</span><h2>Official sources covered</h2></div>
+    <p class="lede">Taught from the GDPR text. This page covers ~80% of the working content on records and DPIAs.</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">GDPR Article 30 (records of processing)</span><span class="note">Part 1 · the fields + the 250-employee carve-outs</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">GDPR Article 35 (DPIA)</span><span class="note">Part 2 · the high-risk trigger + three mandatory examples</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">GDPR Article 5(2) (accountability)</span><span class="note">Part 1 · records as the "demonstrate compliance" evidence</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="quiz">
+    <div class="section-kicker"><span class="klabel">Check yourself</span><h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2></div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · Your company has 40 employees. Are you exempt from keeping a record of processing?</p>
+      <button class="qopt" type="button">A · Yes, always - under 250 employees</button>
+      <button class="qopt" type="button">B · Yes, unless you are a bank</button>
+      <button class="qopt" type="button">C · Almost never - the exemption falls away if processing is "not occasional", which routine business processing is</button>
+      <p class="qwhy">Article 30(5)'s under-250 exemption is cancelled by any of three carve-outs; "not occasional" (regular processing) catches nearly every operating business, so records are effectively required.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">2 · A DPIA is required when processing is...</p>
+      <button class="qopt" type="button">A · Likely to result in a high risk to people's rights - e.g. large-scale profiling with significant effects</button>
+      <button class="qopt" type="button">B · Done on more than 250 people</button>
+      <button class="qopt" type="button">C · Ever done at all</button>
+      <p class="qwhy">Article 35: a DPIA is needed for high-risk processing, with three mandatory examples including systematic extensive profiling with significant effects and large-scale special-category data.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">3 · When should a DPIA be carried out?</p>
+      <button class="qopt" type="button">A · After launch, to document what happened</button>
+      <button class="qopt" type="button">B · Before the processing starts - it is a pre-flight risk check</button>
+      <button class="qopt" type="button">C · Only if a regulator asks</button>
+      <p class="qwhy">A DPIA is done before the high-risk processing begins, so it can actually change the design. Done after launch, it merely records a risk already taken.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <section class="cheat" id="cheatsheet">
+    <h3>Practitioner session 5 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Record of processing</b><span>One row per activity: purpose, data categories, recipients, transfers, retention, lawful basis.</span></div>
+      <div class="cheat-item"><b>Controllers AND processors</b><span>Both must keep records (Art 30(1) and 30(2)).</span></div>
+      <div class="cheat-item"><b>The exemption myth</b><span>Under-250 exemption dies if processing risks rights, is "not occasional", or is special-category. Almost always cancelled.</span></div>
+      <div class="cheat-item"><b>The ROPA pays off</b><span>It powers DSAR search, the transfer map, breach scoping, and accountability evidence.</span></div>
+      <div class="cheat-item"><b>DPIA trigger</b><span>High-risk processing. Three examples: profiling with significant effects, large-scale special data, large-scale public monitoring.</span></div>
+      <div class="cheat-item"><b>DPIA timing</b><span>Before you start - it is a pre-flight check, not a post-mortem.</span></div>
+      <div class="cheat-item"><b>DPIA contents</b><span>Describe the processing, assess necessity, identify risks, set mitigations.</span></div>
+      <div class="cheat-item"><b>Both are evidence</b><span>Article 5(2) accountability: you must be able to demonstrate compliance. These are how.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Practitioner session 5 of 8 · learn-gdpr-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="../index.html">← All sessions</a> &nbsp;·&nbsp; <a href="b6-transfers-practice.html">Next: Transfers in practice →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

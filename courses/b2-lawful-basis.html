@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practitioner session 2 · Picking a lawful basis - learn GDPR with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-gdpr-with-phoebe</a> / Practitioner session 2 of 8</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn GDPR with Phoebe · Practitioner track · Session 2 of 8</div>
+    <h1>Picking a lawful basis <span class="accent">(and documenting it)</span></h1>
+    <p class="sub">Under the GDPR you cannot process personal data at all without a lawful basis - one of six. The mistake teams make is defaulting to consent for everything, when consent is often the weakest and most fragile choice. This session shows how to match the right basis to each purpose, why consent and legitimate interests are the two you will use most, and how to document the choice so it holds up. Lumina picks its bases here.</p>
+    <div class="chip-row">
+      <span class="chip level">🟢 Practitioner track</span>
+      <span class="chip audience">DPOs · marketers · ops</span>
+      <span class="chip audience">Live checker included</span>
+      <span class="chip time">Easy</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:3">3-18 · Concepts</span>
+      <span class="a3" style="flex:5">18-40 · Build-along</span>
+      <span class="a4" style="flex:1">40-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section" id="intro">
+    <div class="section-kicker"><span class="klabel">Part 0</span><h2>No basis, no processing</h2></div>
+    <p class="lede">The GDPR's rule is blunt: every use of personal data needs one of six lawful bases, chosen before you process and recorded. This is a bigger shift than it sounds for a team coming from the PDPA's consent-first world, where "did they agree?" was the main question. Under the GDPR, consent is just one of six doors - and often not the best one, because it can be withdrawn and it is the easiest to get wrong. This session makes the choice concrete.</p>
+    <div class="callout tip"><strong>Read this first</strong> Educational, not legal advice. The checker is a teaching model of Article 6 - read the Regulation and get advice for real decisions.</div>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - full depth after class</span>
+      <span class="pill peach">★ Try it now</span>
+      <span class="pill inkpill">Sources covered at the end</span>
+    </div>
+    <div class="callout win"><strong>★ What you build today</strong> A working method for matching a lawful basis to a purpose, a clear read on consent vs legitimate interests, hands-on time with the basis-mode checker, and the habit of documenting the basis so it survives scrutiny.</div>
+  </section>
+
+  <section class="section" id="six">
+    <div class="section-kicker"><span class="klabel">Part 1 · covers Article 6</span><h2>Match the basis to the purpose <span class="tag concept">7 min live</span></h2></div>
+    <p class="lede">You do not pick a basis you like; you pick the one that fits what you are actually doing. Most business processing lands on one of three: contract, legitimate interests, or consent.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Six lawful bases as doors: consent, contract, legal obligation, vital interests, public task, legitimate interests - pick the one that fits the purpose">
+        <style>
+          .b2bT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .b2bW { font: 400 11px Inter, sans-serif; fill: #DBEAFE; }
+          .b2bN { font: 600 14px Inter, sans-serif; fill: #422006; }
+        </style>
+        <rect x="30" y="40" width="130" height="120" rx="12" fill="#1D4ED8"/><text class="b2bT" x="46" y="72">Consent</text><text class="b2bW" x="46" y="94">marketing,</text><text class="b2bW" x="46" y="110">optional extras</text>
+        <rect x="172" y="40" width="130" height="120" rx="12" fill="#1E3A8A"/><text class="b2bT" x="188" y="72">Contract</text><text class="b2bW" x="188" y="94">deliver what</text><text class="b2bW" x="188" y="110">they asked for</text>
+        <rect x="314" y="40" width="130" height="120" rx="12" fill="#3B82F6"/><text class="b2bT" x="330" y="72">Legal</text><text class="b2bT" x="330" y="90">obligation</text><text class="b2bW" x="330" y="112">tax, AML</text>
+        <rect x="456" y="40" width="130" height="120" rx="12" fill="#3B82F6"/><text class="b2bT" x="472" y="72">Vital</text><text class="b2bT" x="472" y="90">interests</text><text class="b2bW" x="472" y="112">life/safety</text>
+        <rect x="598" y="40" width="130" height="120" rx="12" fill="#3B82F6"/><text class="b2bT" x="614" y="72">Public</text><text class="b2bT" x="614" y="90">task</text><text class="b2bW" x="614" y="112">official duty</text>
+        <rect x="740" y="40" width="110" height="120" rx="12" fill="#1D4ED8"/><text class="b2bT" x="756" y="72">Legit.</text><text class="b2bT" x="756" y="90">interests</text><text class="b2bW" x="756" y="112">+ balance</text>
+        <rect x="30" y="210" width="14" height="14" rx="3" fill="#CA8A04"/>
+        <text class="b2bN" x="54" y="222">Consent, contract, and legitimate interests do most business processing. Pick per purpose, then record it.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the six lawful bases (Art 6)</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The three you will actually use<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Contract (6(1)(b)):</strong> processing genuinely necessary to deliver the service the person asked for. You do not need consent to use an address to ship the order they bought.</li>
+          <li><strong>Consent (6(1)(a)):</strong> for things that are not necessary to the service - marketing, optional analytics. It must be a real opt-in and can be withdrawn.</li>
+          <li><strong>Legitimate interests (6(1)(f)):</strong> a flexible basis for genuine business needs like fraud prevention or security - but only if you can show a balancing test.</li>
+          <li>The other three - legal obligation, vital interests, public task - are narrower and situational.</li>
+        </ul>
+        <div class="callout tip"><strong>The anti-pattern</strong> Do not bundle everything under one consent checkbox. If processing is necessary for the contract, consent is the wrong (and fragile) basis - the person could withdraw it and you would still need to run the service.</div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>★ Build-along: pick a basis<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Set the checker to a purpose and read the suggested basis and its catch. Try "deliver a service the person asked for" (contract), "send marketing" (consent), and "fraud prevention" (legitimate interests) - and note how special-category data always adds an Article 9 condition on top.</p>
+        <div class="gdprbox" data-mode="basis" data-caption="Pick a purpose - the checker names the likely Article 6 basis and the caveat (consent standard, the balancing test, or an Article 9 condition)."></div>
+        <div class="callout tip"><strong>Honesty note</strong> The checker is a teaching model of Article 6. It suggests the typical basis for a purpose; a real decision depends on your specific facts. Confirm with the Regulation and advice.</div>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="consent-li">
+    <div class="section-kicker"><span class="klabel">Part 2 · consent vs legitimate interests</span><h2>The two that need care <span class="tag concept">8 min live</span></h2></div>
+    <p class="lede">Consent and legitimate interests are the two bases teams reach for most - and the two they most often get wrong. Each has a bar you must clear.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Consent needs a real opt-in and is withdrawable; legitimate interests needs a three-part balancing assessment">
+        <style>
+          .b2cT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .b2cW { font: 400 12px Inter, sans-serif; fill: #DBEAFE; }
+          .b2cN { font: 600 14px Inter, sans-serif; fill: #422006; }
+        </style>
+        <rect x="30" y="40" width="390" height="150" rx="14" fill="#1D4ED8"/>
+        <text class="b2cT" x="52" y="70">Consent (Art 4(11) + Art 7)</text>
+        <text class="b2cW" x="52" y="98">Freely given, specific, informed,</text>
+        <text class="b2cW" x="52" y="118">unambiguous - a clear opt-in.</text>
+        <text class="b2cW" x="52" y="146">Demonstrable. As easy to withdraw</text>
+        <text class="b2cW" x="52" y="166">as to give. Not retroactive.</text>
+        <rect x="460" y="40" width="390" height="150" rx="14" fill="#1E3A8A"/>
+        <text class="b2cT" x="482" y="70">Legitimate interests (Art 6(1)(f))</text>
+        <text class="b2cW" x="482" y="98">Document a 3-part LIA:</text>
+        <text class="b2cW" x="482" y="118">1 · identify the legitimate interest</text>
+        <text class="b2cW" x="482" y="138">2 · show it is necessary</text>
+        <text class="b2cW" x="482" y="158">3 · balance against the person's rights</text>
+        <rect x="30" y="210" width="14" height="14" rx="3" fill="#CA8A04"/>
+        <text class="b2cN" x="54" y="222">Consent = a real opt-in you can prove. Legitimate interests = a balancing test you can show.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - consent vs legitimate interests</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The consent standard + the LIA<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Consent</strong> must be freely given, specific, informed, and unambiguous (Art 4(11)) - a clear affirmative action, never a pre-ticked box or silence. You must be able to <em>demonstrate</em> it (Art 7), and it must be as easy to withdraw as to give.</li>
+          <li><strong>Legitimate interests</strong> is the only basis with a built-in "except where overridden" clause, so it needs a balancing test - documented as a three-part Legitimate Interests Assessment (LIA): the interest, its necessity, and the balance against the person's rights. (LIA is the regulator's method name, not a statutory term.)</li>
+          <li><strong>Special-category data</strong> (health, biometrics, beliefs) needs an Article 9 condition <em>on top</em> of your Article 6 basis - an Article 6 basis alone is not enough.</li>
+        </ul>
+        <div class="callout example"><span class="ex-pill">Real world</span><p><strong>Lumina's analytics call.</strong> Lumina wanted "consent" for its product analytics, then realised most users ignore the banner - fragile consent. It switched routine, privacy-respecting analytics to legitimate interests with a documented LIA, and kept consent only for genuine marketing. Fewer banners, stronger footing.</p></div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Why you cannot swap bases later<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>A quiet rule that trips teams up: you should choose your lawful basis before you process, and you cannot casually switch it afterwards to dodge an inconvenience. If you told people you rely on consent and they withdraw it, you cannot then say "actually it was legitimate interests all along" to keep processing. The basis you picked and documented is the one you are held to. This is why documentation is not bureaucracy: the record of which basis, for which purpose, and why, is what lets you answer a regulator or a data-subject cleanly - and what stops you quietly relying on consent for something that should have had a firmer basis from the start. Pick deliberately, write it down, and treat a change of basis as a real decision with its own notice to the people affected.</p>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="exercise">
+    <div class="section-kicker"><span class="klabel">Build-along · take it further</span><h2>Assign Lumina's bases <span class="tag demo">★ 10 min · the checker above</span></h2></div>
+    <p class="lede">Give each of Lumina's real purposes a basis and note the catch.</p>
+    <div class="steps">
+      <div class="step"><p><strong>Account + billing.</strong> Processing to run the service the customer signed up for. Which basis? (Contract.) Note that no consent is needed for what the service requires.</p></div>
+      <div class="step"><p><strong>Product analytics.</strong> Run it through the checker. Consent or legitimate interests? If legitimate interests, sketch the three-part LIA in a line each.</p></div>
+      <div class="step"><p><strong>Marketing emails.</strong> The checker points to consent. Write what a compliant opt-in looks like (clear, specific, withdrawable) versus a pre-ticked box.</p></div>
+      <div class="step"><p><strong>Any health/sensitive data?</strong> If Lumina touched special-category data, note that it needs an Article 9 condition on top - and mark it as a get-advice item.</p></div>
+    </div>
+    <div class="callout win"><strong>★ Lumina after b2</strong> Lumina has a lawful basis recorded for each purpose - contract for the service, legitimate interests (with an LIA) for analytics, consent for marketing. Next, in b3, we tell people all of this in a privacy notice, because a lawful basis you never disclosed is only half done.</div>
+  </section>
+
+  <section class="section" id="homework">
+    <div class="section-kicker"><span class="klabel">Homework</span><h2>Before session b3 <span class="tag exercise">◐ 40 min total</span></h2></div>
+    <ul>
+      <li>List your real processing purposes and assign each a lawful basis using the checker; write one line of justification per purpose.</li>
+      <li>For any legitimate-interests purpose, draft the three-part LIA (interest, necessity, balance).</li>
+      <li>Find one place you currently rely on consent that would be firmer as contract or legitimate interests, and note the switch.</li>
+      <li>Read: GDPR Articles 6 and 7 - the bases and the consent conditions.</li>
+    </ul>
+  </section>
+
+  <section class="section" id="official">
+    <div class="section-kicker"><span class="klabel">Source material</span><h2>Official sources covered</h2></div>
+    <p class="lede">Taught from the GDPR text. This page covers ~80% of the working content on lawful bases.</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">GDPR Article 6 (lawful bases)</span><span class="note">Part 1 · the six + matching to purpose (basis-mode checker)</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">GDPR Articles 4(11) &amp; 7 (consent standard)</span><span class="note">Part 2 · real opt-in, demonstrable, withdrawable</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Legitimate interests + Article 9 (special data)</span><span class="note">Part 2 · the LIA (regulator method) + the Art 9 add-on</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="quiz">
+    <div class="section-kicker"><span class="klabel">Check yourself</span><h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2></div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · You process a customer's address to ship the product they bought. The best lawful basis is...</p>
+      <button class="qopt" type="button">A · Consent</button>
+      <button class="qopt" type="button">B · Legal obligation</button>
+      <button class="qopt" type="button">C · Contract - it is necessary to deliver what they asked for</button>
+      <p class="qwhy">Contract (Art 6(1)(b)) fits processing necessary to perform the service. Using consent here is fragile: they could withdraw it and you would still need the address to fulfil the order.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">2 · To rely on legitimate interests, you must...</p>
+      <button class="qopt" type="button">A · Get the person's signature</button>
+      <button class="qopt" type="button">B · Document a balancing test (an LIA): the interest, its necessity, and the balance against the person's rights</button>
+      <button class="qopt" type="button">C · Notify the regulator in advance</button>
+      <p class="qwhy">Legitimate interests (6(1)(f)) is the only basis with a built-in balancing clause, so you must run and record the three-part assessment weighing your interest against the person's rights.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · To process special-category data (e.g. health), an Article 6 lawful basis is...</p>
+      <button class="qopt" type="button">A · Not enough on its own - you also need an Article 9 condition</button>
+      <button class="qopt" type="button">B · All you need</button>
+      <button class="qopt" type="button">C · Not required at all</button>
+      <p class="qwhy">Special-category data is prohibited unless an Article 9(2) condition applies, on top of your Article 6 basis. Two locks, not one.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <section class="cheat" id="cheatsheet">
+    <h3>Practitioner session 2 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>No basis, no processing</b><span>Every use of personal data needs one of six lawful bases, chosen up front and recorded.</span></div>
+      <div class="cheat-item"><b>The workhorses</b><span>Contract (what the service needs) · legitimate interests (genuine business need) · consent (optional extras).</span></div>
+      <div class="cheat-item"><b>Consent standard</b><span>Freely given, specific, informed, unambiguous. Demonstrable. As easy to withdraw as to give.</span></div>
+      <div class="cheat-item"><b>Don't default to consent</b><span>If it is necessary for the contract, consent is the wrong, fragile choice.</span></div>
+      <div class="cheat-item"><b>Legitimate interests = LIA</b><span>Document the interest, its necessity, and the balance against the person's rights.</span></div>
+      <div class="cheat-item"><b>Special data = Art 9 too</b><span>Health/biometrics/beliefs need an Article 9 condition on top of the Article 6 basis.</span></div>
+      <div class="cheat-item"><b>Document it</b><span>Which basis, which purpose, and why. That record is what survives scrutiny.</span></div>
+      <div class="cheat-item"><b>Do not swap later</b><span>You are held to the basis you picked and disclosed; changing it is a real decision.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Practitioner session 2 of 8 · learn-gdpr-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="../index.html">← All sessions</a> &nbsp;·&nbsp; <a href="b3-privacy-notices.html">Next: Privacy notices + transparency →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/gdpr-live.js?v=1"></script>
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

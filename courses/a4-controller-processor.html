@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leader session 4 · Controller, processor, DPO, DPIA - learn GDPR with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-gdpr-with-phoebe</a> / Leader session 4 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn GDPR with Phoebe · Leader track · Session 4 of 6</div>
+    <h1>Controller, processor, <span class="accent">DPO, DPIA</span></h1>
+    <p class="sub">Every vendor you sign either takes instructions from you or gives them. That single distinction - controller or processor - decides who carries the legal duty, who signs which contract, and who answers when something goes wrong. This session teaches you to place your own company and each of your vendors on the right side of that line, when a written data processing agreement is mandatory, and the two roles the GDPR sometimes forces you to fill: a Data Protection Officer and a Data Protection Impact Assessment.</p>
+    <div class="chip-row">
+      <span class="chip level">🟡 Leader track</span>
+      <span class="chip audience">Leaders: C-level · managers · DPOs</span>
+      <span class="chip audience">No jargon</span>
+      <span class="chip time">Medium</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-20 · Concepts</span>
+      <span class="a3" style="flex:4">20-40 · Exercises</span>
+      <span class="a4" style="flex:1">40-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Why roles decide accountability</h2>
+    </div>
+    <p class="lede">The GDPR does not treat every company that touches personal data the same way. It splits them into two roles with very different duties. The controller decides why and how data is used and carries the heavy accountability. The processor only acts on the controller's instructions. Get the labelling wrong and you either sign the wrong contract, accept a duty that is not yours, or - more dangerously - miss one that is. For a Singapore SaaS with a stack of cloud vendors, this is the hour that turns your vendor list into a clean map of who owes what.</p>
+    <div class="callout tip">
+      <strong>Read this first</strong>
+      This course is educational, not legal advice. The GDPR is a large regulation shaped by case law, and every real situation has its own facts. Verify against the Regulation text and your data protection authority, and get proper advice before you act.
+    </div>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">★ Try it now prompt</span>
+      <span class="pill inkpill">Sources covered at the end</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you walk out with today</strong>
+      The controller-versus-processor test you can run on any vendor, the key terms every Article 28 data processing agreement must contain, the narrow set of cases where a DPO is mandatory (and why the PDPA is different), the three situations that force a DPIA, and questions to put to your DPO and legal counsel this week.
+    </div>
+  </section>
+
+  <section class="section" id="roles">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers Articles 4(7), 4(8), 28</span>
+      <h2>Who is responsible <span class="tag concept">9 min live</span></h2>
+    </div>
+    <p class="lede">Almost every duty in the GDPR is addressed to "the controller". So the first question in any data relationship is simple: who is the controller, and who is merely processing on their behalf? The answer is not about size or seniority - it is about who decides.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The controller decides the purposes and means of processing and instructs the processor, who acts only on those instructions; a binding Article 28 data processing agreement sits between them">
+        <style>
+          .a4rT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .a4rW { font: 400 12px Inter, sans-serif; fill: #DBEAFE; }
+          .a4rI { font: 700 14px Inter, sans-serif; fill: #1E293B; }
+          .a4rS { font: 400 12px Inter, sans-serif; fill: #334155; }
+          .a4rN { font: 600 14px Inter, sans-serif; fill: #422006; }
+          .a4rArr { stroke: #CBD5E1; stroke-width: 2.5; fill: none; marker-end: url(#a4rAh); }
+        </style>
+        <defs>
+          <marker id="a4rAh" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto">
+            <path d="M0,0 L6,3 L0,6" fill="none" stroke="#94A3B8" stroke-width="1.6"/>
+          </marker>
+        </defs>
+        <rect x="40" y="110" width="250" height="80" rx="14" fill="#1E3A8A"/>
+        <text class="a4rT" x="60" y="140">Controller (Art 4(7))</text>
+        <text class="a4rW" x="60" y="162">decides the PURPOSES</text>
+        <text class="a4rW" x="60" y="180">and MEANS of processing</text>
+        <rect x="590" y="110" width="250" height="80" rx="14" fill="#3B82F6"/>
+        <text class="a4rT" x="610" y="140">Processor (Art 4(8))</text>
+        <text class="a4rW" x="610" y="162">acts ONLY on the</text>
+        <text class="a4rW" x="610" y="180">controller's instructions</text>
+        <rect x="345" y="60" width="190" height="46" rx="10" fill="#EFF6FF" stroke="#93C5FD"/>
+        <text class="a4rI" x="365" y="82">Art 28 contract</text>
+        <text class="a4rS" x="365" y="98">the binding DPA</text>
+        <line class="a4rArr" x1="292" y1="140" x2="586" y2="140"/>
+        <text class="a4rS" x="360" y="132">instructions →</text>
+        <line class="a4rArr" x1="440" y1="108" x2="290" y2="120"/>
+        <line class="a4rArr" x1="440" y1="108" x2="590" y2="120"/>
+        <rect x="30" y="256" width="14" height="14" rx="3" fill="#CA8A04"/>
+        <text class="a4rN" x="54" y="268">Whoever decides the WHY and the HOW is the controller - that is where the duty lives.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - controller decides, processor acts, an Article 28 contract binds them</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Controller or processor - the deciding test<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The labels turn on one question: who decides the purposes and the means of the processing? Decide those, and you are the controller, whatever your job title or company size.</p>
+        <ul>
+          <li><strong>Controller (Art 4(7)).</strong> The party that determines the purposes AND means of processing - the why and the how. Your company is the controller for your own customer data: you decided to collect it and what to do with it.</li>
+          <li><strong>Processor (Art 4(8)).</strong> The party that processes personal data on the controller's behalf, acting only on documented instructions. Your cloud host, your email-sending service, your payroll bureau are usually processors of your customer data.</li>
+          <li><strong>The heavy duties sit with the controller.</strong> Lawful basis, transparency, responding to individuals - all addressed to the controller. A processor that starts deciding purposes for itself stops being a processor and becomes a controller, with all that implies.</li>
+        </ul>
+        <div class="prompt-box good"><span class="label">★ Try it now (any chat AI)</span>I run a Singapore SaaS company. I will name a vendor and what they do with our data. Ask me who decided the purpose and the means for that processing, then tell me whether we are the controller and the vendor is a processor, or something else. Start by asking me to name the first vendor.</div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The Article 28 data processing agreement<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>When you hand personal data to a processor, Article 28 requires a binding written contract - the data processing agreement, or DPA. It is not optional paperwork; it is the legal instrument that keeps a processor a processor.</p>
+        <ul>
+          <li><strong>What it must say.</strong> The processor may process only on your documented instructions; staff are bound to confidentiality; Article 32 security measures are in place; sub-processors are controlled; the processor assists you with individuals' rights, breach notification, and DPIAs; data is deleted or returned at the end; and you may audit.</li>
+          <li><strong>"Sufficient guarantees".</strong> A controller must use only processors that provide sufficient guarantees they can meet the GDPR. Choosing a cheap vendor with no security posture is itself a compliance failure.</li>
+          <li><strong>Why leaders care.</strong> If a processor causes a breach and you had no proper DPA, the gap is yours. The DPA is how accountability flows correctly down your supply chain.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>You are usually the controller for your customers<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The most common labelling error a growing company makes is assuming a big-name cloud vendor is the controller because it is larger and more sophisticated. Size is irrelevant. For the personal data you collected from your own customers, <strong>you</strong> decided the purpose and the means, so you are the controller - and the cloud vendor, however large, is your processor for that data. The vendor may of course be a controller for its own separate purposes (its billing relationship with you, its own account data), which is why real relationships can carry both labels at once for different data sets. The discipline is to label per data flow, not per company. Do this once, cleanly, and the rest of the GDPR tells you exactly which duties are yours.</p>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="dpo-dpia">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · covers Articles 30, 35, 37</span>
+      <h2>DPO and DPIA - when you must <span class="tag concept">8 min live</span></h2>
+    </div>
+    <p class="lede">Two GDPR obligations only bite in defined situations, and leaders routinely over- or under-apply them. A Data Protection Officer is mandatory only in narrow cases. A Data Protection Impact Assessment is required only when processing is high-risk. Knowing the triggers stops you both from missing a duty and from inventing one.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A DPO is mandatory in three cases - public authority, large-scale systematic monitoring, or large-scale special-category data; a DPIA is required for three high-risk examples - extensive profiling with significant effects, large-scale special data, or large-scale monitoring of a public area">
+        <style>
+          .a4dT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .a4dW { font: 400 11.5px Inter, sans-serif; fill: #DBEAFE; }
+          .a4dH { font: 700 14px Inter, sans-serif; fill: #1E293B; }
+          .a4dS { font: 400 12px Inter, sans-serif; fill: #334155; }
+          .a4dN { font: 600 14px Inter, sans-serif; fill: #422006; }
+        </style>
+        <text class="a4dH" x="40" y="34">DPO mandatory (Art 37(1)) if any:</text>
+        <rect x="40" y="46" width="360" height="44" rx="10" fill="#1E3A8A"/>
+        <text class="a4dT" x="58" y="66">a · you are a public authority</text>
+        <text class="a4dW" x="58" y="82">(rare for a private SaaS)</text>
+        <rect x="40" y="98" width="360" height="44" rx="10" fill="#1D4ED8"/>
+        <text class="a4dT" x="58" y="118">b · core activity = large-scale</text>
+        <text class="a4dW" x="58" y="134">regular + systematic monitoring</text>
+        <rect x="40" y="150" width="360" height="44" rx="10" fill="#3B82F6"/>
+        <text class="a4dT" x="58" y="170">c · core activity = large-scale</text>
+        <text class="a4dW" x="58" y="186">special-category or criminal data</text>
+        <text class="a4dH" x="480" y="34">DPIA required (Art 35) for high risk:</text>
+        <rect x="480" y="46" width="360" height="44" rx="10" fill="#1E3A8A"/>
+        <text class="a4dT" x="498" y="66">systematic extensive profiling</text>
+        <text class="a4dW" x="498" y="82">with legal / significant effects</text>
+        <rect x="480" y="98" width="360" height="44" rx="10" fill="#1D4ED8"/>
+        <text class="a4dT" x="498" y="118">large-scale special-category</text>
+        <text class="a4dW" x="498" y="134">or criminal-offence data</text>
+        <rect x="480" y="150" width="360" height="44" rx="10" fill="#3B82F6"/>
+        <text class="a4dT" x="498" y="170">large-scale systematic</text>
+        <text class="a4dW" x="498" y="186">monitoring of a public area</text>
+        <rect x="40" y="214" width="800" height="46" rx="10" fill="#EFF6FF" stroke="#93C5FD"/>
+        <text class="a4dS" x="60" y="234">Contrast the PDPA: it requires a DPO for EVERY organisation, no threshold at all.</text>
+        <text class="a4dS" x="60" y="252">Under the GDPR, most private SaaS firms are NOT forced to appoint one - though many do.</text>
+        <rect x="30" y="288" width="14" height="14" rx="3" fill="#CA8A04"/>
+        <text class="a4dN" x="54" y="300">Neither duty is universal - both turn on scale and risk. Check the trigger, do not assume.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - DPO triggers on the left, DPIA triggers on the right</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>When a DPO is mandatory - and the PDPA gap<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Under the GDPR a Data Protection Officer is mandatory only in three defined cases (Art 37(1)). Outside them, appointing one is a sensible choice, not a legal requirement.</p>
+        <ul>
+          <li><strong>(a) Public authorities and bodies.</strong> Rare for a private Singapore SaaS.</li>
+          <li><strong>(b) Large-scale regular and systematic monitoring.</strong> Where that monitoring is a core activity - think ad-tech, extensive behavioural tracking.</li>
+          <li><strong>(c) Large-scale special-category or criminal data.</strong> Where processing sensitive data (Art 9) or offence data (Art 10) is a core activity - think a health platform.</li>
+        </ul>
+        <p>The contrast leaders must hold in mind: <strong>the PDPA requires every organisation in Singapore to appoint a DPO</strong>, with no threshold. So a Singapore company almost certainly has a DPO already for PDPA reasons, even where the GDPR would not compel one. Same role, different trigger.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>When a DPIA is required<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>A Data Protection Impact Assessment (Art 35) is a structured look-before-you-leap: required where a type of processing is likely to result in a <strong>high risk</strong> to individuals' rights. The Regulation names three mandatory examples.</p>
+        <ul>
+          <li><strong>Systematic and extensive profiling</strong> that produces legal or similarly significant effects on people - for example automated decisions that decide who gets a loan or a job.</li>
+          <li><strong>Large-scale processing of special-category (Art 9) or criminal-offence (Art 10) data.</strong></li>
+          <li><strong>Large-scale systematic monitoring of a publicly accessible area</strong> - for example widespread camera or sensor tracking.</li>
+        </ul>
+        <p>A DPIA is done <em>before</em> the high-risk processing starts, and it documents the risks and the measures that bring them down. For a leader it is a governance gate: no DPIA on a high-risk launch is a red flag, not a paperwork delay.</p>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>Lumina and its cloud vendors.</strong> Lumina (our fictional Singapore SaaS) is the controller for its customer data. Its cloud host, transactional-email service, and analytics tool are processors, each needing a DPA. Lumina's processing is ordinary B2B account data at modest scale - no core-activity monitoring, no sensitive data - so the GDPR does not force a DPO or a DPIA. But Lumina already has a DPO because the PDPA requires one. The moment Lumina adds a feature that profiles users to auto-decide pricing tiers, the DPIA question reopens.</p>
+        </div>
+        <div class="callout tip">
+          <strong>A caveat worth keeping</strong>
+          "Large-scale", "core activity", and "high risk" are judgement calls, not bright lines, and supervisory authorities publish their own lists of processing that always needs a DPIA. Treat the three statutory examples as the floor, and confirm close calls against your authority's guidance and proper advice.
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="exercise-1">
+    <div class="section-kicker">
+      <span class="klabel">Exercise 1 of 2</span>
+      <h2>Map Lumina's vendors <span class="tag demo">★ 12 min · pen and paper</span></h2>
+    </div>
+    <p class="lede">Roles become concrete the moment you draw them. Take a real vendor list and label every relationship.</p>
+    <div class="steps">
+      <div class="step"><p>List your (or Lumina's) vendors that touch personal data: cloud host, email service, analytics, payment gateway, support desk, payroll.</p></div>
+      <div class="step"><p>For each, ask the deciding question: who determined the purpose and the means of that processing? If you did, you are the controller and the vendor is your processor.</p></div>
+      <div class="step"><p>Mark which relationships therefore need an Article 28 DPA - every controller-to-processor flow does.</p></div>
+      <div class="step"><p>Flag any vendor that decides its own purposes with your data. That one is a separate controller, and the relationship needs a different contract, not a DPA.</p></div>
+    </div>
+    <div class="prompt-box good"><span class="label">★ Your vendor-mapping partner (paste into any chat AI)</span>You are helping a Singapore SaaS map its data vendors under the GDPR. I will paste a list of vendors and what each does with personal data. For each, ask who decided the purpose and means, then label us as controller and the vendor as processor (or flag the vendor as a separate controller). Tell me which relationships need an Article 28 data processing agreement. Educational only, remind me to get advice. Here is my vendor list: [paste it]</div>
+  </section>
+
+  <section class="section" id="exercise-2">
+    <div class="section-kicker">
+      <span class="klabel">Exercise 2 of 2</span>
+      <h2>Do we need a DPO or a DPIA <span class="tag demo">★ 8 min · your next governance review</span></h2>
+    </div>
+    <p class="lede">Two short decisions, run honestly, tell you whether either obligation bites your organisation today.</p>
+    <div class="steps">
+      <div class="step"><p><strong>DPO test.</strong> Are we a public authority? Is large-scale regular and systematic monitoring a core activity? Is large-scale special-category or criminal data a core activity? Any yes means the GDPR mandates a DPO. If all no, note that the PDPA still requires one anyway.</p></div>
+      <div class="step"><p><strong>DPIA test.</strong> Does any current or planned processing match the three high-risk examples - extensive profiling with significant effects, large-scale sensitive data, or large-scale monitoring of a public area?</p></div>
+      <div class="step"><p>For any DPIA "yes", note whether the assessment was actually done before the processing began. A missing DPIA on a live high-risk feature is the finding.</p></div>
+      <div class="step"><p>Record who holds the DPO role today and whether their independence and reporting line are real, not nominal.</p></div>
+    </div>
+    <div class="callout tip">
+      <strong>The mindset</strong>
+      Do not appoint roles or run assessments out of anxiety, and do not skip them out of optimism. Check the trigger, write down the answer, and revisit it whenever a new high-risk feature ships.
+    </div>
+  </section>
+
+  <section class="section" id="homework">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Before session a5 <span class="tag exercise">◐ 30 min total</span></h2>
+    </div>
+    <ul>
+      <li>Finish the vendor map and mark every relationship that needs an Article 28 DPA. Keep it - a5 (breach) leans on knowing which processors must help you notify.</li>
+      <li>Run the DPO and DPIA tests and record the answers, including the PDPA "DPO for every org" point.</li>
+      <li>Ask your team: do we have a signed DPA with every processor that touches personal data, and does each one require processors to assist with breaches and rights?</li>
+      <li>Optional: read GDPR Article 28 - the list of required contract terms is the checklist your DPAs should already meet.</li>
+    </ul>
+    <div class="callout win">
+      <strong>★ Questions to ask your DPO and legal counsel this week</strong>
+      <ol>
+        <li>For each vendor, are we the controller or the processor - and does our labelling match reality per data flow?</li>
+        <li>Do we hold a signed, GDPR-compliant Article 28 DPA with every processor, with sub-processor, audit, and assist clauses?</li>
+        <li>Does the GDPR mandate a DPO for us, or only the PDPA - and is our current DPO independent and properly resourced?</li>
+        <li>Does any live or planned processing trigger a mandatory DPIA, and if so was one done before launch?</li>
+        <li>Which of our vendors give "sufficient guarantees", and how did we assess that before signing?</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">Taught from the GDPR text and reputable comparative guidance. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">GDPR Articles 4(7) and 4(8) (definitions)</span><span class="note">Part 1 · controller decides purposes and means · processor acts on instructions</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">GDPR Article 28 (processor + DPA terms)</span><span class="note">Part 1 · the binding contract and its prescribed clauses</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">GDPR Article 37 (DPO designation)</span><span class="note">Part 2 · the three mandatory triggers · PDPA contrast</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">GDPR Article 35 (DPIA)</span><span class="note">Part 2 · high-risk test + three mandatory examples</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">GDPR Article 30 (records of processing)</span><span class="note">Referenced · the record that underpins your vendor map</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · Your Singapore SaaS collects customer data and stores it with a large cloud host. For that data, who is the controller?</p>
+      <button class="qopt" type="button">A · The cloud host, because it is larger and runs the servers</button>
+      <button class="qopt" type="button">B · Your company - you decided the purpose and the means; the cloud host is your processor</button>
+      <button class="qopt" type="button">C · Both are joint controllers automatically</button>
+      <p class="qwhy">The controller is whoever determines the purposes and means (Art 4(7)). You collected the data and decided its use, so you are the controller regardless of the vendor's size; the host processes on your behalf.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · Under the GDPR, when is appointing a DPO mandatory?</p>
+      <button class="qopt" type="button">A · For every organisation, always</button>
+      <button class="qopt" type="button">B · Only for companies with more than 250 staff</button>
+      <button class="qopt" type="button">C · Only in defined cases - public authority, or core-activity large-scale monitoring or large-scale special-category / criminal data</button>
+      <p class="qwhy">Article 37(1) makes a DPO mandatory only in those defined cases. "Every organisation, always" is the PDPA rule, not the GDPR - a key contrast for a Singapore company.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · A DPIA is required when...</p>
+      <button class="qopt" type="button">A · Processing is likely to result in a HIGH risk - for example extensive profiling with significant effects, large-scale sensitive data, or large-scale monitoring of a public area</button>
+      <button class="qopt" type="button">B · Any personal data is processed at all</button>
+      <button class="qopt" type="button">C · A breach has already happened</button>
+      <p class="qwhy">Article 35 ties the DPIA to high-risk processing and names three mandatory examples. It is a before-you-launch assessment, not a response to a breach, and not required for all processing.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <section class="cheat" id="cheatsheet">
+    <h3>Leader session 4 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Controller (Art 4(7))</b><span>Determines the PURPOSES and MEANS of processing - the why and the how. Carries the heavy duties.</span></div>
+      <div class="cheat-item"><b>Processor (Art 4(8))</b><span>Processes on the controller's behalf, only on documented instructions. Decide purposes and you stop being a processor.</span></div>
+      <div class="cheat-item"><b>You are the controller</b><span>For your own customer data you are the controller - even a giant cloud vendor is your processor for it.</span></div>
+      <div class="cheat-item"><b>Article 28 DPA</b><span>Mandatory written contract: instructions-only, confidentiality, Art 32 security, sub-processors, assist, delete/return, audit.</span></div>
+      <div class="cheat-item"><b>Sufficient guarantees</b><span>Use only processors that can actually meet the GDPR - vetting them is itself a controller duty.</span></div>
+      <div class="cheat-item"><b>DPO mandatory (Art 37)</b><span>Only if: public authority; core-activity large-scale monitoring; or core-activity large-scale special / criminal data.</span></div>
+      <div class="cheat-item"><b>vs the PDPA DPO rule</b><span>PDPA requires a DPO for EVERY org, no threshold. Most SG firms already have one for that reason.</span></div>
+      <div class="cheat-item"><b>DPIA (Art 35)</b><span>Required for high-risk processing. Three examples: extensive profiling with effects; large-scale sensitive data; large-scale public monitoring.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Leader session 4 of 6 · learn-gdpr-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="../index.html">← All sessions</a> &nbsp;·&nbsp; <a href="a5-breach-penalties.html">Next: Breach and penalties →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

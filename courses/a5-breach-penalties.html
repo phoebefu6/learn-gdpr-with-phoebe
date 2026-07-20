@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leader session 5 · Breach + penalties - learn GDPR with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-gdpr-with-phoebe</a> / Leader session 5 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn GDPR with Phoebe · Leader track · Session 5 of 6</div>
+    <h1>Breach <span class="accent">and penalties</span></h1>
+    <p class="sub">Two numbers define GDPR risk for a leader: 72 hours and 4%. Seventy-two hours is how long you have to tell a regulator after you become aware of a breach. Four percent - of global turnover - is the ceiling on the fine if you get the serious things wrong. This session makes both concrete, sets them against the PDPA's own regime, and shows the billion-euro cases that prove the numbers are real.</p>
+    <div class="chip-row">
+      <span class="chip level">🟠 Leader track</span>
+      <span class="chip audience">Leaders: C-level · managers · DPOs</span>
+      <span class="chip audience">No jargon</span>
+      <span class="chip time">Deciding</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-20 · Concepts</span>
+      <span class="a3" style="flex:4">20-40 · Exercises</span>
+      <span class="a4" style="flex:1">40-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section" id="intro">
+    <div class="section-kicker"><span class="klabel">Part 0</span><h2>The two numbers that focus the mind</h2></div>
+    <p class="lede">Most of the GDPR is about doing things well in advance. Breach and penalties are about what happens when you did not - and they are what get a board's attention. The 72-hour clock is unforgiving because it starts when you become <em>aware</em>, not when you have finished investigating. And the fines are tied to global turnover, so for any company with international revenue the GDPR ceiling dwarfs the PDPA's. This hour turns both into something you can plan for.</p>
+    <div class="callout tip"><strong>Read this first</strong> Educational, not legal advice. Verify against the Regulation text and your data protection authority, and get proper advice before acting.</div>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">★ Try it now prompt</span>
+      <span class="pill inkpill">Sources covered at the end</span>
+    </div>
+    <div class="callout win"><strong>★ What you walk out with today</strong> The 72-hour breach clock and its two notification thresholds, the two-tier fine structure with real cases, how both compare to the PDPA, and five questions to put to your team about whether you could actually meet the clock.</div>
+  </section>
+
+  <section class="section" id="clock">
+    <div class="section-kicker"><span class="klabel">Part 1 · covers Articles 33 and 34</span><h2>The 72-hour clock <span class="tag concept">9 min live</span></h2></div>
+    <p class="lede">The breach rules have two thresholds and one deadline. Any breach that risks people's rights goes to the regulator within 72 hours. A breach that risks them badly also goes to the individuals.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Breach timeline: become aware, then notify the authority within 72 hours unless unlikely to risk rights, and notify individuals when the risk is high">
+        <style>
+          .a5bT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .a5bW { font: 400 12px Inter, sans-serif; fill: #DBEAFE; }
+          .a5bI { font: 700 13px Inter, sans-serif; fill: #1E293B; }
+          .a5bS { font: 400 12px Inter, sans-serif; fill: #334155; }
+          .a5bN { font: 600 14px Inter, sans-serif; fill: #422006; }
+          .a5bArr { stroke: #CBD5E1; stroke-width: 2.5; fill: none; marker-end: url(#a5bAh); }
+        </style>
+        <defs><marker id="a5bAh" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="none" stroke="#94A3B8" stroke-width="1.6"/></marker></defs>
+        <rect x="30" y="110" width="170" height="60" rx="12" fill="#1E3A8A"/><text class="a5bT" x="48" y="138">Become aware</text><text class="a5bW" x="48" y="158">the clock starts</text>
+        <rect x="270" y="40" width="230" height="60" rx="12" fill="#1D4ED8"/><text class="a5bT" x="288" y="66">Notify the authority</text><text class="a5bW" x="288" y="86">within 72 hours (any risk)</text>
+        <rect x="270" y="180" width="230" height="60" rx="12" fill="#3B82F6"/><text class="a5bT" x="288" y="206">Notify individuals</text><text class="a5bW" x="288" y="226">without undue delay (HIGH risk)</text>
+        <rect x="560" y="110" width="290" height="60" rx="12" fill="#F8FAFF" stroke="#93C5FD"/><text class="a5bI" x="578" y="136">Unlikely to risk rights?</text><text class="a5bS" x="578" y="156">Then no authority notice needed.</text>
+        <line class="a5bArr" x1="202" y1="130" x2="266" y2="80"/>
+        <line class="a5bArr" x1="202" y1="150" x2="266" y2="200"/>
+        <line class="a5bArr" x1="502" y1="70" x2="556" y2="130"/>
+        <rect x="30" y="252" width="14" height="14" rx="3" fill="#CA8A04"/>
+        <text class="a5bN" x="54" y="264">"Aware" starts the 72 hours - not "finished investigating". Build the clock into your incident plan.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the 72-hour breach clock and its two thresholds</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Two thresholds, one deadline<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>To the authority (Art 33):</strong> without undue delay and, where feasible, no later than <strong>72 hours after becoming aware</strong> - unless the breach is unlikely to result in a risk to people's rights. Miss 72 hours and you must explain the delay.</li>
+          <li><strong>To the individuals (Art 34):</strong> when the breach is likely to result in a <strong>high risk</strong> to them, tell them too, without undue delay. Exceptions exist - notably if the data was strongly encrypted.</li>
+          <li><strong>The trap is "aware".</strong> The clock does not wait for your investigation. The moment you have reasonable certainty a breach occurred, it is running.</li>
+        </ul>
+        <div class="prompt-box good"><span class="label">★ Try it now (any chat AI)</span>Explain the GDPR breach-notification rules to an executive: the 72-hour clock, what "become aware" means, and the difference between notifying the regulator (any risk) and notifying affected individuals (high risk). Then contrast it with Singapore's PDPA breach timeline.</div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>vs the PDPA clock<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The PDPA runs a different clock. You assess whether a breach is notifiable (the PDPC expects the whole cycle within about 30 days), and once you determine it is, you notify the PDPC within <strong>3 calendar days</strong>. The threshold is significant harm or <strong>500 or more</strong> affected individuals.</p>
+        <ul>
+          <li><strong>GDPR:</strong> one 72-hour clock from awareness, risk-based, no numeric headcount threshold for the authority.</li>
+          <li><strong>PDPA:</strong> a ~30-day assessment window, then 3 days from determining notifiable, gated by the 500/significant-harm threshold.</li>
+          <li><strong>For a dual-regime company:</strong> the GDPR clock is tighter and starts earlier. Build your incident response to the 72-hour standard and you comfortably meet the PDPA one too.</li>
+        </ul>
+        <div class="callout example"><span class="ex-pill">Real world</span><p><strong>Lumina's Monday incident.</strong> Lumina discovers an exposed database on a Monday morning affecting EU and Singapore users. Two clocks start. The GDPR one is the binding constraint: 72 hours to notify the EU authority. The team that had only planned for the PDPA's 30-day assessment window would already be late.</p></div>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="fines">
+    <div class="section-kicker"><span class="klabel">Part 2 · covers Article 83</span><h2>Two tiers, global turnover <span class="tag concept">8 min live</span></h2></div>
+    <p class="lede">GDPR fines come in two tiers, and the ceiling is a percentage of <em>worldwide</em> turnover. That single word is why GDPR exposure is a different order of magnitude from the PDPA.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The two tiers<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <table class="clean">
+          <thead><tr><th>Tier</th><th>Ceiling (whichever is higher)</th><th>Covers</th></tr></thead>
+          <tbody>
+            <tr><td>Lower (Art 83(4))</td><td>EUR 10 million or 2% of global annual turnover</td><td>Records, security, breach notification, DPIA, DPO duties (Art 25-39)</td></tr>
+            <tr><td>Upper (Art 83(5))</td><td>EUR 20 million or 4% of global annual turnover</td><td>Principles, lawful basis, consent (Art 5/6/7/9); rights (Art 12-22); transfers (Art 44-49); ignoring an order</td></tr>
+          </tbody>
+        </table>
+        <ul>
+          <li><strong>"Whichever is higher"</strong> means a large company is measured against the percentage, not the euro figure - the cap scales with revenue.</li>
+          <li><strong>Global turnover</strong> is the base, not EU turnover. A multinational's ceiling is enormous.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The cases that prove it - and the PDPA contrast<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Meta - EUR 1.2 billion (2023):</strong> the largest GDPR fine to date, for unlawful transfers of EU user data to the US. A transfers case (upper tier).</li>
+          <li><strong>Amazon - EUR 746 million (2021):</strong> over its advertising and data-processing practices.</li>
+          <li><strong>The PDPA contrast:</strong> Singapore caps at S$1 million or 10% of <em>Singapore</em> turnover. For a company with modest Singapore revenue but large global revenue, the GDPR exposure is vastly larger, because the base is global.</li>
+        </ul>
+        <div class="callout tip"><strong>The leadership read</strong> The PDPC and EU authorities both weigh harm and culpability, and both prefer directions to fines where they can. But the ceilings tell you where the tail risk lives: for an internationally exposed company, that is the GDPR, tied to global turnover.</div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Why the transfers cases dominate the top of the list<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>It is not a coincidence that the biggest fine on record is a transfers case. International data transfer (session a6) is where a Singapore company is most exposed, because moving EU personal data to a Singapore server is exactly the kind of transfer the GDPR scrutinises after Schrems II. Meta's EUR 1.2 billion was not for a leak or a consent slip - it was for sending EU data abroad without adequate protection. For a Singapore business, that is the risk that maps most directly onto your own operations: your servers, your cloud region, your EU customers' data crossing a border. It is why the leader track ends on transfers, and why the practitioner track dedicates a full session to doing them right.</p>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="exercise-1">
+    <div class="section-kicker"><span class="klabel">Exercise 1 of 2</span><h2>Run your 72-hour clock <span class="tag demo">★ 12 min · pen and paper</span></h2></div>
+    <p class="lede">A breach plan that has never been timed is a hope, not a plan.</p>
+    <div class="steps">
+      <div class="step"><p>Imagine a breach discovered at 9am Monday affecting EU individuals. Write who first "becomes aware" in your organisation, and how the alarm reaches a decision-maker.</p></div>
+      <div class="step"><p>Map the hops to a regulator notification: who assesses risk, who drafts, who approves, who submits. Put an hour estimate on each.</p></div>
+      <div class="step"><p>Add it up against 72 hours. If a weekend or an approval bottleneck eats the budget, you have found a real gap.</p></div>
+      <div class="step"><p>Decide the one change that would most protect the clock - usually a named incident owner with authority to notify.</p></div>
+    </div>
+    <div class="prompt-box good"><span class="label">★ Your breach-clock partner (paste into any chat AI)</span>Help me pressure-test our GDPR 72-hour breach notification. Ask me who becomes aware first, how it escalates, who assesses risk, and who can approve and submit a regulator notification - with time estimates. Then tell me whether we can realistically hit 72 hours and name the biggest bottleneck. Educational only. Here is our setup: [describe it]</div>
+  </section>
+
+  <section class="section" id="exercise-2">
+    <div class="section-kicker"><span class="klabel">Exercise 2 of 2</span><h2>Size the exposure <span class="tag demo">★ 8 min · your next board prep</span></h2></div>
+    <p class="lede">Put the two regimes side by side on your own numbers.</p>
+    <div class="steps">
+      <div class="step"><p>Take your global annual turnover. Compute 4% of it - that is your GDPR upper-tier ceiling if it exceeds EUR 20 million.</p></div>
+      <div class="step"><p>Take your Singapore turnover. Compute 10% - the PDPA ceiling (or S$1 million if larger applies).</p></div>
+      <div class="step"><p>Compare. For most internationally-exposed companies the GDPR number is far larger. Note the gap.</p></div>
+      <div class="step"><p>Ask: does our board understand that our largest privacy tail-risk is GDPR, not PDPA? If not, that is the slide to add.</p></div>
+    </div>
+    <div class="callout tip"><strong>Why size it</strong> "GDPR is serious" loses to other priorities. "Our GDPR ceiling is X, our PDPA ceiling is Y, and X is ten times Y because it is on global revenue" reframes privacy as an enterprise risk.</div>
+  </section>
+
+  <section class="section" id="homework">
+    <div class="section-kicker"><span class="klabel">Homework</span><h2>Before session a6 <span class="tag exercise">◐ 30 min total</span></h2></div>
+    <ul>
+      <li>Time your breach clock end to end and note the biggest bottleneck. Keep it - session b7 turns it into a response plan.</li>
+      <li>Compute your GDPR (4% global) vs PDPA (10% Singapore) ceilings and bring the comparison to your next risk conversation.</li>
+      <li>Check whether your incident plan starts its clock at "aware" or at "investigation complete" - only the first is compliant.</li>
+      <li>Optional: read GDPR Articles 33 and 34 - short, and the whole breach regime.</li>
+    </ul>
+    <div class="callout win"><strong>★ Questions to ask your DPO and security team this week</strong>
+      <ol>
+        <li>Could we notify an EU authority within 72 hours of becoming aware of a breach - who owns that?</li>
+        <li>Does our incident plan start the clock at "aware" or wait until the investigation is done?</li>
+        <li>When would we have to notify affected individuals, not just the regulator?</li>
+        <li>What is our GDPR upper-tier ceiling (4% of global turnover) versus our PDPA ceiling?</li>
+        <li>Is our biggest fine risk a data leak, or a cross-border transfer (as the Meta case suggests)?</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" id="official">
+    <div class="section-kicker"><span class="klabel">Source material</span><h2>Official sources covered</h2></div>
+    <p class="lede">Taught from the GDPR text and published enforcement decisions. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">GDPR Articles 33 &amp; 34 (breach notification)</span><span class="note">Part 1 · 72-hour clock + the two thresholds</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">GDPR Article 83 (penalties)</span><span class="note">Part 2 · the two tiers on global turnover</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Real fines: Meta (EUR 1.2bn), Amazon (EUR 746m)</span><span class="note">Part 2 · the numbers proven</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">PDPA breach + penalty contrast</span><span class="note">Part 1-2 · 30-day/3-day, 500 threshold, 10% SG turnover</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="quiz">
+    <div class="section-kicker"><span class="klabel">Check yourself</span><h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2></div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · The GDPR 72-hour breach clock starts when...</p>
+      <button class="qopt" type="button">A · Your investigation is complete</button>
+      <button class="qopt" type="button">B · You become aware of the breach</button>
+      <button class="qopt" type="button">C · The regulator contacts you</button>
+      <p class="qwhy">Article 33: notify without undue delay and, where feasible, within 72 hours of becoming aware. Awareness starts the clock - not the end of the investigation.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · The GDPR upper-tier fine ceiling is...</p>
+      <button class="qopt" type="button">A · EUR 1 million flat</button>
+      <button class="qopt" type="button">B · 2% of Singapore turnover</button>
+      <button class="qopt" type="button">C · EUR 20 million or 4% of total worldwide annual turnover, whichever is higher</button>
+      <p class="qwhy">Article 83(5): EUR 20M or 4% of global turnover, whichever is higher - covering principles, bases, rights, and transfers. The global base is why it dwarfs the PDPA cap.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · You must notify affected INDIVIDUALS (not just the authority) when the breach...</p>
+      <button class="qopt" type="button">A · Is likely to result in a HIGH risk to their rights and freedoms</button>
+      <button class="qopt" type="button">B · Affects more than 500 people</button>
+      <button class="qopt" type="button">C · Happens on a weekend</button>
+      <p class="qwhy">Article 34: individuals are notified when the risk to them is high. (The 500 threshold is a PDPA rule, not a GDPR one.) Any risk goes to the authority; high risk also goes to individuals.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <section class="cheat" id="cheatsheet">
+    <h3>Leader session 5 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>72-hour clock</b><span>Notify the authority within 72h of becoming AWARE (Art 33), unless unlikely to risk rights.</span></div>
+      <div class="cheat-item"><b>Two thresholds</b><span>Any risk → authority. High risk → also the individuals (Art 34).</span></div>
+      <div class="cheat-item"><b>"Aware" starts it</b><span>Not "investigation complete". The most common planning mistake.</span></div>
+      <div class="cheat-item"><b>Two fine tiers</b><span>Lower: EUR 10M / 2%. Upper: EUR 20M / 4%. Whichever is higher.</span></div>
+      <div class="cheat-item"><b>Global turnover</b><span>The % is on WORLDWIDE turnover - why GDPR exposure dwarfs the PDPA cap.</span></div>
+      <div class="cheat-item"><b>Real cases</b><span>Meta EUR 1.2bn (transfers), Amazon EUR 746m. The numbers are real.</span></div>
+      <div class="cheat-item"><b>vs PDPA</b><span>PDPA: ~30-day assess, 3-day notify, 500 threshold; cap S$1M or 10% SG turnover.</span></div>
+      <div class="cheat-item"><b>Biggest tail-risk</b><span>Cross-border transfers - the top fine on record is a transfers case.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Leader session 5 of 6 · learn-gdpr-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="../index.html">← All sessions</a> &nbsp;·&nbsp; <a href="a6-transfers.html">Next: International transfers →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practitioner session 4 · Handling a DSAR - learn GDPR with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-gdpr-with-phoebe</a> / Practitioner session 4 of 8</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn GDPR with Phoebe · Practitioner track · Session 4 of 8</div>
+    <h1>Handling a DSAR <span class="accent">end to end</span></h1>
+    <p class="sub">A data-subject access request (DSAR) is the moment the rights become real work. An EU individual asks for a copy of their data, and the clock starts: one month to verify, locate, and respond. This session builds the workflow - intake, identity check, search, response, and the narrow cases where you can extend or refuse - so a request does not sit in an inbox until you are already late. Lumina answers its first one here.</p>
+    <div class="chip-row">
+      <span class="chip level">🟡 Practitioner track</span>
+      <span class="chip audience">DPOs · support · ops</span>
+      <span class="chip audience">No jargon</span>
+      <span class="chip time">Medium</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:3">3-18 · Concepts</span>
+      <span class="a3" style="flex:5">18-40 · Build-along</span>
+      <span class="a4" style="flex:1">40-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section" id="intro">
+    <div class="section-kicker"><span class="klabel">Part 0</span><h2>The right that arrives as an email</h2></div>
+    <p class="lede">Of all the GDPR rights, the access request is the one you will handle most, and it usually arrives as an ordinary email: "please send me all the data you hold about me". From that moment you have one month. The work is not glamorous - verify who they are, find their data across your systems, package it, and hand it over without exposing anyone else's data. But a botched DSAR is a common, avoidable complaint, and the process is entirely learnable.</p>
+    <div class="callout tip"><strong>Read this first</strong> Educational, not legal advice. Verify against the Regulation text and get advice for edge cases (especially refusals).</div>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - full depth after class</span>
+      <span class="pill peach">★ Try it now</span>
+      <span class="pill inkpill">Sources covered at the end</span>
+    </div>
+    <div class="callout win"><strong>★ What you build today</strong> A five-step DSAR workflow, the one-month clock and its extension, the rules on fees and identity, when you may refuse, and how the same mechanics extend to erasure and portability requests.</div>
+  </section>
+
+  <section class="section" id="flow">
+    <div class="section-kicker"><span class="klabel">Part 1 · covers Article 15 + Article 12</span><h2>The access request, step by step <span class="tag concept">7 min live</span></h2></div>
+    <p class="lede">A DSAR is a small pipeline: it comes in, you verify the person, you find the data, you respond - within a month. Each step has a rule attached.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="DSAR pipeline: request in, verify identity, locate data, respond within one month">
+        <style>
+          .b4dT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .b4dW { font: 400 11px Inter, sans-serif; fill: #DBEAFE; }
+          .b4dN { font: 600 14px Inter, sans-serif; fill: #422006; }
+          .b4dArr { stroke: #CBD5E1; stroke-width: 2.5; fill: none; marker-end: url(#b4dAh); }
+        </style>
+        <defs><marker id="b4dAh" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="none" stroke="#94A3B8" stroke-width="1.6"/></marker></defs>
+        <rect x="20" y="90" width="150" height="60" rx="12" fill="#1E3A8A"/><text class="b4dT" x="36" y="116">Request in</text><text class="b4dW" x="36" y="136">clock starts</text>
+        <rect x="200" y="90" width="150" height="60" rx="12" fill="#1D4ED8"/><text class="b4dT" x="216" y="116">Verify identity</text><text class="b4dW" x="216" y="136">is it really them?</text>
+        <rect x="380" y="90" width="150" height="60" rx="12" fill="#3B82F6"/><text class="b4dT" x="396" y="116">Locate data</text><text class="b4dW" x="396" y="136">across all systems</text>
+        <rect x="560" y="90" width="150" height="60" rx="12" fill="#1D4ED8"/><text class="b4dT" x="576" y="116">Respond</text><text class="b4dW" x="576" y="136">within 1 month</text>
+        <rect x="740" y="90" width="120" height="60" rx="12" fill="#1E3A8A"/><text class="b4dT" x="756" y="116">Package</text><text class="b4dW" x="756" y="136">no others' data</text>
+        <line class="b4dArr" x1="172" y1="120" x2="196" y2="120"/>
+        <line class="b4dArr" x1="352" y1="120" x2="376" y2="120"/>
+        <line class="b4dArr" x1="532" y1="120" x2="556" y2="120"/>
+        <line class="b4dArr" x1="712" y1="120" x2="736" y2="120"/>
+        <rect x="20" y="210" width="14" height="14" rx="3" fill="#CA8A04"/>
+        <text class="b4dN" x="44" y="222">One month from receipt (Art 12(3)). A request with no owner burns weeks before anyone acts.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the DSAR pipeline</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>What you must provide + verify first<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Provide (Art 15):</strong> confirmation you are processing their data, a copy of it, and the key details - the purposes, categories, recipients, retention, the source, and whether there is automated decision-making.</li>
+          <li><strong>Verify identity first.</strong> You must be reasonably sure the requester is who they say. Handing someone else's data to an impostor is itself a breach - but do not use verification as a stalling tactic.</li>
+          <li><strong>Do not expose third parties.</strong> If the person's record contains other people's personal data, redact or withhold that - you satisfy the requester's right without breaching others'.</li>
+          <li><strong>Free by default.</strong> Generally no charge; a reasonable fee (or refusal) only for manifestly unfounded or excessive requests, or extra copies.</li>
+        </ul>
+        <div class="prompt-box good"><span class="label">★ Try it now (any chat AI)</span>Walk me through handling a GDPR access request end to end: what to verify, what data and details to provide, the deadline, when I can charge or refuse, and how to avoid disclosing other people's data. Then give me a simple intake-to-response checklist.</div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The one-month clock<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>One month from receipt</strong> (Art 12(3)) to respond, without undue delay.</li>
+          <li><strong>Extendable by up to two further months</strong> for complex or numerous requests - but you must tell the person, with reasons, <strong>within the first month</strong>.</li>
+          <li><strong>The operational risk is the handoff.</strong> A request that lands in a support inbox and waits a fortnight for someone to notice has already half-spent the clock. A named owner and a single intake channel are the whole game.</li>
+        </ul>
+        <div class="callout example"><span class="ex-pill">Real world</span><p><strong>Lumina's first DSAR.</strong> An EU user emailed asking for all their data and, separately, to have their account erased. Lumina verified the email against the account, pulled data from the app database, billing, and the support tool, redacted a colleague's name that appeared in a shared ticket, and responded in three weeks. The erasure followed the same clock. Because there was an owner, the month was never at risk.</p></div>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="extensions">
+    <div class="section-kicker"><span class="klabel">Part 2 · extensions, refusals, and the other rights</span><h2>The edges <span class="tag concept">8 min live</span></h2></div>
+    <p class="lede">Most requests are routine. The judgment calls are when you may take longer, when you may refuse, and how the same pipeline serves erasure, portability, and objection requests.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 230" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The one-month clock with a two-month extension for complex requests, and the narrow grounds to refuse or charge">
+        <style>
+          .b4rT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .b4rW { font: 400 12px Inter, sans-serif; fill: #DBEAFE; }
+          .b4rS { font: 400 12px Inter, sans-serif; fill: #334155; }
+          .b4rN { font: 600 14px Inter, sans-serif; fill: #422006; }
+        </style>
+        <rect x="30" y="40" width="230" height="50" rx="10" fill="#1D4ED8"/><text class="b4rT" x="46" y="60">Month 1</text><text class="b4rW" x="46" y="80">respond (default)</text>
+        <rect x="280" y="40" width="300" height="50" rx="10" fill="#3B82F6"/><text class="b4rT" x="296" y="60">+ up to 2 months</text><text class="b4rW" x="296" y="80">complex/numerous - tell them in month 1</text>
+        <rect x="30" y="110" width="550" height="60" rx="12" fill="#F8FAFF" stroke="#93C5FD"/>
+        <text class="b4rS" x="52" y="136">Refuse or charge ONLY if manifestly unfounded or excessive.</text>
+        <text class="b4rS" x="52" y="158">Never disclose another person's personal data in the response.</text>
+        <rect x="30" y="196" width="14" height="14" rx="3" fill="#CA8A04"/>
+        <text class="b4rN" x="54" y="208">Extensions and refusals are narrow exceptions - the default is "respond, fully and free, in a month".</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the clock, extensions, and refusal grounds</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>When you can extend or refuse<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Extend</strong> by up to two months for genuinely complex or numerous requests - with notice and reasons inside the first month. Volume alone from one person can qualify; do not use it to buy time on an ordinary request.</li>
+          <li><strong>Refuse or charge</strong> only where a request is <strong>manifestly unfounded or excessive</strong> (for example, repetitive requests designed to disrupt). The bar is high - "it is a hassle" is not it.</li>
+          <li><strong>Document the decision.</strong> If you extend or refuse, record why. That record is your defence if the person complains to an authority.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>One pipeline, many rights<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The good news for a practitioner is that you do not build a separate machine for each right. Erasure (Art 17), portability (Art 20), objection (Art 21), and restriction (Art 18) requests all ride the same pipeline you just built for access: verify the person, act across the systems, respond within the one-month clock, document the outcome. What changes is the action at the "act" step - copy the data for access, delete it for erasure, export it in a machine-readable format for portability, stop the processing for an objection. So the investment you make in a clean intake channel, an owner, and a data map pays off across all the rights at once. When someone asks "can we handle a portability request?", the honest answer is "yes, if our access pipeline is solid, because it is the same pipeline with a different verb".</p>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="exercise">
+    <div class="section-kicker"><span class="klabel">Build-along · take it further</span><h2>Build Lumina's DSAR workflow <span class="tag demo">★ 10 min · pen and paper</span></h2></div>
+    <p class="lede">Turn the five steps into a workflow your team could actually run.</p>
+    <div class="steps">
+      <div class="step"><p><strong>Intake.</strong> Define the single channel a request comes through (a dedicated address or form) and who is notified the instant it lands.</p></div>
+      <div class="step"><p><strong>Verify.</strong> Write your identity-check rule - proportionate, not a stalling wall.</p></div>
+      <div class="step"><p><strong>Locate.</strong> List the systems you would search for one person's data (app DB, billing, support, analytics, backups). This is your data map in miniature.</p></div>
+      <div class="step"><p><strong>Respond.</strong> Set the internal deadline at three weeks, not four - leaving buffer against the one-month legal limit. Note who redacts third-party data and who approves the send.</p></div>
+    </div>
+    <div class="callout win"><strong>★ Lumina after b4</strong> Lumina can now take an access, erasure, or portability request and deliver inside a month, without leaking anyone else's data. But it keeps rediscovering which systems hold what - so b5 builds the record of processing that makes "locate the data" instant.</div>
+  </section>
+
+  <section class="section" id="homework">
+    <div class="section-kicker"><span class="klabel">Homework</span><h2>Before session b5 <span class="tag exercise">◐ 40 min total</span></h2></div>
+    <ul>
+      <li>Draft your DSAR workflow (intake, verify, locate, respond) with a named owner and an internal three-week deadline.</li>
+      <li>Time a mock access request against your systems - could you actually locate one person's data in every place it lives?</li>
+      <li>Write your identity-verification rule and your extension/refusal policy, with a note to document each such decision.</li>
+      <li>Read: GDPR Articles 15 and 12(3) - the access right and the response clock.</li>
+    </ul>
+  </section>
+
+  <section class="section" id="official">
+    <div class="section-kicker"><span class="klabel">Source material</span><h2>Official sources covered</h2></div>
+    <p class="lede">Taught from the GDPR text. This page covers ~80% of the working content on access requests.</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">GDPR Article 15 (right of access)</span><span class="note">Part 1 · what to provide + verify + third-party protection</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">GDPR Article 12(3) (timeline + fees + refusal)</span><span class="note">Part 1-2 · one month + two, manifestly unfounded/excessive</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Articles 17, 20, 21 (erasure, portability, object)</span><span class="note">Part 2 · same pipeline, different action</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="quiz">
+    <div class="section-kicker"><span class="klabel">Check yourself</span><h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2></div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · An access request lands. You have...</p>
+      <button class="qopt" type="button">A · 72 hours to respond</button>
+      <button class="qopt" type="button">B · One month, extendable by up to two more for complex or numerous requests</button>
+      <button class="qopt" type="button">C · Unlimited time if you are busy</button>
+      <p class="qwhy">Article 12(3): respond within one month of receipt, extendable by up to two further months for complex/numerous requests, with notice to the person in the first month.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · A person's record contains a colleague's name. In your access response you should...</p>
+      <button class="qopt" type="button">A · Send everything as-is</button>
+      <button class="qopt" type="button">B · Refuse the whole request</button>
+      <button class="qopt" type="button">C · Redact or withhold the other person's data, and provide the rest</button>
+      <p class="qwhy">You satisfy the requester's right without breaching others'. Disclosing a third party's personal data would itself be a breach, so redact and provide the remainder.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · You may charge a fee or refuse a request only when it is...</p>
+      <button class="qopt" type="button">A · Manifestly unfounded or excessive</button>
+      <button class="qopt" type="button">B · Sent by email rather than post</button>
+      <button class="qopt" type="button">C · From a non-customer</button>
+      <p class="qwhy">The default is free and fulfilled. A fee or refusal is only for manifestly unfounded or excessive requests (e.g. repetitive, disruptive) - and you should document the decision.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <section class="cheat" id="cheatsheet">
+    <h3>Practitioner session 4 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Five steps</b><span>Intake → verify identity → locate → respond → package (no third-party data).</span></div>
+      <div class="cheat-item"><b>Provide (Art 15)</b><span>A copy of the data + purposes, recipients, retention, source, automated-decision info.</span></div>
+      <div class="cheat-item"><b>One-month clock</b><span>Respond within a month; extend by up to two more for complex/numerous, with notice in month one.</span></div>
+      <div class="cheat-item"><b>Verify, don't stall</b><span>Be reasonably sure of identity - but verification is not a delay tactic.</span></div>
+      <div class="cheat-item"><b>Protect third parties</b><span>Redact others' personal data from the response.</span></div>
+      <div class="cheat-item"><b>Free by default</b><span>Fee or refusal only for manifestly unfounded or excessive requests. Document it.</span></div>
+      <div class="cheat-item"><b>One pipeline</b><span>Erasure, portability, objection ride the same flow - just a different action at "act".</span></div>
+      <div class="cheat-item"><b>Owner + channel</b><span>A named owner and single intake channel is most of DSAR compliance.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Practitioner session 4 of 8 · learn-gdpr-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="../index.html">← All sessions</a> &nbsp;·&nbsp; <a href="b5-records-dpia.html">Next: Records + DPIA →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

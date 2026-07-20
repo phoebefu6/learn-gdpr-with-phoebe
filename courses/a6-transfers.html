@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leader session 6 · International transfers - learn GDPR with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-gdpr-with-phoebe</a> / Leader session 6 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn GDPR with Phoebe · Leader track · Session 6 of 6</div>
+    <h1>International transfers <span class="accent">(the Singapore problem)</span></h1>
+    <p class="sub">This is the session that matters most to a Singapore company, because it is about the thing you do every day: moving EU personal data to servers outside the EU. Singapore has no EU adequacy decision, so that transfer needs a mechanism - and, since Schrems II, an assessment of the destination. Get it wrong and you are in the same category as the largest GDPR fine ever issued. This closes the leader track and hands you to the builders.</p>
+    <div class="chip-row">
+      <span class="chip level">🟠 Leader track</span>
+      <span class="chip audience">Leaders: C-level · managers · DPOs</span>
+      <span class="chip audience">No jargon</span>
+      <span class="chip time">Deciding</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-20 · Concepts</span>
+      <span class="a3" style="flex:4">20-40 · Exercises</span>
+      <span class="a4" style="flex:1">40-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section" id="intro">
+    <div class="section-kicker"><span class="klabel">Part 0</span><h2>Why transfers are the sharp end for a SG company</h2></div>
+    <p class="lede">The GDPR does not want EU personal data to lose its protection just because it crosses a border. So it restricts sending that data to a "third country" - which, for a Singapore business, is your own country. Unlike an EU-to-EU flow, moving EU customer data to a server in Singapore is a regulated transfer that needs a legal mechanism and, after the Schrems II ruling, a real look at whether Singapore law protects it. The biggest GDPR fine on record was exactly this failure. This session gives you the mechanisms and the decision.</p>
+    <div class="callout tip"><strong>Read this first</strong> Educational, not legal advice. Adequacy status and the standard clauses change - verify the current position and get proper advice before acting.</div>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">★ Try it now prompt</span>
+      <span class="pill inkpill">Sources covered at the end</span>
+    </div>
+    <div class="callout win"><strong>★ What you walk out with today</strong> The three transfer mechanisms, why a Singapore company usually lands on Standard Contractual Clauses, what Schrems II added, how the PDPA's transfer rule compares, and five questions to put to your team about where your EU data actually sits.</div>
+  </section>
+
+  <section class="section" id="mechanisms">
+    <div class="section-kicker"><span class="klabel">Part 1 · covers Chapter V (Art 44-49)</span><h2>Three ways to transfer <span class="tag concept">9 min live</span></h2></div>
+    <p class="lede">A transfer to a third country needs one of three mechanisms. For a Singapore company with no adequacy decision, one of them does almost all the work.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three transfer mechanisms: adequacy decision, appropriate safeguards such as Standard Contractual Clauses, and narrow derogations">
+        <style>
+          .a6tT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .a6tW { font: 400 12px Inter, sans-serif; fill: #DBEAFE; }
+          .a6tN { font: 600 14px Inter, sans-serif; fill: #422006; }
+        </style>
+        <rect x="30" y="50" width="260" height="150" rx="14" fill="#1E3A8A"/>
+        <text class="a6tT" x="52" y="82">1 · Adequacy (Art 45)</text>
+        <text class="a6tW" x="52" y="110">Commission deems a country</text>
+        <text class="a6tW" x="52" y="130">"essentially equivalent"</text>
+        <text class="a6tW" x="52" y="160">No extra step needed.</text>
+        <text class="a6tW" x="52" y="182">Singapore is NOT on the list.</text>
+        <rect x="310" y="50" width="260" height="150" rx="14" fill="#1D4ED8"/>
+        <text class="a6tT" x="332" y="82">2 · Safeguards (Art 46)</text>
+        <text class="a6tW" x="332" y="110">Standard Contractual Clauses</text>
+        <text class="a6tW" x="332" y="130">(SCCs) or Binding Corporate</text>
+        <text class="a6tW" x="332" y="150">Rules. The workhorse for a</text>
+        <text class="a6tW" x="332" y="170">SG company. + Schrems II check.</text>
+        <rect x="590" y="50" width="260" height="150" rx="14" fill="#3B82F6"/>
+        <text class="a6tT" x="612" y="82">3 · Derogations (Art 49)</text>
+        <text class="a6tW" x="612" y="110">Narrow one-offs: explicit</text>
+        <text class="a6tW" x="612" y="130">consent, contract performance,</text>
+        <text class="a6tW" x="612" y="150">legal claims. Not a routine</text>
+        <text class="a6tW" x="612" y="170">basis for ongoing transfers.</text>
+        <rect x="30" y="248" width="14" height="14" rx="3" fill="#CA8A04"/>
+        <text class="a6tN" x="54" y="260">No adequacy for Singapore, so EU data to SG usually rides on SCCs - plus a transfer impact assessment.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the three transfer mechanisms</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The three mechanisms, ranked by how you will use them<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Adequacy (Art 45):</strong> the easy path - if the European Commission has ruled a country's protection essentially equivalent, you transfer freely. But <strong>Singapore has no adequacy decision</strong>, so this door is closed for SG-bound data.</li>
+          <li><strong>Appropriate safeguards (Art 46):</strong> the workhorse. <strong>Standard Contractual Clauses (SCCs)</strong> - a pre-approved contract between exporter and importer - are how most Singapore companies lawfully receive EU data. Binding Corporate Rules are the intra-group version.</li>
+          <li><strong>Derogations (Art 49):</strong> narrow, mostly one-off exceptions (explicit consent, performing a contract). Not a foundation for routine, ongoing transfers - do not build a data pipeline on them.</li>
+        </ul>
+        <div class="prompt-box good"><span class="label">★ Try it now (any chat AI)</span>Explain the three GDPR mechanisms for transferring EU personal data to a third country like Singapore: adequacy, Standard Contractual Clauses, and derogations. Say which one a Singapore SaaS with EU customers will most likely rely on and why, and what Schrems II added.</div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>What Schrems II added<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>In 2020 the EU's top court (the <em>Schrems II</em> judgment) struck down the EU-US Privacy Shield and made clear that signing SCCs is not enough on its own. You must also <strong>assess the destination country's laws</strong> - can its government access the data in ways that undermine EU protection? - and add <strong>supplementary measures</strong> where needed, with the most weight on technical ones like strong encryption.</p>
+        <ul>
+          <li><strong>This is a transfer impact assessment (TIA).</strong> SCCs + a documented TIA + supplementary measures is the modern standard.</li>
+          <li><strong>Why it hit Meta:</strong> the EUR 1.2 billion fine was precisely for transfers to the US where SCCs plus measures were found not to remedy the risk. The lesson: the paperwork alone does not protect you if the destination's law does not.</li>
+        </ul>
+        <div class="callout example"><span class="ex-pill">Real world</span><p><strong>Lumina picks a region.</strong> Lumina hosts EU customer data on a Singapore cloud region. To keep it lawful, Lumina puts SCCs in place with its EU customers, runs a transfer impact assessment on Singapore, and encrypts the data with keys it controls. The practitioner track (b6) walks through exactly this.</p></div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>vs the PDPA Transfer Limitation<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The PDPA has its own cross-border rule - the Transfer Limitation Obligation (s.26) - but it works differently. Rather than the GDPR's prescriptive list of adequacy decisions and prescribed clauses, the PDPA uses an <strong>outcome-based "comparable protection" standard</strong>: before you send personal data overseas, you must ensure the recipient provides a standard of protection comparable to the PDPA, typically through a contract. It is more flexible and more self-assured than the GDPR's mechanism-driven approach. For a dual-regime company the practical consequence is that the GDPR is the stricter master here: satisfy the GDPR transfer rules (SCCs + TIA) and your PDPA comparable-protection obligation is comfortably met on the same data. Build to the GDPR standard and document once.</p>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="both">
+    <div class="section-kicker"><span class="klabel">Part 2 · covers the decision</span><h2>The transfer decision, for you <span class="tag concept">7 min live</span></h2></div>
+    <p class="lede">Transfers are not abstract for a Singapore business - they are your architecture. The decision is: for each flow of EU data leaving the EU, what mechanism carries it, and have you done the Schrems II homework.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A transfer decision: is the destination adequate; if not, put SCCs in place and run a transfer impact assessment with supplementary measures">
+        <style>
+          .a6sI { font: 700 13px Inter, sans-serif; fill: #1E293B; }
+          .a6sT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .a6sW { font: 400 12px Inter, sans-serif; fill: #DBEAFE; }
+          .a6sX { font: 600 12px Inter, sans-serif; fill: #64748B; }
+          .a6sN { font: 600 14px Inter, sans-serif; fill: #422006; }
+          .a6sArr { stroke: #CBD5E1; stroke-width: 2.5; fill: none; marker-end: url(#a6sAh); }
+        </style>
+        <defs><marker id="a6sAh" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="none" stroke="#94A3B8" stroke-width="1.6"/></marker></defs>
+        <rect x="30" y="40" width="230" height="56" rx="12" fill="#F8FAFF" stroke="#93C5FD"/><text class="a6sI" x="48" y="64">Destination adequate?</text><text class="a6sI" x="48" y="84">(EU adequacy list)</text>
+        <rect x="330" y="30" width="200" height="46" rx="10" fill="#1E3A8A"/><text class="a6sT" x="348" y="58">Yes - transfer freely</text>
+        <rect x="330" y="110" width="230" height="56" rx="12" fill="#1D4ED8"/><text class="a6sT" x="348" y="134">No - SCCs + a transfer</text><text class="a6sW" x="348" y="154">impact assessment</text>
+        <rect x="610" y="110" width="240" height="56" rx="12" fill="#3B82F6"/><text class="a6sT" x="628" y="134">+ supplementary measures</text><text class="a6sW" x="628" y="154">(esp. strong encryption)</text>
+        <line class="a6sArr" x1="262" y1="60" x2="326" y2="54"/><text class="a6sX" x="270" y="48">yes</text>
+        <line class="a6sArr" x1="262" y1="80" x2="326" y2="135"/><text class="a6sX" x="270" y="104">no</text>
+        <line class="a6sArr" x1="562" y1="138" x2="606" y2="138"/>
+        <rect x="30" y="210" width="14" height="14" rx="3" fill="#CA8A04"/>
+        <text class="a6sN" x="54" y="222">Singapore is not adequate - so the SG path is always the lower branch: SCCs + TIA + measures.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the transfer decision for EU data heading to Singapore</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Know where your EU data physically sits<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>You cannot govern a transfer you cannot see. The first move is a map: which of your systems hold EU personal data, and where - physically - does that data live? Cloud regions, backups, analytics tools, support platforms, sub-processors all count.</p>
+        <ul>
+          <li><strong>Every EU-data flow leaving the EU</strong> needs a mechanism. If you cannot name it, you have an unlawful transfer running.</li>
+          <li><strong>Sub-processors are transfers too.</strong> Your analytics vendor in the US, your support tool's servers - each is a transfer you are responsible for.</li>
+          <li><strong>The leadership question:</strong> not "are we compliant" in the abstract, but "do we have a data map, and does every EU-out flow on it have a named mechanism".</li>
+        </ul>
+        <div class="callout tip"><strong>Warm close to the leader track</strong> You now have the whole GDPR shape: who it reaches, the principles and bases, the rights, the roles, the breach clock, and transfers. The practitioner track takes each and makes it operational on Lumina - starting with the applicability checker you can run in thirty seconds.</div>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="exercise-1">
+    <div class="section-kicker"><span class="klabel">Exercise 1 of 2</span><h2>Map your cross-border flows <span class="tag demo">★ 12 min · pen and paper</span></h2></div>
+    <p class="lede">Find every place EU data leaves the EU in your operation.</p>
+    <div class="steps">
+      <div class="step"><p>List the systems that hold personal data of EU individuals - your app database, CRM, analytics, support tool, backups.</p></div>
+      <div class="step"><p>For each, write where the data physically sits (cloud region, country) and whether that is inside or outside the EU.</p></div>
+      <div class="step"><p>For every "outside the EU" row, name the transfer mechanism (adequacy / SCCs / derogation). Blanks are unlawful transfers to fix.</p></div>
+      <div class="step"><p>Circle the flows going to Singapore or the US - those are your SCCs-plus-Schrems-II priorities.</p></div>
+    </div>
+    <div class="prompt-box good"><span class="label">★ Your transfer-mapping partner (paste into any chat AI)</span>Help me map GDPR cross-border transfers. Ask me which systems hold EU individuals' data, where each physically sits, and whether we have a transfer mechanism (adequacy, SCCs, or a derogation) for each. Then flag any flow leaving the EU with no named mechanism, and which need a Schrems II transfer impact assessment. Educational only. Here is our stack: [describe it]</div>
+  </section>
+
+  <section class="section" id="exercise-2">
+    <div class="section-kicker"><span class="klabel">Exercise 2 of 2</span><h2>The SCCs readiness check <span class="tag demo">★ 8 min · your next vendor review</span></h2></div>
+    <p class="lede">Four questions that reveal whether your transfers would survive scrutiny.</p>
+    <div class="steps">
+      <div class="step"><p><strong>"Do we have SCCs in place with the EU parties whose data we receive?"</strong> No SCCs and no adequacy = no lawful basis for the transfer.</p></div>
+      <div class="step"><p><strong>"Have we done a transfer impact assessment on Singapore (and any other destination)?"</strong> Post-Schrems II, SCCs alone are not enough.</p></div>
+      <div class="step"><p><strong>"Is the data encrypted, and who holds the keys?"</strong> Encryption with keys you control is the strongest supplementary measure.</p></div>
+      <div class="step"><p><strong>"Do our sub-processors' transfers meet the same bar?"</strong> Their non-compliance is your exposure.</p></div>
+    </div>
+    <div class="callout tip"><strong>The mindset</strong> Transfers are the GDPR risk most tied to your architecture - and the one behind the largest fine ever. Treat "where does our EU data live and how does it get there" as a standing question, not a one-time project.</div>
+  </section>
+
+  <section class="section" id="homework">
+    <div class="section-kicker"><span class="klabel">Homework</span><h2>Before the practitioner track <span class="tag exercise">◐ 30 min total</span></h2></div>
+    <ul>
+      <li>Finish your cross-border data map and mark the flows missing a mechanism. Session b6 turns it into an action plan.</li>
+      <li>Check whether you have current SCCs with your EU counterparties, and whether a transfer impact assessment exists for Singapore.</li>
+      <li>List your sub-processors and where they hold data - each is a transfer you own.</li>
+      <li>Optional: read GDPR Articles 45 and 46 - adequacy and safeguards, the two mechanisms you will actually use.</li>
+    </ul>
+    <div class="callout win"><strong>★ Questions to ask your DPO and engineering team this week</strong>
+      <ol>
+        <li>Do we have a map of where EU personal data physically lives across our systems and sub-processors?</li>
+        <li>For every flow of EU data leaving the EU, what is the named transfer mechanism?</li>
+        <li>Do we have SCCs with the EU parties whose data we receive, and a transfer impact assessment on Singapore?</li>
+        <li>Is EU data encrypted in transit and at rest, and who controls the keys?</li>
+        <li>Given the Meta case, do we treat transfers as our top GDPR fine risk?</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" id="official">
+    <div class="section-kicker"><span class="klabel">Source material</span><h2>Official sources covered</h2></div>
+    <p class="lede">Taught from the GDPR text and EDPB guidance. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">GDPR Chapter V, Articles 44-49 (transfers)</span><span class="note">Part 1 · adequacy · SCCs · derogations</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Schrems II + EDPB Recommendations 01/2020</span><span class="note">Part 1 · transfer impact assessment + supplementary measures (via secondary sources)</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">PDPA Transfer Limitation (s.26) contrast</span><span class="note">Self-study · comparable-protection standard</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="quiz">
+    <div class="section-kicker"><span class="klabel">Check yourself</span><h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2></div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · A Singapore company receives EU customer data on a Singapore server. Because Singapore has no EU adequacy decision, it most likely needs...</p>
+      <button class="qopt" type="button">A · Nothing - transfers to Asia are unrestricted</button>
+      <button class="qopt" type="button">B · Standard Contractual Clauses plus a transfer impact assessment</button>
+      <button class="qopt" type="button">C · To move all data back to the EU</button>
+      <p class="qwhy">No adequacy means the adequacy door is closed. SCCs (Art 46) are the workhorse safeguard, and post-Schrems II they must be paired with a transfer impact assessment and supplementary measures.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · What did the Schrems II ruling establish about SCCs?</p>
+      <button class="qopt" type="button">A · They are no longer valid at all</button>
+      <button class="qopt" type="button">B · They only apply to US transfers</button>
+      <button class="qopt" type="button">C · Signing them is not enough - you must also assess the destination country's law and add supplementary measures</button>
+      <p class="qwhy">Schrems II kept SCCs valid but required a case-by-case assessment of the destination plus supplementary measures (especially strong encryption) where local law falls short.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · Compared with the GDPR, the PDPA's cross-border rule is...</p>
+      <button class="qopt" type="button">A · Outcome-based - the recipient must provide "comparable" protection, usually by contract</button>
+      <button class="qopt" type="button">B · Identical to the GDPR</button>
+      <button class="qopt" type="button">C · Non-existent</button>
+      <p class="qwhy">The PDPA Transfer Limitation Obligation uses a comparable-protection standard the org self-assures, rather than the GDPR's prescriptive adequacy lists and prescribed clauses. Meet the GDPR bar and the PDPA one follows.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <section class="cheat" id="cheatsheet">
+    <h3>Leader session 6 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Three mechanisms</b><span>Adequacy (Art 45) · SCCs / safeguards (Art 46) · derogations (Art 49).</span></div>
+      <div class="cheat-item"><b>No SG adequacy</b><span>Singapore is not on the EU adequacy list - so SG-bound EU data rides on SCCs.</span></div>
+      <div class="cheat-item"><b>SCCs = the workhorse</b><span>A pre-approved exporter-importer contract. The default lawful path for a SG company.</span></div>
+      <div class="cheat-item"><b>Schrems II</b><span>SCCs alone are not enough - assess the destination + add supplementary measures (encryption).</span></div>
+      <div class="cheat-item"><b>Transfer impact assessment</b><span>SCCs + a documented TIA + measures = the modern standard.</span></div>
+      <div class="cheat-item"><b>Sub-processors count</b><span>Your vendors' cross-border flows are transfers you are responsible for.</span></div>
+      <div class="cheat-item"><b>Top fine risk</b><span>Meta EUR 1.2bn was a transfers case. This is where SG exposure is sharpest.</span></div>
+      <div class="cheat-item"><b>vs PDPA</b><span>PDPA s.26 = outcome-based "comparable protection". Meet the GDPR and it follows.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Leader session 6 of 6 · learn-gdpr-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="../index.html">← All sessions</a> &nbsp;·&nbsp; <a href="b1-applicability.html">Next: switch to the practitioner track →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

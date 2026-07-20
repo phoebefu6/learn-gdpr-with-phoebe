@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practitioner session 1 · Does GDPR apply? the checker - learn GDPR with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-gdpr-with-phoebe</a> / Practitioner session 1 of 8</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn GDPR with Phoebe · Practitioner track · Session 1 of 8</div>
+    <h1>Does GDPR apply? <span class="accent">Run the checker</span></h1>
+    <p class="sub">Every GDPR project starts with one question: does it apply to us at all? This session turns Article 3 into a tool you can run in thirty seconds - a live checker that takes three answers and tells you whether the GDPR reaches you, which limb catches you, and what to do next. A second mode helps with the follow-on question: once you are in, which lawful basis fits. Lumina, a Singapore SaaS with EU customers, starts here.</p>
+    <div class="chip-row">
+      <span class="chip level">🟢 Practitioner track</span>
+      <span class="chip audience">DPOs · marketers · ops</span>
+      <span class="chip audience">Live checker included</span>
+      <span class="chip time">Start here</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:3">3-18 · Concepts</span>
+      <span class="a3" style="flex:5">18-40 · Build-along</span>
+      <span class="a4" style="flex:1">40-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>The question that gates everything else</h2>
+    </div>
+    <p class="lede">There is no point choosing a lawful basis, writing a notice, or planning a breach response until you know the GDPR applies to you. Applicability is the gate. The good news: the test is small - three questions from Article 3 - and once you can run it, you can screen any product, market, or campaign in seconds. This session builds that reflex with a checker you drive yourself.</p>
+    <div class="callout tip">
+      <strong>Read this first</strong>
+      Educational, not legal advice. The checker is a teaching model of Articles 3 and 6 - always read the Regulation and get proper advice for a real situation, especially on close calls about whether you are "offering to" people in the EU.
+    </div>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - full depth after class</span>
+      <span class="pill peach">★ Try it now</span>
+      <span class="pill inkpill">Sources covered at the end</span>
+    </div>
+    <div class="callout win">
+      <strong>★ What you build today</strong>
+      A fast, repeatable Article 3 applicability test, hands-on time with a live checker (applicability + lawful-basis modes), and a clear list of the first actions to take the moment the GDPR is found to apply.
+    </div>
+  </section>
+
+  <section class="section" id="test">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers the Article 3 test</span>
+      <h2>Three questions, one answer <span class="tag concept">7 min live</span></h2>
+    </div>
+    <p class="lede">The applicability test is a short decision: any one "yes" to the three Article 3 triggers means the GDPR applies. For a Singapore company the establishment question is usually "no" - so the answer turns on offering and monitoring.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Decision flow: established in the EU, or offering to people in the EU, or monitoring people in the EU - any yes means GDPR applies; all no means it likely does not">
+        <style>
+          .h1tI { font: 700 13px Inter, sans-serif; fill: #1E293B; }
+          .h1tT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .h1tW { font: 400 12px Inter, sans-serif; fill: #DBEAFE; }
+          .h1tX { font: 600 12px Inter, sans-serif; fill: #64748B; }
+          .h1tN { font: 600 14px Inter, sans-serif; fill: #422006; }
+          .h1tArr { stroke: #CBD5E1; stroke-width: 2.5; fill: none; marker-end: url(#h1tAh); }
+        </style>
+        <defs>
+          <marker id="h1tAh" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="none" stroke="#94A3B8" stroke-width="1.6"/></marker>
+        </defs>
+        <rect x="30" y="30" width="250" height="46" rx="10" fill="#EFF6FF" stroke="#93C5FD"/>
+        <text class="h1tI" x="48" y="58">Established in the EU?</text>
+        <rect x="30" y="98" width="250" height="46" rx="10" fill="#EFF6FF" stroke="#93C5FD"/>
+        <text class="h1tI" x="48" y="126">Offer goods/services to EU people?</text>
+        <rect x="30" y="166" width="250" height="46" rx="10" fill="#EFF6FF" stroke="#93C5FD"/>
+        <text class="h1tI" x="48" y="194">Monitor people in the EU?</text>
+        <rect x="470" y="66" width="180" height="56" rx="12" fill="#1D4ED8"/>
+        <text class="h1tT" x="490" y="90">Any YES</text>
+        <text class="h1tW" x="490" y="110">GDPR applies</text>
+        <rect x="470" y="150" width="180" height="56" rx="12" fill="#1E293B"/>
+        <text class="h1tT" x="490" y="174">All NO</text>
+        <text class="h1tW" x="490" y="194">likely out of scope</text>
+        <line class="h1tArr" x1="282" y1="53" x2="466" y2="88"/>
+        <line class="h1tArr" x1="282" y1="121" x2="466" y2="96"/>
+        <line class="h1tArr" x1="282" y1="189" x2="466" y2="104"/>
+        <text class="h1tX" x="300" y="150">yes</text>
+        <text class="h1tX" x="300" y="210">no / no / no</text>
+        <line class="h1tArr" x1="282" y1="200" x2="466" y2="182"/>
+        <rect x="30" y="240" width="14" height="14" rx="3" fill="#CA8A04"/>
+        <text class="h1tN" x="54" y="252">Out of scope is not permanent - the day you take an EU customer, re-run the test.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the Article 3 applicability decision</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>What each trigger really asks<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Established in the EU?</strong> An office, branch, or stable arrangement in the EU. Rare for a pure Singapore company, but if a subsidiary or a single employee's home office counts as stable, this can catch you.</li>
+          <li><strong>Offer goods or services to people in the EU?</strong> The key word is <em>target</em>. A website merely being accessible from Europe is not enough; evidence of targeting - EU shipping, euro pricing, EU languages, marketing aimed at EU markets, actual EU customers - is. Payment is not required.</li>
+          <li><strong>Monitor behaviour of people in the EU?</strong> Tracking, profiling, cookies-for-analytics, ad-tech that follows EU users. If your product observes what EU individuals do, this trigger is live.</li>
+        </ul>
+        <div class="callout tip">
+          <strong>The close call to flag</strong>
+          "Are we offering to people in the EU" is the trigger people get wrong. Mere accessibility of your site does not count; targeting does. If you are unsure, that is exactly the point to get advice - it turns on evidence, not on whether a German could load your page.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Found to be in scope? The first three actions<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>"The GDPR applies" is a starting line, not a verdict. The moment the checker says yes, three actions follow:</p>
+        <ul>
+          <li><strong>Set a lawful basis</strong> for the EU personal data you already process (session b2). You cannot process lawfully without one of the six.</li>
+          <li><strong>Appoint an EU representative (Art 27)</strong> if you have no EU establishment, unless a narrow exemption applies.</li>
+          <li><strong>Start the record of processing (Art 30)</strong> - the inventory that every later obligation reads from (session b5).</li>
+        </ul>
+        <div class="callout example">
+          <span class="ex-pill">Real world</span>
+          <p><strong>Lumina runs the checker.</strong> Lumina answers no, yes, yes - no EU office, but it sells its SaaS to EU startups and runs product analytics on them. Two triggers, so the GDPR applies. Lumina's to-do list writes itself: a lawful basis for its EU users, an EU representative, and a record of processing. The rest of the practitioner track works through exactly that list.</p>
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="checker">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · the live checker</span>
+      <h2>Run it yourself <span class="tag concept">8 min live</span></h2>
+    </div>
+    <p class="lede">The checker below has two modes. The applicability mode runs the Article 3 test; the lawful-basis mode helps with the follow-on question once you are in scope. Drive both.</p>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>★ Build-along: applicability<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Answer the three questions for Lumina (no, yes, yes) and watch the verdict cite Article 3(2)(a). Then flip a single answer to no and watch the reasoning change - the checker always names the limb that catches you.</p>
+        <div class="gdprbox" data-mode="apply" data-caption="Answer the three Article 3 questions - the verdict names which limb applies and what it means for a non-EU company."></div>
+        <div class="callout tip">
+          <strong>Honesty note - what this checker is</strong>
+          A teaching model of Article 3. It gives you the structure of the test, not a legal determination of your specific facts - especially the "offering to people in the EU" limb, which turns on evidence of targeting. Use it to screen and to learn; confirm real decisions with the Regulation and advice.
+        </div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>★ Build-along: which lawful basis<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Once you are in scope, every use of personal data needs one of the six lawful bases. Switch the checker to lawful-basis mode and pick a purpose - watch it suggest the fitting basis and flag the catch (consent must be a real opt-in; legitimate interests needs a balancing test; special-category data needs an Article 9 condition too).</p>
+        <div class="gdprbox" data-mode="basis" data-caption="Pick a processing purpose - the checker suggests the Article 6 basis and the caveat that comes with it."></div>
+        <p>Notice the two that trip teams up: consumer marketing pushes you toward <strong>consent</strong> (a real opt-in, withdrawable), while a genuine business need points to <strong>legitimate interests</strong> - which is flexible but only if you can show a documented balancing test. Session b2 makes this choice properly.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Why "out of scope" is a moving target<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The most dangerous checker result is a "no" you treat as permanent. Applicability tracks what your business does, and that changes: a marketing push into Germany, a new EU reseller, a feature that profiles visitors, a single enterprise customer in Amsterdam - any of these flips a "no" to a "yes" without anyone re-running the test. Bake the Article 3 check into the moments where scope changes: entering a new market, launching analytics, onboarding a large customer. The checker is not a one-time gate; it is a screen you re-run whenever the answers to its three questions might have moved.</p>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Build-along · take it further</span>
+      <h2>Screen your real products <span class="tag demo">★ 10 min · the checker above</span></h2>
+    </div>
+    <p class="lede">Run the applicability mode on the products and campaigns you actually operate.</p>
+    <div class="steps">
+      <div class="step"><p><strong>Your main product.</strong> Answer the three triggers honestly. Record the verdict and the limb. If it is a "yes", write the first three actions next to it.</p></div>
+      <div class="step"><p><strong>A borderline case.</strong> Take something you are unsure about - a site accessible from Europe but not targeted there. Note why "accessible" is not "offering", and mark it as a get-advice item rather than guessing.</p></div>
+      <div class="step"><p><strong>Switch to basis mode.</strong> For one real processing purpose, see which basis the checker suggests and whether it flags a balancing test or an Article 9 condition. Is your current practice using that basis, or just assuming consent?</p></div>
+      <div class="step"><p><strong>Reflect.</strong> In one line: which product most urgently needs GDPR work, and is it because it is in scope and unprepared? That is where the rest of the track pays off first.</p></div>
+    </div>
+    <div class="callout win">
+      <strong>★ Lumina after b1</strong>
+      Lumina knows it is in scope (Art 3(2)) and has its first three actions listed. Next, in b2, we do the first one properly: choose and document a lawful basis for its EU users - because "we have consent somewhere" is not a lawful basis you can defend.
+    </div>
+  </section>
+
+  <section class="section" id="homework">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Before session b2 <span class="tag exercise">◐ 40 min total</span></h2>
+    </div>
+    <ul>
+      <li>Run the applicability checker on every product and market you operate; list which are in scope and the limb that catches each.</li>
+      <li>For each in-scope product, draft the first three actions (lawful basis, EU representative, record of processing).</li>
+      <li>Find one borderline "offering to the EU" case and write down the evidence for and against - the raw material for a real scope decision.</li>
+      <li>Read: GDPR Article 3 and Article 6 - short, and the backbone of everything this session did.</li>
+    </ul>
+  </section>
+
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Source material</span>
+      <h2>Official sources covered</h2>
+    </div>
+    <p class="lede">Taught from the GDPR text. This page covers ~80% of the working content on applicability - the deeper obligations follow in later sessions.</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">GDPR Article 3 (territorial scope)</span><span class="note">Part 1-2 · the three triggers as a runnable test</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">GDPR Article 6 (lawful bases)</span><span class="note">Part 2 · the six bases + the caveats (basis-mode checker)</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">GDPR Article 27 (EU representative)</span><span class="note">Part 1 · named as a first action; detail in the program session</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · How many of the three Article 3 triggers must be true for the GDPR to apply?</p>
+      <button class="qopt" type="button">A · All three</button>
+      <button class="qopt" type="button">B · Any one</button>
+      <button class="qopt" type="button">C · At least two</button>
+      <p class="qwhy">Any single trigger - establishment, offering to people in the EU, or monitoring them - brings you into scope. For a Singapore firm it usually turns on offering or monitoring.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · Your website is accessible from Germany but you do not target the EU. On the "offering" trigger, this...</p>
+      <button class="qopt" type="button">A · Automatically puts you in scope</button>
+      <button class="qopt" type="button">B · Is irrelevant to GDPR entirely</button>
+      <button class="qopt" type="button">C · Is probably NOT enough - the trigger turns on evidence of targeting, not mere accessibility</button>
+      <p class="qwhy">Mere accessibility is not "offering". The trigger needs targeting evidence - EU shipping, euro pricing, EU-language marketing, actual EU customers. Close calls need advice.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · The checker says the GDPR applies. A sensible first action is...</p>
+      <button class="qopt" type="button">A · Establish a lawful basis for the EU data you already process, and start a record of processing</button>
+      <button class="qopt" type="button">B · Immediately delete all EU customer data</button>
+      <button class="qopt" type="button">C · Nothing until an authority contacts you</button>
+      <p class="qwhy">In scope means you need a lawful basis for the EU data, likely an EU representative (Art 27), and a record of processing (Art 30) - the inventory the later obligations read from.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <section class="cheat" id="cheatsheet">
+    <h3>Practitioner session 1 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>The Article 3 test</b><span>Established in EU? Offering to people in EU? Monitoring people in EU? Any yes = in scope.</span></div>
+      <div class="cheat-item"><b>Accessibility ≠ offering</b><span>A site reachable from the EU is not "offering". The trigger needs evidence of targeting.</span></div>
+      <div class="cheat-item"><b>Person's location</b><span>The test is whether the individual is in the EU - not nationality, not where you are.</span></div>
+      <div class="cheat-item"><b>First actions in scope</b><span>Lawful basis for EU data · EU representative (Art 27) · record of processing (Art 30).</span></div>
+      <div class="cheat-item"><b>Six lawful bases</b><span>Consent, contract, legal obligation, vital interests, public task, legitimate interests. Pick one, document it.</span></div>
+      <div class="cheat-item"><b>The basis traps</b><span>Consent = real opt-in, withdrawable. Legitimate interests = needs a balancing test. Special data = Art 9 too.</span></div>
+      <div class="cheat-item"><b>Out of scope moves</b><span>Re-run the test on a new market, new analytics, or a big EU customer - a "no" can flip.</span></div>
+      <div class="cheat-item"><b>The checker is a model</b><span>It teaches the test structure, not a legal ruling. Confirm close calls with advice.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Practitioner session 1 of 8 · learn-gdpr-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="../index.html">← All sessions</a> &nbsp;·&nbsp; <a href="b2-lawful-basis.html">Next: Picking a lawful basis →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/gdpr-live.js?v=1"></script>
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

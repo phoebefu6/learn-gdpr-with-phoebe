@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practitioner session 6 · Transfers in practice - learn GDPR with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-gdpr-with-phoebe</a> / Practitioner session 6 of 8</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn GDPR with Phoebe · Practitioner track · Session 6 of 8</div>
+    <h1>Transfers <span class="accent">in practice</span></h1>
+    <p class="sub">The leader track named the mechanisms; this session does the work. For a Singapore company receiving EU data, that means putting Standard Contractual Clauses in place, running a transfer impact assessment on Singapore, and adding the technical measures that make the transfer defensible. This is the single highest-value compliance task a Singapore business does under the GDPR - because it is the failure behind the largest fine ever issued.</p>
+    <div class="chip-row">
+      <span class="chip level">🟠 Practitioner track</span>
+      <span class="chip audience">DPOs · legal ops · engineering</span>
+      <span class="chip audience">No jargon</span>
+      <span class="chip time">Hands-on</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:3">3-18 · Concepts</span>
+      <span class="a3" style="flex:5">18-40 · Build-along</span>
+      <span class="a4" style="flex:1">40-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section" id="intro">
+    <div class="section-kicker"><span class="klabel">Part 0</span><h2>The task behind the biggest fine</h2></div>
+    <p class="lede">Moving EU personal data to a server outside the EU is the most scrutinised thing a non-EU company does under the GDPR. Singapore has no adequacy decision, so every EU-to-Singapore flow needs a mechanism - and, since Schrems II, more than a signed contract. This session turns that into a concrete, repeatable procedure: SCCs, a transfer impact assessment, and supplementary measures. Get it right once and it protects every EU data flow you run.</p>
+    <div class="callout tip"><strong>Read this first</strong> Educational, not legal advice. SCC versions and adequacy status change - verify the current position and get advice before relying on a transfer mechanism.</div>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - full depth after class</span>
+      <span class="pill peach">★ Try it now</span>
+      <span class="pill inkpill">Sources covered at the end</span>
+    </div>
+    <div class="callout win"><strong>★ What you build today</strong> A step-by-step transfer procedure (SCCs plus a transfer impact assessment plus measures), the questions a TIA actually asks, and Lumina's lawful path for hosting EU data on a Singapore cloud region.</div>
+  </section>
+
+  <section class="section" id="procedure">
+    <div class="section-kicker"><span class="klabel">Part 1 · covers Article 46 + Schrems II</span><h2>SCCs, then the assessment <span class="tag concept">7 min live</span></h2></div>
+    <p class="lede">The modern transfer is three moves: sign the Standard Contractual Clauses, assess the destination country, and add measures where the assessment shows a gap. Skipping the middle move is exactly what Schrems II forbids.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Transfer procedure: put SCCs in place, run a transfer impact assessment, add supplementary measures such as encryption">
+        <style>
+          .b6pT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .b6pW { font: 400 11px Inter, sans-serif; fill: #DBEAFE; }
+          .b6pN { font: 600 14px Inter, sans-serif; fill: #422006; }
+          .b6pArr { stroke: #CBD5E1; stroke-width: 2.5; fill: none; marker-end: url(#b6pAh); }
+        </style>
+        <defs><marker id="b6pAh" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="none" stroke="#94A3B8" stroke-width="1.6"/></marker></defs>
+        <rect x="40" y="90" width="210" height="70" rx="12" fill="#1E3A8A"/><text class="b6pT" x="58" y="120">1 · Sign SCCs</text><text class="b6pW" x="58" y="142">exporter + importer contract</text>
+        <rect x="330" y="90" width="210" height="70" rx="12" fill="#1D4ED8"/><text class="b6pT" x="348" y="120">2 · Assess (TIA)</text><text class="b6pW" x="348" y="142">does SG law protect it?</text>
+        <rect x="620" y="90" width="220" height="70" rx="12" fill="#3B82F6"/><text class="b6pT" x="638" y="120">3 · Add measures</text><text class="b6pW" x="638" y="142">encryption, keys you hold</text>
+        <line class="b6pArr" x1="252" y1="125" x2="326" y2="125"/>
+        <line class="b6pArr" x1="542" y1="125" x2="616" y2="125"/>
+        <rect x="40" y="210" width="14" height="14" rx="3" fill="#CA8A04"/>
+        <text class="b6pN" x="64" y="222">SCCs alone are not enough post-Schrems II. The assessment and the measures are what make them work.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the modern transfer procedure</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Putting SCCs in place<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>What SCCs are:</strong> a pre-approved contract, published by the European Commission, between the data exporter (in the EU) and the importer (you, in Singapore). You use the correct module for your relationship (controller-to-processor, etc.) and fill in the annexes describing the data and measures.</li>
+          <li><strong>Who signs:</strong> for a Singapore company receiving EU customer data, your EU customers (the exporters) and you (the importer). Many put the SCCs inside the data processing agreement (session a4's Art 28 contract).</li>
+          <li><strong>Not set-and-forget:</strong> the annexes must actually describe your real processing and measures, and you revisit them when things change.</li>
+        </ul>
+        <div class="prompt-box good"><span class="label">★ Try it now (any chat AI)</span>Explain, for a Singapore company receiving EU customer data, how to lawfully transfer it: what Standard Contractual Clauses are, who signs them, why Schrems II means SCCs alone are not enough, and what a transfer impact assessment checks. Give me a short procedure.</div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The transfer impact assessment<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The TIA is the Schrems II homework: before you rely on SCCs, you assess whether the destination country's law would undermine the protection the SCCs promise - chiefly, can its government access the data in ways an EU person could not challenge?</p>
+        <ul>
+          <li><strong>What it asks:</strong> what data is transferred, to whom, under what local laws, and whether those laws permit disproportionate government access without redress.</li>
+          <li><strong>Then, measures:</strong> where the assessment finds a gap, add supplementary measures. The strongest are technical - <strong>strong encryption with keys held outside the destination</strong>, pseudonymisation - because they protect the data even if local law reaches the server.</li>
+          <li><strong>Document it:</strong> the TIA is your evidence that you did the Schrems II analysis, not just signed a template.</li>
+        </ul>
+        <div class="callout example"><span class="ex-pill">Real world</span><p><strong>Lumina's Singapore region.</strong> Lumina hosts EU customer data in a Singapore cloud region. It puts SCCs into its customer DPA, runs a TIA on Singapore, and encrypts the data at rest with keys held in an EU-based key service it controls - so even if the data sat on the SG disk, it is unreadable without keys outside SG. That combination is what makes the transfer defensible.</p></div>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="map">
+    <div class="section-kicker"><span class="klabel">Part 2 · the flows you forget</span><h2>Sub-processors and the data map <span class="tag concept">8 min live</span></h2></div>
+    <p class="lede">The transfer you sign SCCs for is the obvious one. The transfers that catch people are the ones hidden in the tools: analytics, support, email, backups - each may move EU data somewhere, and each is your responsibility.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 230" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="EU data flows out not just to your servers but through sub-processors: analytics, support, email, backups - each a transfer">
+        <style>
+          .b6mT { font: 700 12px Inter, sans-serif; fill: #FFFFFF; }
+          .b6mW { font: 400 11px Inter, sans-serif; fill: #1E293B; }
+          .b6mN { font: 600 14px Inter, sans-serif; fill: #422006; }
+          .b6mArr { stroke: #CBD5E1; stroke-width: 2; fill: none; marker-end: url(#b6mAh); }
+        </style>
+        <defs><marker id="b6mAh" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="none" stroke="#94A3B8" stroke-width="1.5"/></marker></defs>
+        <rect x="40" y="90" width="150" height="56" rx="12" fill="#1D4ED8"/><text class="b6mT" x="56" y="114">EU user data</text><text class="b6mT" x="56" y="132" style="font-weight:400;fill:#DBEAFE">leaving the EU</text>
+        <rect x="330" y="30" width="180" height="34" rx="8" fill="#EFF6FF" stroke="#93C5FD"/><text class="b6mW" x="346" y="52">Your SG servers</text>
+        <rect x="330" y="72" width="180" height="34" rx="8" fill="#EFF6FF" stroke="#93C5FD"/><text class="b6mW" x="346" y="94">Analytics vendor</text>
+        <rect x="330" y="114" width="180" height="34" rx="8" fill="#EFF6FF" stroke="#93C5FD"/><text class="b6mW" x="346" y="136">Support tool</text>
+        <rect x="330" y="156" width="180" height="34" rx="8" fill="#EFF6FF" stroke="#93C5FD"/><text class="b6mW" x="346" y="178">Backups</text>
+        <rect x="590" y="90" width="240" height="56" rx="12" fill="#1E3A8A"/><text class="b6mT" x="606" y="114">Each = a transfer</text><text class="b6mT" x="606" y="132" style="font-weight:400;fill:#DBEAFE">needing its own mechanism</text>
+        <line class="b6mArr" x1="192" y1="110" x2="326" y2="47"/>
+        <line class="b6mArr" x1="192" y1="115" x2="326" y2="89"/>
+        <line class="b6mArr" x1="192" y1="120" x2="326" y2="131"/>
+        <line class="b6mArr" x1="192" y1="125" x2="326" y2="173"/>
+        <line class="b6mArr" x1="512" y1="118" x2="586" y2="118"/>
+        <rect x="40" y="200" width="14" height="14" rx="3" fill="#CA8A04"/>
+        <text class="b6mN" x="64" y="212">Every sub-processor that touches EU data is a transfer you own - map them, or you cannot cover them.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the transfers hidden in your tools</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Cover the sub-processors<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Every vendor that processes EU data</strong> is a transfer if it sits outside the EU. Your analytics tool, your help desk, your email sender, your cloud backups.</li>
+          <li><strong>The chain flows down:</strong> your processor's sub-processors matter too. Your DPA (Art 28) should require SCCs down the chain, and your ROPA's transfers column (session b5) is where you track them.</li>
+          <li><strong>The audit question:</strong> for every row in your transfers column, is there a named mechanism - SCCs, adequacy, or a derogation? A blank is an unlawful transfer waiting to be found.</li>
+        </ul>
+        <div class="callout tip"><strong>The reuse</strong> This is why the ROPA came first. The transfers column you built in b5 is the exact list you now attach mechanisms to. Compliance here is not a fresh project - it is finishing the inventory.</div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Why data localisation is sometimes the simplest answer<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Sometimes the cleanest way to solve a transfer problem is to not transfer. If your EU customers' data can live in an EU cloud region, then for that data there is no third-country transfer at all - no SCCs, no TIA, no supplementary measures needed for it. Many cloud providers make this a configuration choice: pick an EU region for EU customers. For a Singapore company, this is worth weighing against the operational cost of running EU infrastructure. The trade is real: localisation removes the hardest compliance task entirely for the localised data, at the price of some architectural complexity and cost. It is not always right - your analytics and support tools may still transfer - but for the core customer database, "keep EU data in the EU" can be simpler and safer than perfecting an SCCs-plus-TIA-plus-encryption stack. Treat localisation as a genuine option, not a last resort.</p>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="exercise">
+    <div class="section-kicker"><span class="klabel">Build-along · take it further</span><h2>Lawful transfers for Lumina <span class="tag demo">★ 10 min · pen and paper</span></h2></div>
+    <p class="lede">Attach a mechanism to every EU-out flow.</p>
+    <div class="steps">
+      <div class="step"><p><strong>Take your transfers column</strong> from the b5 ROPA (or Lumina's: SG servers, analytics, support, backups). List each destination.</p></div>
+      <div class="step"><p><strong>Name the mechanism</strong> for each: adequacy (rare), SCCs, or a derogation. Flag blanks.</p></div>
+      <div class="step"><p><strong>For the Singapore server flow</strong>, write the three-step plan: SCCs in the DPA, a TIA on Singapore, encryption with keys held outside SG.</p></div>
+      <div class="step"><p><strong>Consider localisation</strong> for the core customer DB: would an EU region remove the transfer entirely? Note the trade-off.</p></div>
+    </div>
+    <div class="callout win"><strong>★ Lumina after b6</strong> Every one of Lumina's EU-data flows now has a named mechanism, and its Singapore-hosted data rides SCCs + a TIA + encryption. The compliance build is nearly done - what remains is the day the plan is tested. Session b7 handles the breach.</div>
+  </section>
+
+  <section class="section" id="homework">
+    <div class="section-kicker"><span class="klabel">Homework</span><h2>Before session b7 <span class="tag exercise">◐ 40 min total</span></h2></div>
+    <ul>
+      <li>For every destination in your transfers column, write the mechanism. Flag any blanks as urgent.</li>
+      <li>Confirm whether you have current SCCs with your EU counterparties and whether a TIA on Singapore exists.</li>
+      <li>Check where your encryption keys live - keys held in the destination country weaken the supplementary-measure argument.</li>
+      <li>Read: GDPR Article 46 and skim the EDPB Recommendations 01/2020 summary on supplementary measures.</li>
+    </ul>
+  </section>
+
+  <section class="section" id="official">
+    <div class="section-kicker"><span class="klabel">Source material</span><h2>Official sources covered</h2></div>
+    <p class="lede">Taught from the GDPR text and EDPB guidance. This page covers ~80% of the working content on transfers in practice.</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">GDPR Article 46 (appropriate safeguards / SCCs)</span><span class="note">Part 1 · putting SCCs in place</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Schrems II + EDPB Recommendations 01/2020</span><span class="note">Part 1 · the TIA + supplementary measures (via secondary sources)</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">GDPR Article 28 + Article 30 (DPA + records)</span><span class="note">Part 2 · SCCs down the chain + the transfers column</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="quiz">
+    <div class="section-kicker"><span class="klabel">Check yourself</span><h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2></div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · For a Singapore company receiving EU data, the modern lawful transfer is...</p>
+      <button class="qopt" type="button">A · Just signing SCCs</button>
+      <button class="qopt" type="button">B · SCCs, plus a transfer impact assessment, plus supplementary measures where needed</button>
+      <button class="qopt" type="button">C · A verbal agreement with the customer</button>
+      <p class="qwhy">Post-Schrems II, SCCs alone are not enough. You must assess the destination (a TIA) and add measures - especially strong encryption - where local law falls short.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · The strongest supplementary measure for a transfer to Singapore is usually...</p>
+      <button class="qopt" type="button">A · A longer contract</button>
+      <button class="qopt" type="button">B · A privacy notice</button>
+      <button class="qopt" type="button">C · Strong encryption with keys held outside the destination country</button>
+      <p class="qwhy">Technical measures carry the most weight. Encryption with keys you hold outside Singapore protects the data even if local law could reach the server.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · Your US analytics vendor processes EU user data. This is...</p>
+      <button class="qopt" type="button">A · A transfer you are responsible for - it needs its own mechanism</button>
+      <button class="qopt" type="button">B · The vendor's problem alone</button>
+      <button class="qopt" type="button">C · Exempt because it is analytics</button>
+      <p class="qwhy">Every sub-processor outside the EU that touches EU data is a transfer you own. Track it in your ROPA transfers column and ensure SCCs flow down the chain.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <section class="cheat" id="cheatsheet">
+    <h3>Practitioner session 6 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Three steps</b><span>Sign SCCs → run a transfer impact assessment → add supplementary measures.</span></div>
+      <div class="cheat-item"><b>SCCs</b><span>Commission-published exporter-importer contract; often inside the DPA. Fill the annexes honestly.</span></div>
+      <div class="cheat-item"><b>Schrems II</b><span>SCCs alone are not enough - assess whether the destination's law undermines protection.</span></div>
+      <div class="cheat-item"><b>Best measure</b><span>Strong encryption with keys held outside the destination. Technical beats contractual.</span></div>
+      <div class="cheat-item"><b>Sub-processors count</b><span>Analytics, support, email, backups - each is a transfer you own. SCCs flow down the chain.</span></div>
+      <div class="cheat-item"><b>Use the ROPA</b><span>The transfers column from b5 is your list to attach mechanisms to. Blanks = unlawful.</span></div>
+      <div class="cheat-item"><b>Localisation</b><span>Keeping EU data in an EU region removes the transfer entirely - sometimes the simplest fix.</span></div>
+      <div class="cheat-item"><b>Highest value</b><span>Transfers are the top GDPR fine risk (Meta). This session is the one that most protects a SG company.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Practitioner session 6 of 8 · learn-gdpr-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="../index.html">← All sessions</a> &nbsp;·&nbsp; <a href="b7-breach-response.html">Next: Breach response →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

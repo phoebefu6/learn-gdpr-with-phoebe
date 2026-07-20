@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practitioner session 7 · Breach response - learn GDPR with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-gdpr-with-phoebe</a> / Practitioner session 7 of 8</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn GDPR with Phoebe · Practitioner track · Session 7 of 8</div>
+    <h1>Breach response <span class="accent">against the clock</span></h1>
+    <p class="sub">Everything else in this track is preparation; this is the day it is tested. A breach happens, and the 72-hour clock starts the moment you become aware. This session builds the response: contain, assess whether it is notifiable, notify the authority within 72 hours and individuals if the risk is high, then close the gap that let it happen. A plan you have never timed is a plan you do not have.</p>
+    <div class="chip-row">
+      <span class="chip level">🔴 Practitioner track</span>
+      <span class="chip audience">DPOs · security · ops</span>
+      <span class="chip audience">No jargon</span>
+      <span class="chip time">Hardest</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:3">3-18 · Concepts</span>
+      <span class="a3" style="flex:5">18-40 · Build-along</span>
+      <span class="a4" style="flex:1">40-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section" id="intro">
+    <div class="section-kicker"><span class="klabel">Part 0</span><h2>The clock starts before you are ready</h2></div>
+    <p class="lede">A breach never arrives at a convenient time, and the GDPR does not care. The 72-hour clock (Article 33) starts when you become <em>aware</em> a breach has occurred - not when you finish investigating, not on Monday morning. That single fact reshapes incident response: you cannot afford a plan where the first hours are lost to "who owns this?". This session makes the response concrete and, crucially, timed.</p>
+    <div class="callout tip"><strong>Read this first</strong> Educational, not legal advice. Verify against the Regulation text and have real incident-response advice in place before you need it.</div>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - full depth after class</span>
+      <span class="pill peach">★ Try it now</span>
+      <span class="pill inkpill">Sources covered at the end</span>
+    </div>
+    <div class="callout win"><strong>★ What you build today</strong> The notifiable test, the 72-hour authority clock and the high-risk individual notice, the contain-assess-notify-remediate arc, and Lumina's timed response to a real incident.</div>
+  </section>
+
+  <section class="section" id="clock">
+    <div class="section-kicker"><span class="klabel">Part 1 · covers Articles 33 &amp; 34</span><h2>Assess, then notify <span class="tag concept">7 min live</span></h2></div>
+    <p class="lede">Two thresholds decide who you tell. Any breach that risks people's rights goes to the authority within 72 hours. A breach that risks them badly also goes to the affected individuals.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Breach response timeline: become aware, contain, assess whether notifiable, notify authority within 72 hours, notify individuals if high risk">
+        <style>
+          .b7bT { font: 700 12px Inter, sans-serif; fill: #FFFFFF; }
+          .b7bW { font: 400 11px Inter, sans-serif; fill: #DBEAFE; }
+          .b7bN { font: 600 14px Inter, sans-serif; fill: #422006; }
+          .b7bArr { stroke: #CBD5E1; stroke-width: 2.5; fill: none; marker-end: url(#b7bAh); }
+        </style>
+        <defs><marker id="b7bAh" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="none" stroke="#94A3B8" stroke-width="1.6"/></marker></defs>
+        <rect x="20" y="90" width="140" height="60" rx="12" fill="#1E3A8A"/><text class="b7bT" x="36" y="116">Become aware</text><text class="b7bW" x="36" y="136">clock starts</text>
+        <rect x="190" y="90" width="130" height="60" rx="12" fill="#1D4ED8"/><text class="b7bT" x="206" y="116">Contain</text><text class="b7bW" x="206" y="136">stop the bleed</text>
+        <rect x="350" y="90" width="150" height="60" rx="12" fill="#1D4ED8"/><text class="b7bT" x="366" y="116">Assess</text><text class="b7bW" x="366" y="136">is it notifiable?</text>
+        <rect x="530" y="40" width="180" height="56" rx="12" fill="#3B82F6"/><text class="b7bT" x="546" y="64">Authority: 72h</text><text class="b7bW" x="546" y="84">any risk</text>
+        <rect x="530" y="150" width="180" height="56" rx="12" fill="#3B82F6"/><text class="b7bT" x="546" y="174">Individuals</text><text class="b7bW" x="546" y="194">if HIGH risk</text>
+        <rect x="740" y="90" width="120" height="60" rx="12" fill="#1E3A8A"/><text class="b7bT" x="756" y="116">Remediate</text><text class="b7bW" x="756" y="136">close the gap</text>
+        <line class="b7bArr" x1="162" y1="120" x2="186" y2="120"/>
+        <line class="b7bArr" x1="322" y1="120" x2="346" y2="120"/>
+        <line class="b7bArr" x1="502" y1="110" x2="526" y2="76"/>
+        <line class="b7bArr" x1="502" y1="130" x2="526" y2="172"/>
+        <line class="b7bArr" x1="712" y1="120" x2="736" y2="120"/>
+        <rect x="20" y="222" width="14" height="14" rx="3" fill="#CA8A04"/>
+        <text class="b7bN" x="44" y="234">72 hours runs from "aware", and it does not pause for weekends. Pre-decide who assesses and who notifies.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the breach-response arc and the two thresholds</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The notifiable test + the two clocks<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>To the authority (Art 33):</strong> notify without undue delay and, where feasible, within <strong>72 hours of becoming aware</strong> - unless the breach is unlikely to result in a risk to people's rights. Late means you must explain the delay.</li>
+          <li><strong>To individuals (Art 34):</strong> when the breach is likely to result in a <strong>high risk</strong> to them, tell them too, without undue delay. Exceptions include data that was strongly encrypted (a payoff for session b6's measures).</li>
+          <li><strong>If you are a processor:</strong> a processor that detects a breach must notify the controller it works for, without undue delay - you are a link in someone else's 72 hours.</li>
+        </ul>
+        <div class="prompt-box good"><span class="label">★ Try it now (any chat AI)</span>Walk me through GDPR breach response: when the 72-hour clock starts, how to decide if a breach is notifiable, the difference between notifying the authority and notifying individuals, and what a processor must do. Then give me a one-page incident checklist.</div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>vs the PDPA clock, for a dual-regime breach<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>A breach at a Singapore company with EU customers triggers both regimes, and the clocks differ:</p>
+        <ul>
+          <li><strong>GDPR:</strong> one 72-hour clock from awareness, risk-based, no headcount threshold for the authority.</li>
+          <li><strong>PDPA:</strong> assess (the PDPC expects the cycle within about 30 days), then notify the PDPC within 3 calendar days of determining it notifiable, gated by significant harm or 500+ individuals.</li>
+          <li><strong>The binding constraint is the GDPR.</strong> Build your response to hit 72 hours and you comfortably meet the PDPA timeline on the same incident.</li>
+        </ul>
+        <div class="callout example"><span class="ex-pill">Real world</span><p><strong>Lumina's exposed backup.</strong> Lumina discovers a misconfigured backup exposed 3,000 records - EU and Singapore. It becomes aware Friday 4pm. The GDPR clock is now running through the weekend. Because Lumina had a named incident owner with authority to notify, it contained the exposure, assessed the risk, and filed with the EU authority within 72 hours - and met the PDPA process on the same facts. The encryption from b6 meant individual notice was not required for the encrypted portion.</p></div>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="respond">
+    <div class="section-kicker"><span class="klabel">Part 2 · the response, run well</span><h2>Contain, notify, learn <span class="tag concept">8 min live</span></h2></div>
+    <p class="lede">A good breach response is not just fast notification; it is a loop that ends with the gap closed. What you notify, and what you fix, both matter.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 230" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Response loop: contain, assess, notify, remediate, feed back into controls">
+        <style>
+          .b7cT { font: 700 12px Inter, sans-serif; fill: #FFFFFF; }
+          .b7cN { font: 600 14px Inter, sans-serif; fill: #422006; }
+          .b7cArr { stroke: #CBD5E1; stroke-width: 2.5; fill: none; marker-end: url(#b7cAh); }
+        </style>
+        <defs><marker id="b7cAh" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="none" stroke="#94A3B8" stroke-width="1.6"/></marker></defs>
+        <rect x="30" y="90" width="140" height="52" rx="12" fill="#1E3A8A"/><text class="b7cT" x="50" y="120">Contain</text>
+        <rect x="210" y="90" width="140" height="52" rx="12" fill="#1D4ED8"/><text class="b7cT" x="230" y="120">Assess</text>
+        <rect x="390" y="90" width="140" height="52" rx="12" fill="#3B82F6"/><text class="b7cT" x="410" y="120">Notify</text>
+        <rect x="570" y="90" width="140" height="52" rx="12" fill="#1D4ED8"/><text class="b7cT" x="590" y="120">Remediate</text>
+        <rect x="720" y="90" width="140" height="52" rx="12" fill="#1E3A8A"/><text class="b7cT" x="740" y="120">Feed back</text>
+        <line class="b7cArr" x1="172" y1="116" x2="206" y2="116"/>
+        <line class="b7cArr" x1="352" y1="116" x2="386" y2="116"/>
+        <line class="b7cArr" x1="532" y1="116" x2="566" y2="116"/>
+        <line class="b7cArr" x1="712" y1="116" x2="716" y2="116"/>
+        <rect x="30" y="200" width="14" height="14" rx="3" fill="#CA8A04"/>
+        <text class="b7cN" x="54" y="212">The response is not done at "notified". It ends when the gap that caused it is closed.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the response loop</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>What to include, and when to consult first<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>The notification tells the authority:</strong> the nature of the breach, the categories and rough number of individuals and records affected, the likely consequences, and the measures taken or proposed. You can provide information in phases if you do not have it all in 72 hours.</li>
+          <li><strong>The individual notice</strong> (when required) is in clear language: what happened, likely consequences, what you are doing, and what they can do (change a password, watch for fraud).</li>
+          <li><strong>Consult the authority first</strong> for breaches likely to attract widespread attention - it is better to be seen managing it than reacting.</li>
+          <li><strong>Close the loop:</strong> the incident should upgrade a control (the Protection Obligation gap from the leader track) so the same breach cannot recur.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The response plan is the deliverable, not the response<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>You cannot write a good breach response in the 72 hours you have to deliver one - the plan has to exist beforehand. The real work of this session is not "know the rules"; it is "have a plan, with named roles, that you have timed". A plan names who becomes the incident owner, who can authorise a regulator notification without waiting for a committee, how the security team escalates to them out of hours, and where the notification templates live. Then you rehearse it - a tabletop exercise where you start the clock on a Friday afternoon and see whether you would actually make 72 hours. Most teams discover their bottleneck is not the technical investigation but the approval step: nobody is sure they are allowed to notify. Fixing that - a single owner with pre-granted authority - is worth more than any amount of policy text. Build the plan, time it, and keep the templates ready.</p>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="exercise">
+    <div class="section-kicker"><span class="klabel">Build-along · take it further</span><h2>Run Lumina's breach clock <span class="tag demo">★ 10 min · pen and paper</span></h2></div>
+    <p class="lede">Time a real incident against 72 hours.</p>
+    <div class="steps">
+      <div class="step"><p><strong>The trigger.</strong> Lumina's on-call engineer spots the exposed backup at 4pm Friday. Write who they tell, and how fast the incident owner is reached.</p></div>
+      <div class="step"><p><strong>Assess.</strong> Who decides whether it is notifiable, and against what test (risk to rights; EU individuals affected)? Estimate the hours.</p></div>
+      <div class="step"><p><strong>Notify.</strong> Who drafts and who has authority to submit to the EU authority - over a weekend? Put the clock on it. Does it clear 72 hours?</p></div>
+      <div class="step"><p><strong>Learn.</strong> Name the control that would have prevented it (backup access review) and who owns closing it.</p></div>
+    </div>
+    <div class="callout win"><strong>★ Lumina after b7</strong> Lumina has a timed, owned breach plan that clears 72 hours even on a weekend, and it closes the gap afterwards. Only one thing remains: making all of this a standing programme rather than seven separate efforts. Session b8 assembles it - and harmonises it with the PDPA.</div>
+  </section>
+
+  <section class="section" id="homework">
+    <div class="section-kicker"><span class="klabel">Homework</span><h2>Before session b8 <span class="tag exercise">◐ 40 min total</span></h2></div>
+    <ul>
+      <li>Write (or find) your breach-response plan and confirm it names an incident owner with pre-granted authority to notify.</li>
+      <li>Run a five-minute tabletop: start the clock on a Friday incident and trace whether you would make 72 hours.</li>
+      <li>Check your notification templates exist and where they live - do not draft them during a live incident.</li>
+      <li>Read: GDPR Articles 33 and 34 - the authority and individual notification rules.</li>
+    </ul>
+  </section>
+
+  <section class="section" id="official">
+    <div class="section-kicker"><span class="klabel">Source material</span><h2>Official sources covered</h2></div>
+    <p class="lede">Taught from the GDPR text. This page covers ~80% of the working content on breach response.</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">GDPR Article 33 (notification to the authority)</span><span class="note">Part 1 · 72 hours from awareness + phased info + processor duty</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">GDPR Article 34 (notification to individuals)</span><span class="note">Part 1-2 · high-risk threshold + the encryption exception</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">PDPA breach contrast</span><span class="note">Part 1 · ~30-day assess, 3-day notify, 500 threshold</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="quiz">
+    <div class="section-kicker"><span class="klabel">Check yourself</span><h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2></div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · The 72-hour breach clock starts...</p>
+      <button class="qopt" type="button">A · When you finish the investigation</button>
+      <button class="qopt" type="button">B · When you become aware of the breach</button>
+      <button class="qopt" type="button">C · On the next business day</button>
+      <p class="qwhy">Article 33: notify within 72 hours of becoming aware. The clock runs through weekends and does not wait for the investigation to conclude - which is why a pre-agreed owner matters.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · You must notify affected individuals (not just the authority) when the breach...</p>
+      <button class="qopt" type="button">A · Involves any personal data at all</button>
+      <button class="qopt" type="button">B · Happens at a company over 250 employees</button>
+      <button class="qopt" type="button">C · Is likely to result in a HIGH risk to their rights and freedoms</button>
+      <p class="qwhy">Article 34: individuals are told when the risk to them is high. Strong encryption of the affected data can remove that duty - the payoff of good supplementary measures.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · The most common real-world bottleneck in hitting 72 hours is...</p>
+      <button class="qopt" type="button">A · The approval step - nobody is sure they are authorised to notify</button>
+      <button class="qopt" type="button">B · Writing the press release</button>
+      <button class="qopt" type="button">C · Choosing a font for the notice</button>
+      <p class="qwhy">Teams usually find the technical work is manageable; the delay is organisational. A single incident owner with pre-granted authority to notify is the fix.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <section class="cheat" id="cheatsheet">
+    <h3>Practitioner session 7 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>72 hours from "aware"</b><span>Notify the authority within 72h of becoming aware (Art 33), unless unlikely to risk rights.</span></div>
+      <div class="cheat-item"><b>Two thresholds</b><span>Any risk → authority. High risk → also individuals (Art 34).</span></div>
+      <div class="cheat-item"><b>Encryption exception</b><span>Strong encryption of affected data can remove the duty to notify individuals.</span></div>
+      <div class="cheat-item"><b>Processor duty</b><span>A processor tells the controller without undue delay - a link in their 72 hours.</span></div>
+      <div class="cheat-item"><b>Phased info OK</b><span>You can notify with what you have and follow up as the investigation develops.</span></div>
+      <div class="cheat-item"><b>The loop</b><span>Contain → assess → notify → remediate → feed back. Done at "gap closed", not "notified".</span></div>
+      <div class="cheat-item"><b>The real bottleneck</b><span>Approval authority. A named owner who can notify, out of hours, is the fix.</span></div>
+      <div class="cheat-item"><b>vs PDPA</b><span>PDPA: ~30-day assess, 3-day notify, 500 threshold. Hit GDPR's 72h and PDPA follows.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Practitioner session 7 of 8 · learn-gdpr-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="../index.html">← All sessions</a> &nbsp;·&nbsp; <a href="b8-gdpr-program.html">Next: The GDPR program + PDPA harmony →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>
