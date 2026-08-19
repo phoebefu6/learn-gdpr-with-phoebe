@@ -131,6 +131,34 @@
         <div class="callout example">
           <span class="ex-pill">Real world</span>
           <p><strong>Lumina runs the checker.</strong> Lumina answers no, yes, yes - no EU office, but it sells its SaaS to EU startups and runs product analytics on them. Two triggers, so the GDPR applies. Lumina's to-do list writes itself: a lawful basis for its EU users, an EU representative, and a record of processing. The rest of the practitioner track works through exactly that list.</p>
+<figure class="zoomable">
+  <svg viewBox="0 0 880 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A single bar showing Lumina in scope under Article 3(2)(a) after answering no, yes, yes to the establishment, offering and monitoring triggers, with three chips above it for the actions that follow: a lawful basis, an EU representative under Article 27, and a record of processing under Article 30.">
+    <style>
+      .b1scT { font: 700 13px Inter, sans-serif; fill: #1E293B; }
+      .b1scC { font: 700 11px Inter, sans-serif; fill: #1E3A8A; }
+      .b1scB { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+      .b1scS { font: 400 11.5px Inter, sans-serif; fill: rgba(255,255,255,.84); }
+      .b1scN { font: 400 12px Inter, sans-serif; fill: #64748B; }
+    </style>
+    <rect x="0" y="0" width="880" height="200" fill="#FFFFFF"/>
+    <text class="b1scT" x="40" y="28">Found in scope: three actions the checker hands you</text>
+
+    <rect x="60" y="50" width="170" height="30" rx="8" fill="#EFF6FF"/>
+    <text class="b1scC" x="145" y="70" text-anchor="middle">Lawful basis (b2)</text>
+    <rect x="250" y="50" width="170" height="30" rx="8" fill="#EFF6FF"/>
+    <text class="b1scC" x="335" y="70" text-anchor="middle">EU rep (Art 27)</text>
+    <rect x="440" y="50" width="170" height="30" rx="8" fill="#EFF6FF"/>
+    <text class="b1scC" x="525" y="70" text-anchor="middle">Record of processing</text>
+
+    <rect x="60" y="96" width="760" height="56" rx="10" fill="#1E3A8A"/>
+    <text class="b1scB" x="78" y="120">IN SCOPE - ARTICLE 3(2)(A)</text>
+    <text class="b1scS" x="78" y="138">Lumina: no EU office, yes sells to EU, yes runs analytics</text>
+
+    <text class="b1scN" x="40" y="180">The moment the checker says yes, all three actions follow at once.</text>
+  </svg>
+  <figcaption>🔍 Click to zoom - in scope is a starting line, not a verdict</figcaption>
+</figure>
+
         </div>
       </div>
     </details>
@@ -159,6 +187,56 @@
       <summary><span class="mode live">Live</span>★ Build-along: which lawful basis<span class="mini">3 min</span><span class="caret">▶</span></summary>
       <div class="body">
         <p>Once you are in scope, every use of personal data needs one of the six lawful bases. Switch the checker to lawful-basis mode and pick a purpose - watch it suggest the fitting basis and flag the catch (consent must be a real opt-in; legitimate interests needs a balancing test; special-category data needs an Article 9 condition too).</p>
+<figure class="zoomable">
+  <svg viewBox="0 0 880 350" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A decision tree routing a processing purpose to a lawful basis. Consumer marketing routes to consent, which must be a real withdrawable opt-in. A genuine business need routes to legitimate interests, which needs a documented balancing test. Special-category data needs an Article 9 condition on top of any basis, whichever purpose it serves.">
+    <defs>
+      <marker id="arrB1lb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path d="M0,0 L10,5 L0,10 z" fill="#64748B"/>
+      </marker>
+    </defs>
+    <style>
+      .b1lbT { font: 700 13px Inter, sans-serif; fill: #1E293B; }
+      .b1lbQ { font: 700 12px Inter, sans-serif; fill: #1E293B; }
+      .b1lbE { font: 400 11px Inter, sans-serif; fill: #64748B; }
+      .b1lbO { font: 700 12px Inter, sans-serif; fill: #1E3A8A; }
+      .b1lbOr { font: 700 12px Inter, sans-serif; fill: #991B1B; }
+      .b1lbL { font: 400 11.5px Inter, sans-serif; fill: #1E293B; }
+      .b1lbN { font: 400 12px Inter, sans-serif; fill: #64748B; }
+    </style>
+    <rect x="0" y="0" width="880" height="350" fill="#FFFFFF"/>
+    <text class="b1lbT" x="40" y="28">Two bases teams reach for, and the flag that stacks on both</text>
+
+    <rect x="40" y="142" width="240" height="56" rx="10" fill="#EFF6FF" stroke="#3B82F6" stroke-width="1.5"/>
+    <text class="b1lbQ" x="160" y="163" text-anchor="middle">What's the processing</text>
+    <text class="b1lbQ" x="160" y="181" text-anchor="middle">for?</text>
+
+    <path d="M280,170 L620,88" fill="none" stroke="#64748B" stroke-width="1.5" marker-end="url(#arrB1lb)"/>
+    <text class="b1lbE" x="450" y="118" text-anchor="middle">consumer marketing</text>
+    <path d="M280,170 L620,180" fill="none" stroke="#64748B" stroke-width="1.5" marker-end="url(#arrB1lb)"/>
+    <text class="b1lbE" x="450" y="169" text-anchor="middle">genuine business need</text>
+    <path d="M280,170 L620,272" fill="none" stroke="#64748B" stroke-width="1.5" marker-end="url(#arrB1lb)"/>
+    <text class="b1lbE" x="450" y="230" text-anchor="middle">special-category data</text>
+
+    <rect x="620" y="50" width="220" height="76" rx="10" fill="#EFF6FF" stroke="#3B82F6" stroke-width="1.5"/>
+    <text class="b1lbO" x="632" y="72">CONSENT</text>
+    <text class="b1lbL" x="632" y="88">Consumer marketing purposes</text>
+    <text class="b1lbL" x="632" y="104">Real opt-in, withdrawable</text>
+
+    <rect x="620" y="142" width="220" height="76" rx="10" fill="#EFF6FF" stroke="#3B82F6" stroke-width="1.5"/>
+    <text class="b1lbO" x="632" y="164">LEGITIMATE INTERESTS</text>
+    <text class="b1lbL" x="632" y="180">Genuine business need</text>
+    <text class="b1lbL" x="632" y="196">A documented balancing test</text>
+
+    <rect x="620" y="234" width="220" height="76" rx="10" fill="#FEF2F2" stroke="#991B1B" stroke-width="1.5"/>
+    <text class="b1lbOr" x="632" y="256">+ ARTICLE 9 CONDITION</text>
+    <text class="b1lbL" x="632" y="272">Special-category data</text>
+    <text class="b1lbL" x="632" y="288">Needed on top of any basis</text>
+
+    <text class="b1lbN" x="40" y="336">Consent and legitimate interests answer "which basis" - Article 9 answers "is that enough".</text>
+  </svg>
+  <figcaption>🔍 Click to zoom - special-category data needs a basis and an Article 9 condition, not either</figcaption>
+</figure>
+
         <div class="gdprbox" data-mode="basis" data-caption="Pick a processing purpose - the checker suggests the Article 6 basis and the caveat that comes with it."></div>
         <p>Notice the two that trip teams up: consumer marketing pushes you toward <strong>consent</strong> (a real opt-in, withdrawable), while a genuine business need points to <strong>legitimate interests</strong> - which is flexible but only if you can show a documented balancing test. Session b2 makes this choice properly.</p>
       </div>
